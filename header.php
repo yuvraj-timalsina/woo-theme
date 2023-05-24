@@ -45,9 +45,15 @@
                 </div>
 
                 <!-- Menu -->
-                <nav class="col-12 mt-3 mt-md-0">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary">
                     <!-- Menu code goes here -->
-                    menu
+                    <?php wp_nav_menu([
+                        'menu' => 'Uv Woo Nav Menu',
+                        'theme_location' => 'uv_woo_main_menu',
+                        'menu_class' => 'navbar-nav fw-bold',
+                        'container' => 'div',
+                        'container_class' => 'container-fluid'
+                    ]); ?>
                 </nav>
             </div>
         </div>

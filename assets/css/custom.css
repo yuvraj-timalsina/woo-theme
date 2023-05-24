@@ -1,0 +1,10 @@
+.menu-item {
+    margin: 0 5px 0 0;
+}
+
+.menu-item a {
+    text-decoration: none;
+}
+.current-menu-item a{
+    color: red;
+}
