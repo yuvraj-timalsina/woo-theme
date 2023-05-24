@@ -10,25 +10,36 @@
  */
 ?>
 <!-- Footer -->
-<footer class="bg-dark text-light">
-    <div class="container">
-        <div class="row">
-            <!-- Footer Widgets -->
-            <div class="col-md-6 col-lg-8">
-                <!-- Footer widgets code goes here -->
+<footer>
+    <section class="footer-widgets bg-dark text-light">
+        <div class="container">
+            <div class="row">
+                <!-- Footer Widgets -->
                 footer widgets
             </div>
-
-            <!-- Copyright -->
-            <div class="col-md-6 col-lg-4 text-center text-md-end">
-                <!-- Copyright code goes here -->
-                copyright
+        </div>
+    </section>
+    <section class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="copyright-text col-12 col-md-6">
+                    Copyright
+                </div>
+                <nav class="footer-menu navbar navbar-expand-lg col-12 col-md-6 text-left text md-right">
+                    <?php wp_nav_menu([
+                        'menu' => 'Uv Woo Footer Menu',
+                        'theme_location' => 'uv_woo_footer_menu',
+                        'menu_class' => 'navbar-nav',
+                        'container' => 'div',
+                        'container_class' => 'container-fluid'
+                    ]);
+                    ?>
+                </nav>
             </div>
         </div>
-    </div>
+    </section>
 </footer>
 
-</div>
 <?php wp_footer(); ?>
 </body>
 </html>

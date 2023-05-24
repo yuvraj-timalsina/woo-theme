@@ -14,51 +14,62 @@
 
 get_header();
 ?>
-    <!-- Slider -->
-    <div class="slider">
-        <div class="container">
-            <!-- Slider code goes here -->
-            slider
-        </div>
+    <div class="content-area">
+        <main>
+            <!-- Slider -->
+            <section class="slider">
+                <div class="container">
+                    <!-- Slider code goes here -->
+                    <div class="row">slider</div>
+                </div>
+            </section>
+
+            <!-- Promotions -->
+            <section class="promotions">
+                <div class="container">
+                    <!-- Promotions code goes here -->
+                    <div class="row">promotions</div>
+                </div>
+            </section>
+
+            <!-- Popular Products -->
+            <section class="popular-products">
+                <div class="container">
+                    <!-- Popular products code goes here -->
+                    <div class="row">popular</div>
+                </div>
+            </section>
+
+            <!-- New Arrivals -->
+            <section class="new-arrivals">
+                <div class="container">
+                    <!-- New arrivals code goes here -->
+                    <div class="row">
+                        new arrivals
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deal of the Week -->
+            <section class="deal-of-the-week">
+                <div class="container">
+                    <!-- Deal of the week code goes here -->
+                    <div class="row">
+                        deal of the week
+                    </div>
+                </div>
+            </section>
+
+            <!-- News -->
+            <section class="news">
+                <div class="container">
+                    <!-- News code goes here -->
+                    <div class="row">
+                        news
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
-    <!-- Promotions -->
-    <div class="promotions">
-        <div class="container">
-            <!-- Promotions code goes here -->
-            promotions
-        </div>
-    </div>
-
-    <!-- Popular Products -->
-    <div class="popular-products">
-        <div class="container">
-            <!-- Popular products code goes here -->
-            popular
-        </div>
-    </div>
-
-    <!-- New Arrivals -->
-    <div class="new-arrivals">
-        <div class="container">
-            <!-- New arrivals code goes here -->
-            new arrivals
-        </div>
-    </div>
-
-    <!-- Deal of the Week -->
-    <div class="deal-of-the-week">
-        <div class="container">
-            <!-- Deal of the week code goes here -->
-            deal of the week
-        </div>
-    </div>
-
-    <!-- News -->
-    <div class="news">
-        <div class="container">
-            <!-- News code goes here -->
-            news
-        </div>
-    </div>
 <?php get_footer(); ?>

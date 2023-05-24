@@ -39,7 +39,8 @@ add_action('init', 'uv_woo_disable_gutenberg_editor');
 function uv_woo_config(): void
 {
     register_nav_menus([
-        'uv_woo_main_menu' => 'Uv Woo Nav Menu'
+        'uv_woo_main_menu' => 'Uv Woo Nav Menu',
+        'uv_woo_footer_menu'=>'Uv Woo Footer Menu'
     ]);
 }
 
