@@ -11,13 +11,13 @@
 
 function uv_woo_enqueue_styles_and_scripts(): void
 {
-    // Enqueue main style
-    wp_enqueue_style('uv_woo_main_style', get_stylesheet_uri(), [], '1.0', 'all');
-    // Enqueue other styles
-    wp_enqueue_style('uv_woo_style', get_template_directory_uri() . '/css/your-style.css', array(), '1.0');
+    // enqueue script
+    wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/inc/bootstrap.min.js', ['jquery'], '5.3.0', true);
 
-    // Enqueue script
-    wp_enqueue_script('uv_woo_script', get_template_directory_uri() . '/js/your-script.js', array('jquery'), '1.0', true);
+    // enqueue style
+    wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/inc/bootstrap.min.css', [], '5.3.0', 'all');
+    wp_enqueue_style('uv-woo-main-style', get_stylesheet_uri(), [], filemtime(get_template_directory().'/style.css'), 'all');
+
 }
 
 add_action('wp_enqueue_scripts', 'uv_woo_enqueue_styles_and_scripts');
