@@ -45,7 +45,6 @@
                 </div>
 
                 <!-- Menu -->
-
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container">
                         <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
@@ -57,9 +56,9 @@
                                 'menu' => 'Uv Woo Nav Menu',
                                 'theme_location' => 'uv_woo_main_menu',
                                 'container'       => false,
-                                'menu_class'      => 'navbar-nav ml-auto',
+                                'menu_class'      => '',
                                 'fallback_cb'     => '__return_false',
-                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'items_wrap' => '<ul id="%1$s" class="navbar-nav me-auto mb-2 mb-md-0 %2$s">%3$s</ul>',
                                 'depth'           => 2,
                                 'walker'          => new Bootstrap_5_Navwalker(),
                             ]); ?>

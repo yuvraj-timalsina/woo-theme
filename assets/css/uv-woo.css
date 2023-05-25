@@ -5,48 +5,51 @@ Author: Yv
 Version: 1.0.0
 */
 
-
 /* rajdhani-regular - latin */
 @font-face {
     font-family: 'Rajdhani';
     font-style: normal;
     font-weight: 400;
-    src: url('assets/fonts/rajdhani/Rajdhani-Regular.woff');
+    src: url('../fonts/rajdhani/Rajdhani-Regular.woff');
 }
+
 /* rajdhani-500 - latin */
 @font-face {
     font-family: 'Rajdhani';
     font-style: normal;
     font-weight: 500;
-    src: url('assets/fonts/rajdhani/Rajdhani-Medium.woff');
+    src: url('../fonts/rajdhani/Rajdhani-Medium.woff');
 }
+
 /* rajdhani-600 - latin */
 @font-face {
     font-family: 'Rajdhani';
     font-style: normal;
     font-weight: 600;
-    src: url('assets/fonts/rajdhani/Rajdhani-SemiBold.woff');
+    src: url('../fonts/rajdhani/Rajdhani-SemiBold.woff');
 }
+
 /* rajdhani-700 - latin */
 @font-face {
     font-family: 'Rajdhani';
     font-style: normal;
     font-weight: 700;
-    src: url('assets/fonts/rajdhani/Rajdhani-Bold.woff');
+    src: url('../fonts/rajdhani/Rajdhani-Bold.woff');
 }
+
 /* seaweed-script-regular - latin */
 @font-face {
     font-family: 'Seaweed Script';
     font-style: normal;
     font-weight: 400;
-    src: url('assets/fonts/seaweed-script/SeaweedScript-Regular.woff');
+    src: url('../fonts/seaweed-script/SeaweedScript-Regular.woff');
 }
 
 a {
     text-decoration: none;
 }
 
-body{
+body {
     font-family: 'Rajdhani', sans-serif;
     font-weight: 400;
 }
@@ -59,14 +62,25 @@ body{
     text-decoration: none;
 }
 
-.menu-item a:hover {
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
     color: #CC0000;
 }
-
-.current-menu-item a {
-    color: #D2335B;
+.navbar-nav .nav-link.active:hover {
+    color: #FFFFFF;
 }
 
+.menu-item a:hover {
+    color: #D2335B;
+    background-color: transparent;
+}
+.navbar-nav .nav-link.active:hover {
+    color: #D2335B;
+}
+.dropdown-item.active, .dropdown-item:active{
+    color: #D2335B;
+    background-color: transparent;
+}
 
 /* Shop */
 .shop-content {
@@ -317,6 +331,6 @@ a.added_to_cart.wc-forward {
 }
 
 /* Footer */
-.footer-menu li{
+.footer-menu li {
     font-size: 12px;
 }
