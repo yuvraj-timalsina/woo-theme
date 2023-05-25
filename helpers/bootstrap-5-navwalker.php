@@ -2,10 +2,9 @@
 /**
  * Custom Navwalker Class for Bootstrap 5
  */
-class Bootstrap_5_Navwalker extends Walker_Nav_menu
-{
-    private $current_item;
-    private $dropdown_menu_alignment_values = [
+class Bootstrap_5_Navwalker extends Walker_Nav_menu {
+    private object $current_item;
+    private array $dropdown_menu_alignment_values = [
         'dropdown-menu-start',
         'dropdown-menu-end',
         'dropdown-menu-sm-start',
@@ -20,8 +19,7 @@ class Bootstrap_5_Navwalker extends Walker_Nav_menu
         'dropdown-menu-xxl-end'
     ];
 
-    function start_lvl(&$output, $depth = 0, $args = null)
-    {
+    function start_lvl(&$output, $depth = 0, $args = null) {
         $dropdown_menu_class[] = '';
         foreach($this->current_item->classes as $class) {
             if(in_array($class, $this->dropdown_menu_alignment_values)) {
@@ -33,8 +31,7 @@ class Bootstrap_5_Navwalker extends Walker_Nav_menu
         $output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr(implode(" ",$dropdown_menu_class)) . " depth_$depth\">\n";
     }
 
-    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
-    {
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
         $this->current_item = $item;
 
         $indent = ($depth) ? str_repeat("\t", $depth) : '';

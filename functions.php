@@ -14,7 +14,8 @@ defined('ABSPATH') || exit;
  */
 function uv_woo_enqueue_styles_and_scripts(): void
 {
-    // Enqueue Bootstrap script
+    // Enqueue Popper Bootstrap script
+//    wp_enqueue_script('popper-script', get_template_directory_uri(). '/inc/popper.js', [], '2.11.7', true);
     wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/inc/bootstrap.min.js', [], '5.3.0', true);
     wp_enqueue_script('uv-woo-script', get_template_directory_uri() . '/assets/js/uv-woo.js', [], '1.0.0', true);
 
