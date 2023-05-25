@@ -92,20 +92,20 @@ Version: 1.0.0
     font-size: 140%;
 }
 
-.woocommerce ul.products li.product .onsale {
+.woocommerce ul.products li.product .onsale, .woocommerce span.onsale {
     top: 15px;
     left: 0;
     right: 0;
     transform: rotate(90deg);
     border-radius: 0;
-    width: 85px;
+    width: 84px;
     padding: 0;
     background-color: #D2335B;
     margin: 0;
     font-weight: bold;
 }
 
-.woocommerce ul.products li.product .onsale:before {
+ .woocommerce span.onsale:before {
     content: "";
     position: absolute;
     top: 0;
@@ -117,7 +117,7 @@ Version: 1.0.0
     border-color: #D2335B transparent transparent transparent;
 }
 
-.woocommerce ul.products li.product .onsale:after {
+.woocommerce span.onsale:after {
     content: "";
     position: absolute;
     bottom: 0;
