@@ -66,7 +66,7 @@ add_action('after_setup_theme', 'uv_woo_config', 0);
  *
  * @param WP_Admin_Bar $wp_admin_bar The WordPress admin bar object.
  */
-function display_current_template_in_admin_bar(WP_Admin_Bar $wp_admin_bar): void
+function uv_woo_display_current_template(WP_Admin_Bar $wp_admin_bar): void
 {
     // Check if the current user has the 'manage_options' capability and it's not the admin area
     if (current_user_can('manage_options') && !is_admin()) {
@@ -83,5 +83,5 @@ function display_current_template_in_admin_bar(WP_Admin_Bar $wp_admin_bar): void
     }
 }
 
-add_action('admin_bar_menu', 'display_current_template_in_admin_bar', 999);
+add_action('admin_bar_menu', 'uv_woo_display_current_template', 999);
 
