@@ -3,7 +3,7 @@
 // Function to open the container and row divs for the WooCommerce shop content
 function uv_woo_open_container_row(): void
 {
-    echo '<div class="shop-content container"><div class="row">';
+    echo '<div class="shop-content container mt-4"><div class="row">';
 }
 
 add_action('woocommerce_before_main_content', 'uv_woo_open_container_row', 5);

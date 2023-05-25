@@ -23,7 +23,124 @@ Version: 1.0.0
     color: #FF0000;
 }
 
-/* Custom CSS for woocommerce */
+
+/* Shop */
+.shop-content {
+    padding: 3rem 0;
+}
+
+.shop-content .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.post-type-archive-product .content-area,
+.product-template-default .content-area,
+.tax-product_cat .content-area {
+    padding: 0;
+}
+
+.woocommerce .woocommerce-breadcrumb a {
+    font-weight: 700;
+}
+
+.woocommerce ul.products.columns-1 li.product:first-child,
+.woocommerce-page ul.products.columns-1 li.product:first-child {
+    margin-top: 20px;
+}
+
+.woocommerce .products ul, .woocommerce ul.products {
+    border-top: 1px solid #eee;
+}
+
+.woocommerce ul.products li.product a img {
+    width: 255px;
+    height: auto;
+    display: block;
+    margin: 0 1em 1em 0;
+    box-shadow: none;
+    float: left;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 25px;
+    font-weight: 700;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: table;
+}
+
+.post-type-archive-product .woocommerce-loop-product__title {
+    margin-bottom: 0.5rem !important;
+}
+
+.woocommerce ul.products li.product .button {
+    margin-top: 0;
+}
+
+.woocommerce ul.products li.product p {
+    color: #000;
+}
+
+.woocommerce ul.products li.product .price {
+    color: #000;
+    font-weight: 600;
+}
+
+.woocommerce ul.products li.product .price ins {
+    font-size: 140%;
+}
+
+.woocommerce ul.products li.product .onsale {
+    top: 15px;
+    left: 0;
+    right: 0;
+    transform: rotate(90deg);
+    border-radius: 0;
+    width: 85px;
+    padding: 0;
+    background-color: #D2335B;
+    margin: 0;
+    font-weight: bold;
+}
+
+.woocommerce ul.products li.product .onsale:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 83px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 24px 22px 0 0;
+    border-color: #D2335B transparent transparent transparent;
+}
+
+.woocommerce ul.products li.product .onsale:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 83px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 22px 24px 0;
+    border-color: transparent transparent #D2335B transparent;
+}
+
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span {
+    color: #000;
+}
+
+.woocommerce nav.woocommerce-pagination ul li a,
+.woocommerce nav.woocommerce-pagination ul li span {
+    padding: 12px;
+}
+
+/* General */
+
 .size-auto,
 .size-full,
 .size-large,
