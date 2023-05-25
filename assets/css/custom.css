@@ -6,6 +6,10 @@
     font-weight: bold;
     text-decoration: none;
 }
-.current-menu-item a{
-    color: red;
+
+.menu-item a:hover {
+    color: #CC0000;
+}
+.current-menu-item a {
+    color: #FF0000;
 }
