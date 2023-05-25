@@ -5,18 +5,16 @@ Author: Yv
 Version: 1.0.0
 */
 
-/* General */
 a {
     text-decoration: none;
 }
 
 /* Nav Menu */
-.menu-item {
-    margin-right: 5px;
-}
-
+.menu-item,
 .menu-item a {
+    margin: 0 5px 0 0;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .menu-item a:hover {
@@ -24,8 +22,9 @@ a {
 }
 
 .current-menu-item a {
-    color: #FF0000;
+    color: #D2335B;
 }
+
 
 /* Shop */
 .shop-content {
@@ -33,7 +32,8 @@ a {
 }
 
 .shop-content .row {
-    margin: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 .post-type-archive-product .content-area,
@@ -46,7 +46,8 @@ a {
     font-weight: 700;
 }
 
-.woocommerce ul.products.columns-1 li.product:first-child {
+.woocommerce ul.products.columns-1 li.product:first-child,
+.woocommerce-page ul.products.columns-1 li.product:first-child {
     margin-top: 20px;
 }
 
@@ -64,7 +65,8 @@ a {
     float: left;
 }
 
-.woocommerce ul.products li.product .woocommerce-loop-product__title {
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.post-type-archive-product .woocommerce-loop-product__title {
     font-size: 25px;
     font-weight: 700;
     color: #000;
@@ -73,25 +75,22 @@ a {
     display: table;
 }
 
-.post-type-archive-product .woocommerce-loop-product__title {
-    margin-bottom: 0.5rem !important;
+.woocommerce ul.products li.product .button,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt {
+    background-color: #D2335B;
+    color: #fff;
 }
 
-.woocommerce ul.products li.product .button {
-    margin-top: 0;
-}
-
-.woocommerce ul.products li.product p,
-.woocommerce ul.products li.product .price {
+.woocommerce ul.products li.product .price ins,
+.woocommerce div.product p.price ins,
+.woocommerce div.product span.price ins,
+.woocommerce-Price-amount {
+    font-size: 25px;
     color: #000;
-}
-
-.woocommerce ul.products li.product .price {
-    font-weight: 600;
-}
-
-.woocommerce ul.products li.product .price ins {
-    font-size: 140%;
+    font-weight: 700;
 }
 
 .woocommerce ul.products li.product .onsale,
@@ -131,6 +130,7 @@ a {
     border-width: 0 22px 24px 0;
     border-color: transparent transparent #D2335B transparent;
 }
+
 .woocommerce nav.woocommerce-pagination ul li a,
 .woocommerce nav.woocommerce-pagination ul li span {
     color: #000;
@@ -138,40 +138,24 @@ a {
 }
 
 /* Single Product */
-.woocommerce #respond input#submit.alt,
-.woocommerce a.button.alt,
-.woocommerce button.button.alt,
-.woocommerce input.button.alt,
-.woocommerce ul.products li.product .button {
-    background-color: #D2335B;
-    color: #fff;
-}
-
-.woocommerce #respond input#submit.alt:hover,
-.woocommerce a.button.alt:hover,
-.woocommerce button.button.alt:hover,
-.woocommerce input.button.alt:hover,
-.woocommerce ul.products li.product .button:hover {
-    background-color: #bd3759;
-}
-
 .product_meta > span {
     display: block;
 }
 
 .woocommerce div.product p.price del,
 .woocommerce div.product span.price del,
-.woocommerce-Price-amount {
+.woocommerce ul.products li.product .price del .woocommerce-Price-amount {
     color: #000;
     font-size: 20px;
     font-weight: 500;
 }
 
-.woocommerce div.product p.price ins,
-.woocommerce div.product span.price ins {
-    font-size: 25px;
-    color: #000;
-    font-weight: 700;
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce ul.products li.product .button:hover {
+    background-color: #bd3759;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
@@ -183,18 +167,16 @@ a {
     margin: 0;
 }
 
+.woocommerce div.product .woocommerce-tabs ul.tabs li::after,
+.woocommerce div.product .woocommerce-tabs ul.tabs li::before {
+    content: none;
+}
+
 .woocommerce #respond input#submit,
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button {
     background-color: #ffeb8a;
-}
-
-.woocommerce #respond input#submit:hover,
-.woocommerce a.button:hover,
-.woocommerce button.button:hover,
-.woocommerce input.button:hover {
-    background-color: #ffe252;
 }
 
 .woocommerce .quantity .qty {
