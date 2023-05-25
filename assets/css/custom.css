@@ -3,6 +3,7 @@
 }
 
 .menu-item a {
+    font-weight: bold;
     text-decoration: none;
 }
 .current-menu-item a{

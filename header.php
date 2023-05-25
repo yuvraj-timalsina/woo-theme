@@ -45,15 +45,26 @@
                 </div>
 
                 <!-- Menu -->
-                <nav class="navbar navbar-expand-lg bg-body-tertiary">
-                    <!-- Menu code goes here -->
-                    <?php wp_nav_menu([
-                        'menu' => 'Uv Woo Nav Menu',
-                        'theme_location' => 'uv_woo_main_menu',
-                        'menu_class' => 'navbar-nav fw-bold',
-                        'container' => 'div',
-                        'container_class' => 'container-fluid'
-                    ]); ?>
+
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="container">
+                        <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <?php wp_nav_menu([
+                                'menu' => 'Uv Woo Nav Menu',
+                                'theme_location' => 'uv_woo_main_menu',
+                                'container'       => false,
+                                'menu_class'      => 'navbar-nav ml-auto',
+                                'fallback_cb'     => '__return_false',
+                                'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+                                'depth'           => 2,
+                                'walker'          => new Bootstrap_5_Navwalker(),
+                            ]); ?>
+                        </div>
+                    </div>
                 </nav>
             </div>
         </div>

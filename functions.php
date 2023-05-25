@@ -36,6 +36,9 @@ function uv_woo_disable_gutenberg_editor(): void
 
 add_action('init', 'uv_woo_disable_gutenberg_editor');
 
+// Include the Bootstrap 5 Navwalker class
+require_once get_template_directory() . '/inc/bootstrap-5-navwalker.php';
+
 function uv_woo_config(): void
 {
     register_nav_menus([
