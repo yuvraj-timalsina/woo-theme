@@ -8,9 +8,7 @@
  *
  * @package Uv Woo
  */
-if (!defined('ABSPATH')) {
-    exit;
-}
+defined('ABSPATH') || exit;
 /**
  * Enqueue styles and scripts for UV Woo theme.
  */
@@ -43,7 +41,7 @@ function uv_woo_disable_gutenberg_editor(): void
 add_action('init', 'uv_woo_disable_gutenberg_editor');
 
 // Include the Bootstrap 5 Navwalker class
-require_once get_template_directory() . '/inc/bootstrap-5-navwalker.php';
+require_once get_template_directory() . '/helpers/bootstrap-5-navwalker.php';
 
 /**
  * Theme configuration for UV Woo.
@@ -75,54 +73,19 @@ function uv_woo_config(): void
     add_theme_support('wc-product-gallery-zoom');
     add_theme_support('wc-product-gallery-slider');
     add_theme_support('wc-product-gallery-lightbox');
-    if (!isset($content_width)) {
-        $content_width = 600;
-    }
+
+    // Check if $content_width is already set; if not, assign the value 600
+    isset($content_width) || $content_width = 600;
+
 }
 
 // Hook the UV Woo theme configuration function to the after_setup_theme action
 add_action('after_setup_theme', 'uv_woo_config', 0);
 
+// Include the Woocommerce functions file
+require_once get_template_directory() . '/woocommerce/functions.php';
 
-/**
- * Display the currently used template file name and additional details in the WordPress admin bar (frontend only).
- *
- * @param WP_Admin_Bar $wp_admin_bar The WordPress admin bar object.
- */
-function uv_woo_display_current_template(WP_Admin_Bar $wp_admin_bar): void
-{
-    // Check if the current user has the 'manage_options' capability and it's not the admin area
-    if (current_user_can('manage_options') && !is_admin()) {
-        global $template;
-        $template_name = basename($template);
-        $template_path = str_replace(ABSPATH, '', $template); // Get the relative path by removing the absolute server path
-
-        // Determine if the template file is located in the themes or plugins directory
-        $template_directory = '';
-        if (str_contains($template_path, 'wp-content/themes/')) {
-            $template_directory = 'themes';
-            $template_path = str_replace('wp-content/themes/', '', $template_path);
-        } elseif (str_contains($template_path, 'wp-content/plugins/')) {
-            $template_directory = 'plugins';
-            $template_path = str_replace('wp-content/plugins/', '', $template_path);
-        }
-
-        $args = [
-            'id' => 'current-template',
-            'title' => 'Current Template: ' . $template_name,
-            'meta' => [
-                'class' => 'current-template',
-                'title' => 'Template Path: ' . $template_directory . '/' . $template_path, // Additional detail: Template directory and path as the title attribute
-                'data' => ['template-directory' => $template_directory] // Additional detail: Template directory information as data attribute
-            ]
-        ];
-
-        // Add the custom menu item to the admin bar
-        $wp_admin_bar->add_node($args);
-    }
-}
-
-// Hook the uv_woo_display_current_template() function to the admin_bar_menu action with a high priority (999)
-add_action('admin_bar_menu', 'uv_woo_display_current_template', 999);
+// Include the template helper file
+require_once get_template_directory() . '/helpers/template-helper.php';
 
 
