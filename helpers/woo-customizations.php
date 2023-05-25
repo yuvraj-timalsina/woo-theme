@@ -1,4 +1,11 @@
 <?php
+/**
+ * WooCommerce Customizations
+ *
+ * This file contains custom modifications for the WooCommerce shop page.
+ * It adds and modifies various elements on the shop page, including opening and closing divs,
+ * removing the default sidebar, and adding custom sidebar elements.
+ */
 function uv_woo_wc_modifications(): void
 {
     // Function to open the container and row divs for the WooCommerce shop content

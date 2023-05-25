@@ -82,13 +82,12 @@ function uv_woo_config(): void
 // Hook the UV Woo theme configuration function to the after_setup_theme action
 add_action('after_setup_theme', 'uv_woo_config', 0);
 
-// Include the Woocommerce customizations file
-require_once get_template_directory() . '/helpers/woo-customizations.php';
+// Check if the 'WooCommerce' class exists and include customizations file if it does
+class_exists('WooCommerce') && require_once get_template_directory() . '/helpers/woo-customizations.php';
 
 // Include the template helper file
 require_once get_template_directory() . '/helpers/template-helper.php';
 
 // Display the excerpt after the shop loop item title in WooCommerce.
 add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
-
 
