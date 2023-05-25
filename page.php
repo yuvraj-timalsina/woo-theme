@@ -14,10 +14,7 @@ get_header();
 ?>
     <div class="content-area">
         <main>
-            <!-- News -->
-            <section class="news">
                 <div class="container">
-                    <!-- News code goes here -->
                     <div class="row">
                         <?php
                         if (have_posts()) :
@@ -35,7 +32,6 @@ get_header();
                         <?php endif; ?>
                     </div>
                 </div>
-            </section>
         </main>
     </div>
 
