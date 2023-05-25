@@ -47,18 +47,18 @@
                 <!-- Menu -->
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
                     <div class="container">
-                        <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <a class="navbar-brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle Navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
-                        <div class="collapse navbar-collapse" id="navbarNav">
+                        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
                             <?php wp_nav_menu([
                                 'menu' => 'Uv Woo Nav Menu',
                                 'theme_location' => 'uv_woo_main_menu',
                                 'container'       => false,
                                 'menu_class'      => '',
                                 'fallback_cb'     => '__return_false',
-                                'items_wrap' => '<ul id="%1$s" class="navbar-nav me-auto mb-2 mb-md-0 %2$s">%3$s</ul>',
+                                'items_wrap' => '<ul id="%1$s" class="navbar-nav mb-2 mb-lg-0 %2$s">%3$s</ul>',
                                 'depth'           => 2,
                                 'walker'          => new Bootstrap_5_Navwalker(),
                             ]); ?>
