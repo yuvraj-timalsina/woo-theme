@@ -12,7 +12,8 @@
 /**
  * Enqueue styles and scripts for UV Woo theme.
  */
-function uv_woo_enqueue_styles_and_scripts(): void {
+function uv_woo_enqueue_styles_and_scripts(): void
+{
     // Enqueue Bootstrap script
     wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/inc/bootstrap.min.js', ['jquery'], '5.3.0', true);
 
@@ -47,7 +48,8 @@ require_once get_template_directory() . '/inc/bootstrap-5-navwalker.php';
  *
  * Registers navigation menus for UV Woo theme.
  */
-function uv_woo_config(): void {
+function uv_woo_config(): void
+{
     // Register menus for UV Woo theme
     register_nav_menus([
         'uv_woo_main_menu' => 'Uv Woo Nav Menu',
@@ -60,26 +62,26 @@ add_action('after_setup_theme', 'uv_woo_config', 0);
 
 
 /**
- * Display the currently used template file name in the WordPress admin bar.
+ * Display the currently used template file name in the WordPress admin bar (frontend only).
  *
  * @param WP_Admin_Bar $wp_admin_bar The WordPress admin bar object.
  */
-function display_current_template_in_admin_bar(WP_Admin_Bar $wp_admin_bar): void {
-    // Check if the current user has the 'manage_options' capability
-    if (current_user_can('manage_options')) {
+function display_current_template_in_admin_bar(WP_Admin_Bar $wp_admin_bar): void
+{
+    // Check if the current user has the 'manage_options' capability and it's not the admin area
+    if (current_user_can('manage_options') && !is_admin()) {
         global $template;
         $template_name = basename($template);
 
-        $args = array(
-            'id'    => 'current-template',
+        $args = [
+            'id' => 'current-template',
             'title' => 'Current Template: ' . $template_name,
-            'meta'  => array(
-                'class' => 'current-template',
-            ),
-        );
+            'meta' => ['class' => 'current-template']];
 
         // Add the custom menu item to the admin bar
         $wp_admin_bar->add_node($args);
     }
 }
+
 add_action('admin_bar_menu', 'display_current_template_in_admin_bar', 999);
+
