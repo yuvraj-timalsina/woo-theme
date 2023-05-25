@@ -5,8 +5,50 @@ Author: Yv
 Version: 1.0.0
 */
 
+
+/* rajdhani-regular - latin */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/rajdhani/Rajdhani-Regular.woff');
+}
+/* rajdhani-500 - latin */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 500;
+    src: url('assets/fonts/rajdhani/Rajdhani-Medium.woff');
+}
+/* rajdhani-600 - latin */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 600;
+    src: url('assets/fonts/rajdhani/Rajdhani-SemiBold.woff');
+}
+/* rajdhani-700 - latin */
+@font-face {
+    font-family: 'Rajdhani';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/fonts/rajdhani/Rajdhani-Bold.woff');
+}
+/* seaweed-script-regular - latin */
+@font-face {
+    font-family: 'Seaweed Script';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/seaweed-script/SeaweedScript-Regular.woff');
+}
+
 a {
     text-decoration: none;
+}
+
+body{
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
 }
 
 /* Nav Menu */
@@ -34,6 +76,12 @@ a {
 .shop-content .row {
     margin-left: 0;
     margin-right: 0;
+}
+
+a.added_to_cart.wc-forward {
+    margin-left: 8px;
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 .post-type-archive-product .content-area,
@@ -209,6 +257,55 @@ a {
     font-weight: bold;
 }
 
+.woocommerce form .form-row input {
+    line-height: inherit;
+    border: 1px solid #d3ced2;
+    padding: 8px;
+}
+
+.woocommerce form .form-row textarea {
+    height: 125px;
+    padding: 8px;
+    border: 1px solid #d3ced2;
+}
+
+/* Order */
+.woocommerce-thankyou-order-received {
+    padding: 1em 2em 1em 0.5em;
+    margin: 0 0 2em;
+    position: relative;
+    background-color: #f7f6f7;
+    color: #515151;
+    border-top: 3px solid #00FF00;
+    list-style: none outside;
+    width: auto;
+    word-wrap: break-word;
+}
+
+.woocommerce-thankyou-order-received::before {
+    font-family: 'dashicons';
+    content: '\f12a';
+    display: inline-block;
+    margin-right: 5px;
+    color: #00FF00;
+}
+
+.woocommerce #respond input#submit,
+.woocommerce a.button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce ul.products li.product .button {
+    text-transform: capitalize;
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce ul.products li.product .button:hover {
+    color: #FFFFFF;
+}
+
 /* General */
 .size-auto,
 .size-full,
@@ -217,4 +314,9 @@ a {
 .size-thumbnail {
     max-width: 100%;
     height: auto;
+}
+
+/* Footer */
+.footer-menu li{
+    font-size: 12px;
 }
