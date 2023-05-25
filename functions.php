@@ -8,7 +8,9 @@
  *
  * @package Uv Woo
  */
-
+if (!defined('ABSPATH')) {
+    exit;
+}
 /**
  * Enqueue styles and scripts for UV Woo theme.
  */
@@ -16,10 +18,11 @@ function uv_woo_enqueue_styles_and_scripts(): void
 {
     // Enqueue Bootstrap script
     wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/inc/bootstrap.min.js', ['jquery'], '5.3.0', true);
+    wp_enqueue_script('uv-woo-script', get_template_directory_uri() . '/assets/js/uv-woo.js', [], '1.0', true);
 
     // Enqueue Bootstrap and custom styles
     wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/inc/bootstrap.min.css', [], '5.3.0', 'all');
-    wp_enqueue_style('uv-woo-custom-style', get_template_directory_uri() . '/assets/css/custom.css', [], '1.0', 'all');
+    wp_enqueue_style('uv-woo-style', get_template_directory_uri() . '/assets/css/uv-woo.css', [], '1.0', 'all');
     wp_enqueue_style('uv-woo-main-style', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'), 'all');
 }
 
@@ -72,7 +75,7 @@ function uv_woo_config(): void
     add_theme_support('wc-product-gallery-zoom');
     add_theme_support('wc-product-gallery-slider');
     add_theme_support('wc-product-gallery-lightbox');
-    if ( ! isset( $content_width ) ) {
+    if (!isset($content_width)) {
         $content_width = 600;
     }
 }
@@ -82,7 +85,7 @@ add_action('after_setup_theme', 'uv_woo_config', 0);
 
 
 /**
- * Display the currently used template file name in the WordPress admin bar (frontend only).
+ * Display the currently used template file name and additional details in the WordPress admin bar (frontend only).
  *
  * @param WP_Admin_Bar $wp_admin_bar The WordPress admin bar object.
  */
@@ -92,16 +95,34 @@ function uv_woo_display_current_template(WP_Admin_Bar $wp_admin_bar): void
     if (current_user_can('manage_options') && !is_admin()) {
         global $template;
         $template_name = basename($template);
+        $template_path = str_replace(ABSPATH, '', $template); // Get the relative path by removing the absolute server path
+
+        // Determine if the template file is located in the themes or plugins directory
+        $template_directory = '';
+        if (str_contains($template_path, 'wp-content/themes/')) {
+            $template_directory = 'themes';
+            $template_path = str_replace('wp-content/themes/', '', $template_path);
+        } elseif (str_contains($template_path, 'wp-content/plugins/')) {
+            $template_directory = 'plugins';
+            $template_path = str_replace('wp-content/plugins/', '', $template_path);
+        }
 
         $args = [
             'id' => 'current-template',
             'title' => 'Current Template: ' . $template_name,
-            'meta' => ['class' => 'current-template']];
+            'meta' => [
+                'class' => 'current-template',
+                'title' => 'Template Path: ' . $template_directory . '/' . $template_path, // Additional detail: Template directory and path as the title attribute
+                'data' => ['template-directory' => $template_directory] // Additional detail: Template directory information as data attribute
+            ]
+        ];
 
         // Add the custom menu item to the admin bar
         $wp_admin_bar->add_node($args);
     }
 }
 
+// Hook the uv_woo_display_current_template() function to the admin_bar_menu action with a high priority (999)
 add_action('admin_bar_menu', 'uv_woo_display_current_template', 999);
+
 

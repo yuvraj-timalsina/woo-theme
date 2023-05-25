@@ -4,6 +4,8 @@ Description: Custom CSS styles for Custom Woo.
 Author: Yv
 Version: 1.0.0
 */
+
+/* Custom CSS for Nav Menu */
 .menu-item {
     margin: 0 5px 0 0;
 }
@@ -21,6 +23,7 @@ Version: 1.0.0
     color: #FF0000;
 }
 
+/* Custom CSS for woocommerce */
 .size-auto,
 .size-full,
 .size-large,
@@ -29,3 +32,4 @@ Version: 1.0.0
     max-width: 100%;
     height: auto;
 }
+
