@@ -26,7 +26,6 @@ function uv_woo_enqueue_styles_and_scripts(): void
 // Hook the UV Woo enqueue styles and scripts function to the wp_enqueue_scripts action
 add_action('wp_enqueue_scripts', 'uv_woo_enqueue_styles_and_scripts');
 
-
 /**
  * Disable Gutenberg Editor
  *
@@ -55,6 +54,27 @@ function uv_woo_config(): void
         'uv_woo_main_menu' => 'Uv Woo Nav Menu',
         'uv_woo_footer_menu' => 'Uv Woo Footer Menu'
     ]);
+
+    // Declare woocommerce support
+    add_theme_support('woocommerce', [
+        'thumbnail_image_width' => 150,
+        'single_image_width' => 300,
+        'product_grid' => [
+            'default_rows' => 3,
+            'min_rows' => 2,
+            'max_rows' => 8,
+            'default_columns' => 4,
+            'min_columns' => 2,
+            'max_columns' => 5,
+        ]
+    ]);
+    // Enable WooCommerce product gallery features
+    add_theme_support('wc-product-gallery-zoom');
+    add_theme_support('wc-product-gallery-slider');
+    add_theme_support('wc-product-gallery-lightbox');
+    if ( ! isset( $content_width ) ) {
+        $content_width = 600;
+    }
 }
 
 // Hook the UV Woo theme configuration function to the after_setup_theme action

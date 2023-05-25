@@ -5,14 +5,16 @@
 class Bootstrap_5_Navwalker extends Walker_Nav_Menu {
 
     // Add Bootstrap 5 classes to submenu items
-    function start_lvl(&$output, $depth = 0, $args = array()) {
+    function start_lvl(&$output, $depth = 0, $args = array()): void
+    {
         $indent = str_repeat("\t", $depth);
         $submenu_class = ($depth > 0) ? ' dropdown-menu dropdown-menu-end' : ' dropdown-menu';
         $output .= "\n$indent<ul class=\"$submenu_class\">\n";
     }
 
     // Add Bootstrap 5 classes to menu item with dropdown
-    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0): void
+    {
         $indent = ($depth) ? str_repeat("\t", $depth) : '';
 
         $li_attributes = '';
