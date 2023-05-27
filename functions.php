@@ -92,3 +92,4 @@ require_once get_template_directory() . '/helpers/template-helper.php';
 // Display the excerpt after the shop loop item title in WooCommerce.
 add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
 
+

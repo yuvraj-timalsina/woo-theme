@@ -340,6 +340,10 @@ a.added_to_cart.wc-forward {
 }
 
 /* Footer */
+.footer-menu ul {
+gap: 5px
+}
+
 .footer-menu li {
     font-size: 12px;
 }
