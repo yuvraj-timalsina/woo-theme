@@ -57,6 +57,7 @@ body {
 /* Nav Menu */
 .menu-item,
 .menu-item a {
+    color: gray;
     margin: 0 5px 0 0;
     font-weight: bold;
     text-decoration: none;
@@ -76,6 +77,7 @@ body {
 .navbar-nav .nav-link.active:hover {
     color: #D2335B;
 }
+
 .dropdown-item.active, .dropdown-item:active{
     color: #D2335B;
     background-color: transparent;
@@ -329,7 +331,13 @@ a.added_to_cart.wc-forward {
     height: auto;
 }
 
+/* Search box */
+.ms-n5 {
+    margin-left: -40px;
+}
+
 /* Footer */
 .footer-menu li {
     font-size: 12px;
 }
+
