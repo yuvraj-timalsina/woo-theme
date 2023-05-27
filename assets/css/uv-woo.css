@@ -54,27 +54,30 @@ body {
     font-weight: 400;
 }
 
+/* Header */
+.nav-header {
+    background-color: aliceblue;
+}
 /* Nav Menu */
 .menu-item,
 .menu-item a {
     color: gray;
-    margin: 0 5px 0 0;
     font-weight: bold;
     text-decoration: none;
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
+.nav .nav-link.active,
+.nav .nav-link.show {
     color: #CC0000;
 }
-.navbar-nav .nav-link.active:hover {
+.nav .nav-link.active:hover {
     color: #FFFFFF;
 }
 .menu-item a:hover {
     color: #D2335B;
     background-color: transparent;
 }
-.navbar-nav .nav-link.active:hover {
+.nav .nav-link.active:hover {
     color: #D2335B;
 }
 
