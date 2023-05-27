@@ -46,8 +46,10 @@
                                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
                                        data-bs-toggle="dropdown"
                                        aria-expanded="false">
-                                        <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
-                                             class="rounded-circle">
+                                        <img src="<?= esc_url(get_avatar_url(wp_get_current_user()->ID)); ?>" alt="mdo"
+                                             width="25" height="25"
+                                             class="rounded-circle"><span
+                                                class="ms-2 fw-bold"><?= wp_get_current_user()->display_name ?></span>
                                     </a>
                                     <ul class="dropdown-menu text-small" style="">
                                         <li><a class="dropdown-item" href="#">Settings</a></li>
@@ -56,8 +58,8 @@
                                             <hr class="dropdown-divider">
                                         </li>
                                         <li><a class="dropdown-item"
-                                               href="<?= esc_url(wp_logout_url(get_permalink(get_option('woocommerce_myaccount_page_id')))); ?>">Sign
-                                                out</a></li>
+                                               href="<?= esc_url(wp_logout_url(get_permalink(get_option('woocommerce_myaccount_page_id')))); ?>">Log
+                                                Out</a></li>
                                     </ul>
                                 </div>
                             <?php else : ?>
