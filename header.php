@@ -87,10 +87,9 @@
                 <!-- Cart -->
                 <ul class="nav float-end mb-3">
                     <li class="nav-item">
-                        <a href="#" class="cart-link position-relative">
-                            <span class="cart-text position-absolute fw-bold pb-md-4">(2 items)</span>
+                        <a href="<?= wc_get_cart_url(); ?>" class="cart-link position-relative">
                             <span class="dashicons dashicons-cart cart-icon"></span>
-                            <span class="cart-counter position-absolute fw-bold">10</span>
+                            <span class="cart-counter position-absolute fw-bold"><?= wc()->cart->get_cart_contents_count(); ?></span>
                         </a>
                     </li>
                 </ul>

@@ -64,6 +64,18 @@ function uv_woo_wc_modifications(): void
 
         add_action('woocommerce_after_main_content', 'uv_woo_close_shop_tags', 4);
     }
+
+    // Show cart contents / total Ajax
+    function uv_woo_add_to_cart_fragment( $fragments ) {
+        global $woocommerce;
+        ob_start();
+        ?>
+        <span class="cart-counter position-absolute fw-bold"><?= wc()->cart->get_cart_contents_count(); ?></span>
+        <?php
+        $fragments['span.cart-counter'] = ob_get_clean();
+        return $fragments;
+    }
+    add_filter( 'woocommerce_add_to_cart_fragments', 'uv_woo_add_to_cart_fragment' );
 }
 
 add_action('wp', 'uv_woo_wc_modifications');
