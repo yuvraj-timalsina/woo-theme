@@ -163,14 +163,13 @@ a.added_to_cart.wc-forward {
     font-weight: 700;
 }
 
-.woocommerce ul.products li.product .onsale,
-.woocommerce span.onsale {
-    top: 15px;
+.woocommerce ul.products li.product .onsale, .woocommerce span.onsale {
+    top: 0px;
     left: 0;
     right: 0;
     transform: rotate(90deg);
     border-radius: 0;
-    width: 84px;
+    width: 51px;
     padding: 0;
     background-color: #D2335B;
     margin: 0;
@@ -180,8 +179,8 @@ a.added_to_cart.wc-forward {
 .woocommerce span.onsale:before {
     content: "";
     position: absolute;
-    top: 0;
-    left: 83px;
+    top: 0px;
+    left: 50px;
     width: 0;
     height: 0;
     border-style: solid;
@@ -193,7 +192,7 @@ a.added_to_cart.wc-forward {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 83px;
+    left: 50px;
     width: 0;
     height: 0;
     border-style: solid;
