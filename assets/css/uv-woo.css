@@ -160,11 +160,12 @@ a.added_to_cart.wc-forward {
 .woocommerce-Price-amount {
     font-size: 25px;
     color: #000;
-    font-weight: 700;
+    font-weight: bolder;
+    text-decoration: none;
 }
 
 .woocommerce ul.products li.product .onsale, .woocommerce span.onsale {
-    top: 0px;
+    top: 0;
     left: 0;
     right: 0;
     transform: rotate(90deg);
@@ -179,7 +180,7 @@ a.added_to_cart.wc-forward {
 .woocommerce span.onsale:before {
     content: "";
     position: absolute;
-    top: 0px;
+    top: 0;
     left: 50px;
     width: 0;
     height: 0;
