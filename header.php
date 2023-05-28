@@ -52,8 +52,9 @@
                                                 class="ms-2 fw-bold"><?= wp_get_current_user()->display_name ?></span>
                                     </a>
                                     <ul class="dropdown-menu text-small" style="">
-                                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                                        <li><a class="dropdown-item" href="<?= get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php _e('My Account','uv-woo'); ?></a></li>
                                         <li><a class="dropdown-item" href="#">Profile</a></li>
+                                        <li><a class="dropdown-item" href="#">Orders</a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
@@ -78,12 +79,16 @@
         <header class="p-3 border-bottom nav-header">
             <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
                 <!-- Logo -->
+                <?php if (has_custom_logo()) : ?>
                 <a href="<?= get_home_url('/'); ?>"
                    class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none fw-bold">
-                    <img src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg" alt="Logo" width="30"
-                         height="24" class="d-inline-block align-text-top">
-                    <span class="ms-2">Uv Woo</span>
+                    <?php the_custom_logo(); ?>
                 </a>
+                <?php else: ?>
+                <a href="<?= get_home_url('/'); ?>" class="site-title fw-bold"><?php bloginfo('title'); ?></a>
+                <span><?php bloginfo('description'); ?></span>
+
+                <?php endif; ?>
 
                 <?php wp_nav_menu([
                     'menu' => 'Uv Woo Nav Menu',
