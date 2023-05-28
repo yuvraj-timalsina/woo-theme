@@ -52,9 +52,9 @@
                                                 class="ms-2 fw-bold"><?= wp_get_current_user()->display_name ?></span>
                                     </a>
                                     <ul class="dropdown-menu text-small" style="">
-                                        <li><a class="dropdown-item" href="<?= get_permalink( get_option('woocommerce_myaccount_page_id') ); ?>"><?php _e('My Account','uv-woo'); ?></a></li>
-                                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                                        <li><a class="dropdown-item" href="#">Orders</a></li>
+                                        <li><a class="dropdown-item" href="<?= wc_get_page_permalink( 'myaccount' ) ?>"><?php _e('Dashboard','uv-woo'); ?></a></li>
+                                        <li><a class="dropdown-item" href="<?= wc_get_account_endpoint_url( 'edit-account' ) ?>"><?php _e('Profile','uv-woo'); ?></a></li>
+                                        <li><a class="dropdown-item" href="<?= wc_get_account_endpoint_url( 'orders' ) ?>"><?php _e('Orders','uv-woo'); ?></a></li>
                                         <li>
                                             <hr class="dropdown-divider">
                                         </li>
