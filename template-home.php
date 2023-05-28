@@ -14,9 +14,26 @@ get_header();
     <main>
         <!-- Slider -->
         <section class="slider">
-            <div class="container">
-                <!-- Slider code goes here -->
-                <div class="row">slider</div>
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <img src="slide1.jpg" />
+                    </li>
+                    <li>
+                        <img src="slide2.jpg" />
+                    </li>
+                    <li>
+                        <img src="slide3.jpg" />
+                    </li>
+                    <li>
+                        <img src="slide4.jpg" />
+                    </li>
+                </ul>
+            </div>
+            <div class="custom-navigation">
+                <a href="#" class="flex-prev">Prev</a>
+                <div class="custom-controls-container"></div>
+                <a href="#" class="flex-next">Next</a>
             </div>
         </section>
 

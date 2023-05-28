@@ -14,14 +14,20 @@ defined('ABSPATH') || exit;
  */
 function uv_woo_enqueue_styles_and_scripts(): void
 {
-    // Enqueue Popper Bootstrap script
-    wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/inc/bootstrap.min.js', [], '5.3.0', true);
-    wp_enqueue_script('uv-woo-script', get_template_directory_uri() . '/assets/js/uv-woo.js', [], '1.0.0', true);
+    // Bootstrap script and css
+    wp_enqueue_script('bootstrap-script', get_template_directory_uri() . '/inc/bootstrap/bootstrap.min.js', [], '5.3.0', true);
+    wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/inc/bootstrap/bootstrap.min.css', [], '5.3.0', 'all');
 
-    // Enqueue Bootstrap, dashicons and custom styles
-    wp_enqueue_style('dashicons');
-    wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/inc/bootstrap.min.css', [], '5.3.0', 'all');
+    // Flexslider script and css
+    wp_enqueue_script('flexslider-script', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', [], '2.7.2', true);
+    wp_enqueue_style('flexslider-style', get_template_directory_uri() . '/inc/flexslider/flexslider.css', ['jquery'], '2.7.2', 'all');
+
+    // Uv Woo script and css
+    wp_enqueue_script('uv-woo-script', get_template_directory_uri() . '/assets/js/uv-woo.js', [], '1.0.0', true);
     wp_enqueue_style('uv-woo-style', get_template_directory_uri() . '/assets/css/uv-woo.css', [], '1.0.0', 'all');
+
+    // Enqueue dashicons and main stylesheet
+    wp_enqueue_style('dashicons');
     wp_enqueue_style('uv-woo-main-style', get_stylesheet_uri(), [], filemtime(get_template_directory() . '/style.css'), 'all');
 }
 
@@ -83,9 +89,12 @@ function uv_woo_config(): void
         [
             'height' => 85,
             'width' => 165,
-            'flex-height'=>true,
-            'flex-width'=>true
+            'flex-height' => true,
+            'flex-width' => true
         ]);
+
+    // Define image size for slider
+    add_image_size('uv-woo-slider', 1920, 800, ['center', 'center']);
 
     // Check if $content_width is already set; if not, assign the value 600
     isset($content_width) || $content_width = 600;
@@ -101,7 +110,6 @@ class_exists('WooCommerce') && require_once get_template_directory() . '/helpers
 // Include the template helper file
 require_once get_template_directory() . '/helpers/template-helper.php';
 
-// Display the excerpt after the shop loop item title in WooCommerce.
-add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
+
 
 
