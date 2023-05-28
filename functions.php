@@ -19,8 +19,8 @@ function uv_woo_enqueue_styles_and_scripts(): void
     wp_enqueue_style('bootstrap-style', get_template_directory_uri() . '/inc/bootstrap/bootstrap.min.css', [], '5.3.0', 'all');
 
     // Flexslider script and css
-    wp_enqueue_script('flexslider-script', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', [], '2.7.2', true);
-    wp_enqueue_style('flexslider-style', get_template_directory_uri() . '/inc/flexslider/flexslider.css', ['jquery'], '2.7.2', 'all');
+    wp_enqueue_script('flexslider-script', get_template_directory_uri() . '/inc/flexslider/jquery.flexslider-min.js', ['jquery'], '2.7.2', true);
+    wp_enqueue_style('flexslider-style', get_template_directory_uri() . '/inc/flexslider/flexslider.css', [], '2.7.2', 'all');
 
     // Uv Woo script and css
     wp_enqueue_script('uv-woo-script', get_template_directory_uri() . '/assets/js/uv-woo.js', [], '1.0.0', true);

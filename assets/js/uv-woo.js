@@ -10,10 +10,8 @@
 })(jQuery);
 
 // Flexslider script
-$(document).ready(function() {
-    $('.flexslider').flexslider({
-        animation: "slide",
-        controlsContainer: $(".custom-controls-container"),
-        customDirectionNav: $(".custom-navigation a")
+jQuery(window).load(function() {
+    jQuery('.flexslider').flexslider({
+        animation: "slide"
     });
 });

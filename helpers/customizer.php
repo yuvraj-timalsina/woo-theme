@@ -48,7 +48,7 @@ function uv_woo_customizer($wp_customize): void
     // Slider One
     // Field 1 - Slider Page Number 1
     $wp_customize->add_setting(
-        'settings_slider_page_one', [
+        'settings_slider_page_1', [
             'type' => 'theme_mod',
             'default' => '',
             'sanitize_callback' => 'absint'
@@ -56,7 +56,7 @@ function uv_woo_customizer($wp_customize): void
     );
 
     $wp_customize->add_control(
-        'settings_slider_page_one', [
+        'settings_slider_page_1', [
             'label' => 'Page One',
             'description' => 'Set Slider Page One',
             'section' => 'section_slider',
@@ -66,7 +66,7 @@ function uv_woo_customizer($wp_customize): void
 
     // Field 2 - Slider Button Text For Page 1
     $wp_customize->add_setting(
-        'settings_slider_button_text_one', [
+        'settings_slider_button_text_1', [
             'type' => 'theme_mod',
             'default' => '',
             'sanitize_callback' => 'sanitize_text_field'
@@ -74,7 +74,7 @@ function uv_woo_customizer($wp_customize): void
     );
 
     $wp_customize->add_control(
-        'settings_slider_button_text_one', [
+        'settings_slider_button_text_1', [
             'label' => 'Button Text',
             'description' => 'Button Text for Page One',
             'section' => 'section_slider',
@@ -84,7 +84,7 @@ function uv_woo_customizer($wp_customize): void
 
     // Field 3 - Slider Button URL For Page 1
     $wp_customize->add_setting(
-        'settings_slider_button_url_one', [
+        'settings_slider_button_url_1', [
             'type' => 'theme_mod',
             'default' => '',
             'sanitize_callback' => 'esc_url_raw'
@@ -92,7 +92,7 @@ function uv_woo_customizer($wp_customize): void
     );
 
     $wp_customize->add_control(
-        'settings_slider_button_url_one', [
+        'settings_slider_button_url_1', [
             'label' => 'Button URL',
             'description' => 'Button URL for Page One',
             'section' => 'section_slider',
@@ -103,7 +103,7 @@ function uv_woo_customizer($wp_customize): void
     // Slider Two
     // Field 1 - Slider Page Number 2
     $wp_customize->add_setting(
-        'settings_slider_page_two', [
+        'settings_slider_page_2', [
             'type' => 'theme_mod',
             'default' => '',
             'sanitize_callback' => 'absint'
@@ -111,7 +111,7 @@ function uv_woo_customizer($wp_customize): void
     );
 
     $wp_customize->add_control(
-        'settings_slider_page_two', [
+        'settings_slider_page_2', [
             'label' => 'Page Two',
             'description' => 'Set Slider Page Two',
             'section' => 'section_slider',
@@ -121,7 +121,7 @@ function uv_woo_customizer($wp_customize): void
 
     // Field 2 - Slider Button Text For Page 2
     $wp_customize->add_setting(
-        'settings_slider_button_text_two', [
+        'settings_slider_button_text_2', [
             'type' => 'theme_mod',
             'default' => '',
             'sanitize_callback' => 'sanitize_text_field'
@@ -129,7 +129,7 @@ function uv_woo_customizer($wp_customize): void
     );
 
     $wp_customize->add_control(
-        'settings_slider_button_text_two', [
+        'settings_slider_button_text_2', [
             'label' => 'Button Text',
             'description' => 'Button Text for Page Two',
             'section' => 'section_slider',
@@ -139,7 +139,7 @@ function uv_woo_customizer($wp_customize): void
 
     // Field 3 - Slider Button URL For Page 1
     $wp_customize->add_setting(
-        'settings_slider_button_url_two', [
+        'settings_slider_button_url_2', [
             'type' => 'theme_mod',
             'default' => '',
             'sanitize_callback' => 'esc_url_raw'
@@ -147,7 +147,7 @@ function uv_woo_customizer($wp_customize): void
     );
 
     $wp_customize->add_control(
-        'settings_slider_button_url_two', [
+        'settings_slider_button_url_2', [
             'label' => 'Button URL',
             'description' => 'Button URL for Page Two',
             'section' => 'section_slider',
@@ -158,7 +158,7 @@ function uv_woo_customizer($wp_customize): void
     // Slider Three
     // Field 1 - Slider Page Number 3
     $wp_customize->add_setting(
-        'settings_slider_page_three', [
+        'settings_slider_page_3', [
             'type' => 'theme_mod',
             'default' => '',
             'sanitize_callback' => 'absint'
@@ -166,7 +166,7 @@ function uv_woo_customizer($wp_customize): void
     );
 
     $wp_customize->add_control(
-        'settings_slider_page_three', [
+        'settings_slider_page_3', [
             'label' => 'Page Three',
             'description' => 'Set Slider Page Three',
             'section' => 'section_slider',
@@ -176,7 +176,7 @@ function uv_woo_customizer($wp_customize): void
 
     // Field 2 - Slider Button Text for Page 3
     $wp_customize->add_setting(
-        'settings_slider_button_text_three', [
+        'settings_slider_button_text_3', [
             'type' => 'theme_mod',
             'default' => '',
             'sanitize_callback' => 'sanitize_text_field'
@@ -184,7 +184,7 @@ function uv_woo_customizer($wp_customize): void
     );
 
     $wp_customize->add_control(
-        'settings_slider_button_text_three', [
+        'settings_slider_button_text_3', [
             'label' => 'Button Text',
             'description' => 'Button Text for Page Three',
             'section' => 'section_slider',
@@ -194,7 +194,7 @@ function uv_woo_customizer($wp_customize): void
 
     // Field 3 - Slider Button URL for Page 3
     $wp_customize->add_setting(
-        'settings_slider_button_url_three', [
+        'settings_slider_button_url_3', [
             'type' => 'theme_mod',
             'default' => '',
             'sanitize_callback' => 'esc_url_raw'
@@ -202,7 +202,7 @@ function uv_woo_customizer($wp_customize): void
     );
 
     $wp_customize->add_control(
-        'settings_slider_button_url_three', [
+        'settings_slider_button_url_3', [
             'label' => 'Button URL',
             'description' => 'Button URL for Page Three',
             'section' => 'section_slider',

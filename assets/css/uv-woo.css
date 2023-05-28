@@ -363,3 +363,110 @@ a.added_to_cart.wc-forward {
     bottom: 12px;
     left: 16px;
 }
+
+
+/* Flex Slider */
+.flexslider{
+    border: 0 !important;
+}
+
+.flex-control-nav {
+    bottom: 10px !important;
+}
+
+.slider-details-container {
+    color: #FFF;
+    top: 50%;
+    transform: translateY(-50%);
+    position: absolute;
+    width: 800px;
+}
+
+.slider-details-container h1{
+    font-family: 'Seaweed Script';
+    font-size: 3.7rem;
+}
+
+.slider-details-container .subtitle{
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.slider-details-container .slider-title{
+    color: #FFF;
+    font-weight: 700;
+}
+
+.slider-details-container a{
+    background-color: #D2335B;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    padding: 0.8em;
+    display: inline-block;
+    font-size: 1.2em;
+}
+
+.slider-details-container a:hover{
+    color: #fff;
+}
+
+.flexslider .slides {
+    padding: 0 !important;
+}
+
+.flex-control-paging li a {
+    background: rgba(189, 189, 189, 0.5) !important;
+    height: 10px !important;
+    width: 15px !important;
+}
+
+.flex-control-paging li a.flex-active {
+    background: #D2335B !important;
+    width: 25px !important;
+}
+
+.flex-control-nav li {
+    margin: 0 2px !important;
+}
+
+.flex-direction-nav a {
+    height: 52px;
+}
+@media all and (max-width: 767px) {
+
+    .slider-details-container{
+        margin: 0 25px;
+        max-width: 400px;
+    }
+
+    .slider-title h3 {
+        font-size: 2em;
+    }
+
+    .slider-details-container .subtitle {
+        font-size: 1em;
+    }
+
+    .slider-details-container a {
+        padding: 0.5em;
+    }
+
+}
+
+@media all and (max-width: 575px)  {
+    .slider-details-container{
+        max-width: 300px;
+    }
+
+    .slider-details-container a {
+        padding: 0.7em;
+        font-size: 1em;
+    }
+
+    .flexslider img{
+        height: 500px !important;
+        object-fit: cover;
+        object-position: center;
+    }
+}
