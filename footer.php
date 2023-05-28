@@ -21,7 +21,7 @@
     </section>
     <section class="copyright">
         <div class="container">
-            <div class="row align-items-center fw-bold text-secondary">
+            <div class="row align-items-center fw-medium text-secondary">
                 <div class="copyright-text col-6">
                     &copy; Copyright - <?= date('Y'); ?> |
                     <?= get_theme_mod('settings_copyright', 'All Rights Reserved!') ?>

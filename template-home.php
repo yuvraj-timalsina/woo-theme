@@ -36,6 +36,17 @@ get_header();
                                 ?>
                                 <li>
                                     <?php the_post_thumbnail('uv-woo-slider', ['class'=>'img-fluid']); ?>
+                                    <div class="container">
+                                        <div class="slider-details-container">
+                                            <div class="slider-title">
+                                                <h1><?php the_title(); ?></h1>
+                                            </div>
+                                            <div class="slider-description">
+                                                <div class="subtitle"><?php the_content(); ?></div>
+                                                <a href="" class="link"></a>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </li>
                             <?php endwhile;
                             wp_reset_postdata(); endif; ?>

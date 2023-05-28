@@ -63,7 +63,8 @@ body {
 .menu-item,
 .menu-item a {
     color: gray;
-    font-weight: bold;
+    font-size: 20px;
+    font-weight: 500;
     text-decoration: none;
 }
 
@@ -430,9 +431,6 @@ a.added_to_cart.wc-forward {
     margin: 0 2px !important;
 }
 
-.flex-direction-nav a {
-    height: 52px;
-}
 @media all and (max-width: 767px) {
 
     .slider-details-container{
