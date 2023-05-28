@@ -22,7 +22,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-    <div class="sticky-top">
+        <div class="sticky-top">
         <!-- Nav -->
         <nav class="py-2 bg-body-tertiary border-bottom">
             <div class="container d-flex flex-wrap gap-3 align-items-center justify-content-center justify-content-lg-between justify-content-md-center">

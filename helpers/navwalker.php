@@ -1,6 +1,8 @@
 <?php
 /**
- * Custom Navwalker Class for Bootstrap 5
+ * Custom Navwalker Class for Uv Woo
+ *
+ * @package Uv Woo
  */
 class Bootstrap_5_Navwalker extends Walker_Nav_menu {
     private object $current_item;

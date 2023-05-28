@@ -21,20 +21,23 @@
     </section>
     <section class="copyright">
         <div class="container">
-            <div class="row">
-                <div class="copyright-text col-12 col-md-6">
-                    Copyright
+            <div class="row align-items-center fw-bold text-secondary">
+                <div class="copyright-text col-6">
+                    &copy; Copyright - <?= date('Y'); ?> |
+                    <?= get_theme_mod('settings_copyright', 'All Rights Reserved!') ?>
                 </div>
-                <nav class="footer-menu navbar navbar-expand-lg col-12 col-md-6 text-left text md-right">
-                    <?php wp_nav_menu([
-                        'menu' => 'Uv Woo Footer Menu',
-                        'theme_location' => 'uv_woo_footer_menu',
-                        'menu_class' => 'navbar-nav',
-                        'container' => 'div',
-                        'container_class' => 'container-fluid'
-                    ]);
-                    ?>
-                </nav>
+              <div class="useful-links col-6">
+                  <nav class="footer-menu navbar navbar-expand-lg">
+                      <?php wp_nav_menu([
+                          'menu' => 'Uv Woo Footer Menu',
+                          'theme_location' => 'uv_woo_footer_menu',
+                          'menu_class' => 'navbar-nav',
+                          'container' => 'div',
+                          'container_class' => 'container-fluid'
+                      ]);
+                      ?>
+                  </nav>
+              </div>
             </div>
         </div>
     </section>
