@@ -32,7 +32,9 @@
                     <li class="nav-item"><a href="#" class="nav-link link-dark px-2">Features</a></li>
                 </ul>
                 <!-- Search -->
-                <?php get_search_form(); ?>
+               <div class="w-50 w-lg-25">
+                   <?php get_search_form(); ?>
+               </div>
                 <?php if (class_exists('WooCommerce')) : ?>
                     <!-- Account -->
                     <?php if (is_user_logged_in()) : ?>
