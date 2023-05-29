@@ -1,6 +1,6 @@
 /*
 Theme Name: Uv Woo
-Description: Custom CSS styles for Custom Woo.
+Description: Custom CSS styles for Uv Woo.
 Author: Yv
 Version: 1.0.0
 */
@@ -37,12 +37,12 @@ Version: 1.0.0
     src: url('../fonts/rajdhani/Rajdhani-Bold.woff');
 }
 
-/* seaweed-script-regular - latin */
+/* permanent-marker-regular */
 @font-face {
-    font-family: 'Seaweed Script';
+    font-family: 'Permanent Marker';
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/seaweed-script/SeaweedScript-Regular.woff');
+    src: url('../fonts/permanent-marker/PermanentMarker-Regular.woff');
 }
 
 a {
@@ -50,7 +50,7 @@ a {
 }
 
 body {
-    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Rajdhani';
     font-weight: 400;
 }
 
@@ -384,12 +384,15 @@ a.added_to_cart.wc-forward {
 }
 
 .slider-details-container h1{
-    font-family: 'Seaweed Script';
+    font-family: 'Permanent Marker';
     font-size: 3.7rem;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #D2335B;
 }
 
 .slider-details-container .subtitle{
-    font-size: 1.3em;
+    font-size: 1.5em;
+    font-weight: 500;
     margin-bottom: 15px;
 }
 
@@ -400,16 +403,20 @@ a.added_to_cart.wc-forward {
 
 .slider-details-container a{
     background-color: #D2335B;
-    color: #fff;
+    color: #FFFFFF;
+    border: 1px solid #D2335B;
     border-radius: 5px;
     text-transform: uppercase;
-    padding: 0.8em;
+    padding: 0.75em;
     display: inline-block;
     font-size: 1.2em;
+    font-weight: bold;
 }
 
 .slider-details-container a:hover{
-    color: #fff;
+    color: #D2335B;
+    background-color: transparent;
+    border: 1px solid #D2335B;
 }
 
 .flexslider .slides {

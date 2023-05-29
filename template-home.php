@@ -29,7 +29,7 @@ get_header();
                             'posts_per_page' => 3
                         ];
                         $slider_loop = new WP_Query($args);
-
+$j=1;
                         if ($slider_loop->have_posts()):
                             while ($slider_loop->have_posts()):
                                 $slider_loop->the_post();
@@ -43,12 +43,14 @@ get_header();
                                             </div>
                                             <div class="slider-description">
                                                 <div class="subtitle"><?php the_content(); ?></div>
-                                                <a href="" class="link"></a>
+                                                <a href="<?= $slider_button_url[$j]; ?>" class="link"><?= $slider_button_text[$j] ?></a>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
-                            <?php endwhile;
+                            <?php
+                            $j++;
+                            endwhile;
                             wp_reset_postdata(); endif; ?>
                     </ul>
                 </div>

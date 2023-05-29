@@ -1,3 +1,9 @@
+/*
+Theme Name: Uv Woo
+Description: Custom Js scripts for Uv Woo.
+Author: Yv
+Version: 1.0.0
+*/
 // Add hover and click behavior for Bootstrap dropdowns
 (function ($) {
     $(document).ready(function () {
