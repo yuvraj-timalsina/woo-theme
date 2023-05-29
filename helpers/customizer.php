@@ -215,7 +215,7 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_section(
 		'section_home_page', [
-			'title'       => 'Home Page Products Settings',
+			'title'       => 'Home Page Products',
 			'description' => 'Home Page Products Section',
 		]
 	);
@@ -322,26 +322,40 @@ function uv_woo_customizer( $wp_customize ): void {
 		]
 	);
 
-// Deal of the Week
+	// Deal of the Week
 	$wp_customize->add_setting(
-		'settings_deal',
-		array(
+		'settings_deal_title', [
 			'type'              => 'theme_mod',
 			'default'           => '',
-			'sanitize_callback' => 'absint',
-		)
+			'sanitize_callback' => 'sanitize_text_field'
+		]
 	);
 
 	$wp_customize->add_control(
-		'settings_deal',
-		array(
+		'settings_deal_title', [
+			'label'       => 'Deal of The Week - Title',
+			'description' => 'Title For Deal Of The Week Section',
+			'section'     => 'section_home_page',
+			'type'        => 'text'
+		]
+	);
+
+	$wp_customize->add_setting(
+		'settings_deal',[
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'absint',
+		]
+	);
+
+	$wp_customize->add_control(
+		'settings_deal',[
 			'label'       => 'Deal of the Week (Product ID)',
 			'description' => 'Product ID to Display',
 			'section'     => 'section_home_page',
 			'type'        => 'select',
 			'choices'     => uv_woo_get_featured_products(),
-		)
-	);
+		]);
 
 	// Deal of the Week Checkbox
 	$wp_customize->add_setting(
@@ -372,7 +386,7 @@ function uv_woo_sanitize_checkbox( $checked ): bool {
 function uv_woo_get_featured_products(): array {
 	$featured_product_ids = wc_get_featured_product_ids();
 
-	$choices = array();
+	$choices = [];
 
 	foreach ( $featured_product_ids as $product_id ) {
 		$stock_status  = get_post_meta( $product_id, '_stock_status', true );

@@ -69,7 +69,9 @@ get_header();
                 <!-- Popular Products -->
                 <section class="popular-products">
                     <div class="container">
-                        <h2><?= get_theme_mod( 'settings_popular_title', 'Popular Products' ); ?></h2>
+                        <div class="section-title">
+                            <h2><?= get_theme_mod( 'settings_popular_title', 'Popular Products' ); ?></h2>
+                        </div>
 						<?= do_shortcode( '[products limit=" ' . $popular_limit . ' " columns="" ' . $popular_col . ' "" orderby="popularity"]' ); ?>
                     </div>
                 </section>
@@ -77,7 +79,9 @@ get_header();
                 <!-- New Arrivals -->
                 <section class="new-arrivals">
                     <div class="container">
-                        <h2><?= get_theme_mod( 'settings_new_arrivals_title', 'New Arrivals' ); ?></h2>
+                        <div class="section-title">
+                            <h2><?= get_theme_mod( 'settings_new_arrivals_title', 'New Arrivals' ); ?></h2>
+                        </div>
 						<?= do_shortcode( '[products limit=" ' . $new_arrivals_limit . ' " columns="" ' . $new_arrivals_col . ' "" orderby="date"]' ); ?>
                     </div>
                 </section>
@@ -95,7 +99,9 @@ get_header();
                     <!-- Deal of the Week -->
                     <section class="deal-of-the-week">
                         <div class="container">
-                            <h2>Deal of the Week</h2>
+                            <div class="section-title">
+                                <h2><?= get_theme_mod( 'settings_deal_title', 'New Arrivals' ); ?></h2>
+                            </div>
                             <div class="row d-flex align-items-center justify-content-between">
                                 <div class="deal-img col-12 col-md-6 text-center">
 									<?= get_the_post_thumbnail( $deal, 'large', [ 'class' => 'img-fluid' ] ); ?>

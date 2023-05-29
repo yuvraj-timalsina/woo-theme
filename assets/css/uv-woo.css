@@ -62,6 +62,10 @@ body {
     font-family: 'Rajdhani';
     font-weight: 400;
 }
+.content-area{
+    min-height: 500px;
+    padding: 3rem 0;
+}
 
 /* Header */
 .nav-header {
@@ -430,7 +434,7 @@ a.added_to_cart.wc-forward {
 .slider-details-container a:hover{
     color: #D2335B;
     background-color: transparent;
-    border: 1px solid #D2335B;
+    border: 1px solid var(--uv-woo-primary);
 }
 
 .flexslider .slides {
@@ -444,7 +448,7 @@ a.added_to_cart.wc-forward {
 }
 
 .flex-control-paging li a.flex-active {
-    background: #D2335B !important;
+    background: var(--uv-woo-primary) !important;
     width: 25px !important;
 }
 
@@ -452,7 +456,162 @@ a.added_to_cart.wc-forward {
     margin: 0 2px !important;
 }
 
+
+/* Frontend Product Lists */
+.home main .section-title{
+    margin-bottom: 20px;
+}
+
+.home main .section-title h2{
+    font-size: 2.5rem;
+    display: inline-block;
+    background: #fff;
+    padding: 0 20px 0 0;
+}
+
+.home section.lab-blog{
+    padding: 40px 0;
+}
+
+.home .woocommerce ul.products {
+    border-top: none;
+}
+
+.home .woocommerce ul.products li.product .woocommerce-loop-product__title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: #868686;
+    margin: 0;
+    padding: 0;
+    display: table;
+}
+
+.home .popular-products .woocommerce ul.products li.product .button,
+.home .new-arrivals .woocommerce ul.products li.product .button {
+    background-color: transparent;
+    color: #d83a65;
+    padding: 0;
+    margin: 0;
+    transition: 0.5s;
+}
+
+.home .popular-products .woocommerce ul.products li.product .button:hover,
+.home .new-arrivals .woocommerce ul.products li.product .button:hover {
+    color: #666;
+}
+
+.home .woocommerce ul.products li.product .button {
+    margin-top: 0;
+}
+
+.deal-of-the-week {
+    background: #f7f7f7;
+    padding: 60px 0;
+}
+
+.deal-of-the-week .row{
+    padding: 30px 0;
+}
+
+.deal-of-the-week .discount{
+    background: #ff6891;
+    color: #fff;
+    padding: 0.5rem;
+    display: inline-block;
+    margin: 20px 0;
+    position: relative;
+    font-weight: 600;
+}
+
+.deal-of-the-week .discount:before{
+    content: '';
+    position: absolute;
+    top: 6%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    border: 1px dashed #ffc8d8;
+}
+
+.deal-of-the-week .discount:after{
+    content: '';
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    border: 1px dashed #ffc8d8;
+}
+
+.deal-of-the-week .section-title{
+    margin: 0 !important;
+}
+
+.deal-of-the-week h2{
+    background: #f8f8f8 !important;
+}
+
+.deal-of-the-week h3{
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+.deal-of-the-week h3 a{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #000;
+    transition: 0.5s;
+}
+
+.deal-of-the-week h3 a:hover{
+    color: #777;
+}
+
+.deal-of-the-week p{
+    color: #aeaeae;
+    font-size: 1.2rem;
+}
+
+.deal-of-the-week .prices .regular{
+    font-size: 1.4rem;
+    font-weight: 600;
+    opacity: 0.4;
+    text-decoration: line-through;
+}
+
+.deal-of-the-week .prices .sale{
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.deal-of-the-week a.add-to-cart{
+    background-color: #D2335B;
+    color: #fff;
+    text-decoration: none;
+    line-height: 1;
+    padding: 0.618em 1em;
+    font-weight: 700;
+    border-radius: 3px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* Media Queries */
+
+@media all and (max-width: 768px){
+    .woocommerce ul.products[class*="columns-"] li.product,
+    .woocommerce-page ul.products[class*="columns-"] li.product {
+        width: 100%;
+    }
+}
+
 @media all and (max-width: 767px) {
+
+    .woocommerce .col2-set .col-1,
+    .woocommerce .col2-set .col-2{
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 
     .slider-details-container{
         margin: 0 25px;
@@ -487,5 +646,11 @@ a.added_to_cart.wc-forward {
         height: 500px !important;
         object-fit: cover;
         object-position: center;
+    }
+}
+
+@media all and (max-width: 500px){
+    .woocommerce ul.products li.product a img {
+        width: 100%;
     }
 }
