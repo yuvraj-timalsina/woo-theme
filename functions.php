@@ -71,12 +71,12 @@ function uv_woo_config(): void
         'thumbnail_image_width' => 150,
         'single_image_width' => 300,
         'product_grid' => [
-            'default_rows' => 3,
-            'min_rows' => 2,
-            'max_rows' => 8,
-            'default_columns' => 4,
-            'min_columns' => 2,
-            'max_columns' => 5,
+	        'default_rows'    => 10,
+	        'min_rows'        => 5,
+	        'max_rows'        => 10,
+	        'default_columns' => 1,
+	        'min_columns'     => 3,
+	        'max_columns'     => 3,
         ]
     ]);
     // Enable WooCommerce product gallery features

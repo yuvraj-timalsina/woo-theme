@@ -18,7 +18,7 @@ Version: 1.0.0
 @font-face {
     font-family: 'Rajdhani';
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     src: url('../fonts/rajdhani/Rajdhani-Regular.woff');
 }
 
@@ -217,6 +217,11 @@ a.added_to_cart.wc-forward {
     padding: 12px;
 }
 
+.woocommerce .products p,
+.woocommerce .summary p{
+    color: #6C757D;
+    font-size: 20px;
+}
 /* Single Product */
 .product_meta > span {
     display: block;

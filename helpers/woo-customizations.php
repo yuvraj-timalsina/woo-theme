@@ -63,10 +63,10 @@ function uv_woo_wc_modifications(): void
         }
 
         add_action('woocommerce_after_main_content', 'uv_woo_close_shop_tags', 4);
-    }
 
-    // Display the excerpt after the shop loop item title in WooCommerce.
-    add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
+	    // Display the excerpt after the shop loop item title in WooCommerce.
+	    add_action('woocommerce_after_shop_loop_item_title', 'the_excerpt', 1);
+    }
 
     // Show cart contents / total ajax
     function uv_woo_add_to_cart_fragment( $fragments ) {
