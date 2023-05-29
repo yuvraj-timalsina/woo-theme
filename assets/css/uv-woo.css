@@ -62,10 +62,6 @@ body {
     font-family: 'Rajdhani';
     font-weight: 400;
 }
-.content-area{
-    min-height: 500px;
-    padding: 3rem 0;
-}
 
 /* Header */
 .nav-header {
