@@ -59,55 +59,71 @@ get_header();
             </section>
 
 			<?php
-			$popular_limit      = get_theme_mod( 'settings_popular_max_num', 4 );
-			$popular_col        = get_theme_mod( 'settings_popular_max_col', 4 );
-			$new_arrivals_limit = get_theme_mod( 'settings_new_arrivals_max_num', 4 );
-			$new_arrivals_col   = get_theme_mod( 'settings_new_arrivals_max_col', 4 );
-			?>
-
-            <!-- Popular Products -->
-            <section class="popular-products">
-                <div class="container">
-                    <h2>Popular Products</h2>
-					<?= do_shortcode( '[products limit=" ' . $popular_limit . ' " columns="" ' . $popular_col . ' "" orderby="popularity"]' ); ?>
-                </div>
-            </section>
-
-            <!-- New Arrivals -->
-            <section class="new-arrivals">
-                <div class="container">
-                    <h2>New Arrivals</h2>
-					<?= do_shortcode( '[products limit=" ' . $new_arrivals_limit . ' " columns="" ' . $new_arrivals_col . ' "" orderby="date"]' ); ?>
-                </div>
-            </section>
-
-			<?php
-			$show_deal     = get_theme_mod( 'settings_deal_show', 0 );
-			$deal          = get_theme_mod( 'settings_deal' );
-			$currency      = get_woocommerce_currency_symbol();
-			$regular_price = floatval(get_post_meta( $deal, '_regular_price', true ));
-			$sale_price    = floatval(get_post_meta( $deal, '_sale_price', true ));
-
-			if ( $show_deal == 1 && ( ! empty( $deal ) ) ) :
-				$discount_percentage = absint( 100 - ( ( $sale_price / $regular_price ) * 100 ) );
+			if ( class_exists( 'WooCommerce' ) ) :
+				$popular_limit = get_theme_mod( 'settings_popular_max_num', 4 );
+				$popular_col = get_theme_mod( 'settings_popular_max_col', 4 );
+				$new_arrivals_limit = get_theme_mod( 'settings_new_arrivals_max_num', 4 );
+				$new_arrivals_col = get_theme_mod( 'settings_new_arrivals_max_col', 4 );
 				?>
-                <!-- Deal of the Week -->
-                <section class="deal-of-the-week">
+
+                <!-- Popular Products -->
+                <section class="popular-products">
                     <div class="container">
-                        <h2>Deal of the Week</h2>
-                        <div class="row d-flex align-items-center justify-content-between">
-                            <div class="deal-img col-12 col-md-6 text-center">
-								<?= get_the_post_thumbnail( $deal, 'large', [ 'class' => 'img-fluid' ] ); ?>
-                            </div>
-                            <div class="deal-desc col-12 col-md-4 text-center">
+                        <h2>Popular Products</h2>
+						<?= do_shortcode( '[products limit=" ' . $popular_limit . ' " columns="" ' . $popular_col . ' "" orderby="popularity"]' ); ?>
+                    </div>
+                </section>
+
+                <!-- New Arrivals -->
+                <section class="new-arrivals">
+                    <div class="container">
+                        <h2>New Arrivals</h2>
+						<?= do_shortcode( '[products limit=" ' . $new_arrivals_limit . ' " columns="" ' . $new_arrivals_col . ' "" orderby="date"]' ); ?>
+                    </div>
+                </section>
+
+				<?php
+				$show_deal     = get_theme_mod( 'settings_deal_show', 0 );
+				$deal          = get_theme_mod( 'settings_deal' );
+				$currency      = get_woocommerce_currency_symbol();
+				$regular_price = floatval( get_post_meta( $deal, '_regular_price', true ) );
+				$sale_price    = floatval( get_post_meta( $deal, '_sale_price', true ) );
+
+				if ( $show_deal == 1 && ( ! empty( $deal ) ) ) :
+					$discount_percentage = absint( 100 - ( ( $sale_price / $regular_price ) * 100 ) );
+					?>
+                    <!-- Deal of the Week -->
+                    <section class="deal-of-the-week">
+                        <div class="container">
+                            <h2>Deal of the Week</h2>
+                            <div class="row d-flex align-items-center justify-content-between">
+                                <div class="deal-img col-12 col-md-6 text-center">
+									<?= get_the_post_thumbnail( $deal, 'large', [ 'class' => 'img-fluid' ] ); ?>
+                                </div>
+                                <div class="deal-desc col-12 col-md-4 text-center">
                                 <span class="discount">
                                     <?= $discount_percentage . '% OFF' ?>
                                 </span>
+                                    <h3>
+                                        <a href="<?= get_permalink( $deal ); ?>"> <?= get_the_title( $deal ); ?></a>
+                                    </h3>
+                                    <p><?= get_the_excerpt( $deal ); ?></p>
+                                    <div class="prices">
+                                    <span class="regular_price">
+                                       <?= $currency . $regular_price; ?>
+
+                                    </span>
+                                        <span class="sale_price">
+                                         <?= $currency . $sale_price; ?>
+                                    </span>
+                                    </div>
+                                    <a class="add-to-cart"
+                                       href="<?= esc_url( '?add-to-cart=' . $deal ); ?>">Add To Cart</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </section>
-			<?php endif; ?>
+                    </section>
+				<?php endif; endif; ?>
             <!-- News -->
             <section class="news">
                 <div class="container">

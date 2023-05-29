@@ -311,7 +311,6 @@ function uv_woo_customizer( $wp_customize ): void {
 		)
 	);
 
-
 	// Deal of the Week Checkbox
 	$wp_customize->add_setting(
 		'settings_deal_show', [
