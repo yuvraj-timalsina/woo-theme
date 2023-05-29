@@ -16,26 +16,26 @@ get_header();
             <section class="slider">
                 <div class="flexslider">
                     <ul class="slides">
-                        <?php
-                        // Getting data from customizer for Slider
-                        for ($i = 1; $i < 4; $i++):
-                            $slider_page[$i] = get_theme_mod('settings_slider_page_' . $i);
-                            $slider_button_text[$i] = get_theme_mod('settings_slider_button_text_' . $i);
-                            $slider_button_url[$i] = get_theme_mod('settings_slider_button_url_' . $i);
-                        endfor;
+						<?php
+						// Getting data from customizer for Slider
+						for ( $i = 1; $i < 4; $i ++ ):
+							$slider_page[ $i ]        = get_theme_mod( 'settings_slider_page_' . $i );
+							$slider_button_text[ $i ] = get_theme_mod( 'settings_slider_button_text_' . $i );
+							$slider_button_url[ $i ]  = get_theme_mod( 'settings_slider_button_url_' . $i );
+						endfor;
 
-                        $args = [
-                            'post_type' => 'page',
-                            'posts_per_page' => 3
-                        ];
-                        $slider_loop = new WP_Query($args);
-$j=1;
-                        if ($slider_loop->have_posts()):
-                            while ($slider_loop->have_posts()):
-                                $slider_loop->the_post();
-                                ?>
+						$args        = [
+							'post_type'      => 'page',
+							'posts_per_page' => 3
+						];
+						$slider_loop = new WP_Query( $args );
+						$j           = 1;
+						if ( $slider_loop->have_posts() ):
+							while ( $slider_loop->have_posts() ):
+								$slider_loop->the_post();
+								?>
                                 <li>
-                                    <?php the_post_thumbnail('uv-woo-slider', ['class'=>'img-fluid']); ?>
+									<?php the_post_thumbnail( 'uv-woo-slider', [ 'class' => 'img-fluid' ] ); ?>
                                     <div class="container">
                                         <div class="slider-details-container">
                                             <div class="slider-title">
@@ -43,31 +43,23 @@ $j=1;
                                             </div>
                                             <div class="slider-description">
                                                 <div class="subtitle"><?php the_content(); ?></div>
-                                                <a href="<?= $slider_button_url[$j]; ?>" class="link"><?= $slider_button_text[$j] ?></a>
+                                                <a href="<?= $slider_button_url[ $j ]; ?>"
+                                                   class="link"><?= $slider_button_text[ $j ] ?></a>
                                             </div>
                                         </div>
                                     </div>
                                 </li>
-                            <?php
-                            $j++;
-                            endwhile;
-                            wp_reset_postdata(); endif; ?>
+								<?php
+								$j ++;
+							endwhile;
+							wp_reset_postdata(); endif; ?>
                     </ul>
-                </div>
-            </section>
-
-            <!-- Promotions -->
-            <section class="promotions">
-                <div class="container">
-                    <!-- Promotions code goes here -->
-                    <div class="row">promotions</div>
                 </div>
             </section>
 
             <!-- Popular Products -->
             <section class="popular-products">
                 <div class="container">
-                    <!-- Popular products code goes here -->
                     <div class="row">popular</div>
                 </div>
             </section>
@@ -75,7 +67,6 @@ $j=1;
             <!-- New Arrivals -->
             <section class="new-arrivals">
                 <div class="container">
-                    <!-- New arrivals code goes here -->
                     <div class="row">
                         new arrivals
                     </div>
@@ -85,7 +76,6 @@ $j=1;
             <!-- Deal of the Week -->
             <section class="deal-of-the-week">
                 <div class="container">
-                    <!-- Deal of the week code goes here -->
                     <div class="row">
                         deal of the week
                     </div>
@@ -97,20 +87,20 @@ $j=1;
                 <div class="container">
                     <!-- News code goes here -->
                     <div class="row">
-                        <?php
-                        if (have_posts()) :
-                            while (have_posts()) :
-                                the_post(); ?>
+						<?php
+						if ( have_posts() ) :
+							while ( have_posts() ) :
+								the_post(); ?>
                                 <article>
                                     <h2><?php the_title(); ?></h2>
                                     <div><?php the_content(); ?></div>
                                 </article>
-                            <?php
-                            endwhile;
-                        else:
-                            ?>
+							<?php
+							endwhile;
+						else:
+							?>
                             <p>No Posts!</p>
-                        <?php endif; ?>
+						<?php endif; ?>
                     </div>
                 </div>
             </section>

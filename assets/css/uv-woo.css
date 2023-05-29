@@ -4,6 +4,15 @@ Description: Custom CSS styles for Uv Woo.
 Author: Yv
 Version: 1.0.0
 */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --uv-woo-primary: #D2335B;
+}
 
 /* rajdhani-regular - latin */
 @font-face {
@@ -78,16 +87,16 @@ body {
 }
 
 .menu-item a:hover {
-    color: #D2335B;
+    color: var(--uv-woo-primary);
     background-color: transparent;
 }
 
 .nav .nav-link.active:hover {
-    color: #D2335B;
+    color: var(--uv-woo-primary);
 }
 
 .dropdown-item.active, .dropdown-item:active {
-    color: #D2335B;
+    color: var(--uv-woo-primary);
     background-color: transparent;
 }
 
@@ -151,7 +160,7 @@ a.added_to_cart.wc-forward {
 .woocommerce a.button.alt,
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
-    background-color: #D2335B;
+    background-color: var(--uv-woo-primary);
     color: #fff;
 }
 
@@ -173,7 +182,7 @@ a.added_to_cart.wc-forward {
     border-radius: 0;
     width: 51px;
     padding: 0;
-    background-color: #D2335B;
+    background-color: var(--uv-woo-primary);
     margin: 0;
     font-weight: bold;
 }
@@ -187,7 +196,7 @@ a.added_to_cart.wc-forward {
     height: 0;
     border-style: solid;
     border-width: 24px 22px 0 0;
-    border-color: #D2335B transparent transparent transparent;
+    border-color: var(--uv-woo-primary) transparent transparent transparent;
 }
 
 .woocommerce span.onsale:after {
@@ -199,7 +208,7 @@ a.added_to_cart.wc-forward {
     height: 0;
     border-style: solid;
     border-width: 0 22px 24px 0;
-    border-color: transparent transparent #D2335B transparent;
+    border-color: transparent transparent var(--uv-woo-primary) transparent;
 }
 
 .woocommerce nav.woocommerce-pagination ul li a,
@@ -268,7 +277,7 @@ a.added_to_cart.wc-forward {
 }
 
 .woocommerce table.shop_table thead {
-    background-color: #D2335B;
+    background-color: var(--uv-woo-primary);
     color: #fff;
 }
 
@@ -356,7 +365,7 @@ a.added_to_cart.wc-forward {
 }
 
 .cart-counter {
-    background-color: #D2335B;
+    background-color: var(--uv-woo-primary);
     color: #FFFFFF;
     border-radius: 50%;
     padding: 2px 8px;
@@ -387,7 +396,7 @@ a.added_to_cart.wc-forward {
     font-family: 'Permanent Marker';
     font-size: 3.7rem;
     -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: #D2335B;
+    -webkit-text-stroke-color: var(--uv-woo-primary);
 }
 
 .slider-details-container .subtitle{
@@ -402,12 +411,12 @@ a.added_to_cart.wc-forward {
 }
 
 .slider-details-container a{
-    background-color: #D2335B;
+    background-color: var(--uv-woo-primary);
     color: #FFFFFF;
-    border: 1px solid #D2335B;
-    border-radius: 5px;
+    border: 1px solid var(--uv-woo-primary);
+    border-radius:5px;
     text-transform: uppercase;
-    padding: 0.75em;
+    padding: 0.85em;
     display: inline-block;
     font-size: 1.2em;
     font-weight: bold;
