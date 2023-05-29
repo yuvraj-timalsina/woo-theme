@@ -69,7 +69,7 @@ get_header();
                 <!-- Popular Products -->
                 <section class="popular-products">
                     <div class="container">
-                        <h2>Popular Products</h2>
+                        <h2><?= get_theme_mod( 'settings_popular_title', 'Popular Products' ); ?></h2>
 						<?= do_shortcode( '[products limit=" ' . $popular_limit . ' " columns="" ' . $popular_col . ' "" orderby="popularity"]' ); ?>
                     </div>
                 </section>
@@ -77,7 +77,7 @@ get_header();
                 <!-- New Arrivals -->
                 <section class="new-arrivals">
                     <div class="container">
-                        <h2>New Arrivals</h2>
+                        <h2><?= get_theme_mod( 'settings_new_arrivals_title', 'New Arrivals' ); ?></h2>
 						<?= do_shortcode( '[products limit=" ' . $new_arrivals_limit . ' " columns="" ' . $new_arrivals_col . ' "" orderby="date"]' ); ?>
                     </div>
                 </section>

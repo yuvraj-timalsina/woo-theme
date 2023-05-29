@@ -215,12 +215,28 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_section(
 		'section_home_page', [
-			'title'       => 'Home Page Products/Blog Settings',
-			'description' => 'Home Page Section',
+			'title'       => 'Home Page Products Settings',
+			'description' => 'Home Page Products Section',
 		]
 	);
 
 	// Popular Products
+	$wp_customize->add_setting(
+		'settings_popular_title', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		]
+	);
+
+	$wp_customize->add_control(
+		'settings_popular_title', [
+			'label'       => 'Popular Products - Title',
+			'description' => 'Title For Popular Products Section',
+			'section'     => 'section_home_page',
+			'type'        => 'text'
+		]
+	);
 	$wp_customize->add_setting(
 		'settings_popular_max_num', [
 			'type'              => 'theme_mod',
@@ -231,7 +247,7 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_popular_max_num', [
-			'label'       => 'Popular Products Max Number',
+			'label'       => 'Popular Products - Max Number',
 			'description' => 'Sets Max Number For Popular Products',
 			'section'     => 'section_home_page',
 			'type'        => 'number'
@@ -248,14 +264,30 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_popular_max_col', [
-			'label'       => 'Popular Products Max Columns',
+			'label'       => 'Popular Products - Max Columns',
 			'description' => 'Sets Max Columns For Popular Products',
 			'section'     => 'section_home_page',
 			'type'        => 'number'
 		]
 	);
-
 	// New Arrivals
+	$wp_customize->add_setting(
+		'settings_new_arrivals_title', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		]
+	);
+
+	$wp_customize->add_control(
+		'settings_new_arrivals_title', [
+			'label'       => 'New Arrivals - Title',
+			'description' => 'Title For New Arrivals Section',
+			'section'     => 'section_home_page',
+			'type'        => 'text'
+		]
+	);
+
 	$wp_customize->add_setting(
 		'settings_new_arrivals_max_num', [
 			'type'              => 'theme_mod',
@@ -266,7 +298,7 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_new_arrivals_max_num', [
-			'label'       => 'New Arrivals Max Number',
+			'label'       => 'New Arrivals - Max Number',
 			'description' => 'Sets Max Number For New Arrivals',
 			'section'     => 'section_home_page',
 			'type'        => 'number'
@@ -283,7 +315,7 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_new_arrivals_max_col', [
-			'label'       => 'New Arrivals Max Columns',
+			'label'       => 'New Arrivals - Max Columns',
 			'description' => 'Sets Max Columns For New Arrivals',
 			'section'     => 'section_home_page',
 			'type'        => 'number'
