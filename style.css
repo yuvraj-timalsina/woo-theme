@@ -4,14 +4,137 @@ Theme URI: https://yuvrajtimalsina.com.np/wp-themes/uv-woo
 Author: Yv
 Author URI: https://yuvrajtimalsina.com.np
 Description:  Uv Woo is a dynamic and stylish WordPress theme specifically designed for WooCommerce-powered online stores. The main stylesheet file of Uv Woo encompasses a range of meticulously crafted styles and visual elements, creating an immersive and visually stunning experience for your customers. With its sleek design and seamless integration with WooCommerce, Uv Woo offers a perfect balance of aesthetics and functionality, empowering you to showcase your products in the best light while providing a smooth and enjoyable shopping experience for your customers. Elevate your online store with Uv Woo and unlock the potential for success in the world of e-commerce.
-Tags: wordpress-theme, woocommerce, e-commerce, custom-theme, stylesheet, web-design, responsive-design, user-friendly, online-store, product-showcase, theme-development, seo-optimization, mobile-friendly, conversion-optimization, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, translation-ready, blog, right-sidebar, sticky-post, threaded-comments
 Version: 1.0
 Requires at least: 5.0
-Tested up to: 6.2.2
+Tested up to: 6.2
 Requires PHP: 8.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: uv-woo
+Tags: e-commerce, custom-menu, custom-logo, featured-images, footer-widgets, theme-options, translation-ready, blog, right-sidebar, sticky-post, threaded-comments
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 */
+/* WordPress Core
+-------------------------------------------------------------- */
+.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    float: right;
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    float: left;
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    max-width: 96%; /* Image does not overflow the content area */
+    padding: 5px 3px 10px;
+    text-align: center;
+}
+
+.wp-caption.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    border: 0;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+}
+
+.screen-reader-text:focus {
+    background-color: #eee;
+    clip: auto !important;
+    clip-path: none;
+    color: #444;
+    display: block;
+    font-size: 1em;
+    height: auto;
+    left: 5px;
+    line-height: normal;
+    padding: 15px 23px 14px;
+    text-decoration: none;
+    top: 5px;
+    width: auto;
+    z-index: 100000;
+    /* Above WP toolbar. */
+}
+
+.gallery-caption {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.bypostauthor {
+    font-weight: bold;
+    background-color: #f0f0f0;
+}
+

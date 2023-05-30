@@ -28,16 +28,14 @@ function uv_woo_enqueue_styles_and_scripts(): void {
 	// Enqueue dashicons and main stylesheet
 	wp_enqueue_style( 'dashicons' );
 	wp_enqueue_style( 'uv-woo-main-style', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css' ), 'all' );
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 
 // Hook the UV Woo enqueue styles and scripts function to the wp_enqueue_scripts action
 add_action( 'wp_enqueue_scripts', 'uv_woo_enqueue_styles_and_scripts' );
-
-// Disable Gutenberg editor for all post types
-add_filter( 'use_block_editor_for_post_type', '__return_false' );
-
-// Disables the block editor from managing widgets.
-add_filter( 'use_widgets_block_editor', '__return_false' );
 
 // Include the navwalker class
 require_once get_template_directory() . '/helpers/navwalker.php';
@@ -93,6 +91,9 @@ function uv_woo_config(): void {
 
 	// Enable title tag
 	add_theme_support( 'title-tag' );
+
+	//Enable Automatic Feed Links for post and comment
+	add_theme_support( 'automatic-feed-links' );
 
 	// Define image size for slider
 	add_image_size( 'uv-woo-slider', 1920, 800, [ 'center', 'center' ] );
