@@ -140,14 +140,14 @@ get_header();
 						<?php
 						$args = [
 							'post_type'      => 'post',
-							'posts_per_page' => 2
+							'posts_per_page' => 3
 						];
 
 						$blog_posts = new WP_Query( $args );
 						if ( $blog_posts->have_posts() ) :
 							while ( $blog_posts->have_posts() ) :
 								$blog_posts->the_post(); ?>
-                                <article class="col-12 col-md-6">
+                                <article class="col-12 col-md-4">
                                     <a href="<?php the_permalink(); ?>">
 										<?php
 										if ( has_post_thumbnail() ) :
@@ -165,7 +165,7 @@ get_header();
 							wp_reset_postdata();
 						else:
 							?>
-                            <p>No Posts!</p>
+                            <p>No Posts Found!</p>
 						<?php endif; ?>
                     </div>
                 </div>

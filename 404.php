@@ -18,7 +18,7 @@ get_header(); ?>
 					<?php
 					the_widget( 'WP_Widget_Recent_Posts', [
 						'title'  => 'Take a look at Our Latest Posts',
-						'number' => 3,
+						'number' => 5,
 					] );
 					?>
                 </div>
