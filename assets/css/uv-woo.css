@@ -55,6 +55,7 @@ Version: 1.0.0
 }
 
 a {
+    color: var(--uv-woo-primary);
     text-decoration: none;
 }
 

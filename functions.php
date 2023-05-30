@@ -93,6 +93,9 @@ function uv_woo_config(): void {
 	// Enable post thumbnails
 	add_theme_support( 'post-thumbnails' );
 
+	// Enable title tag
+	add_theme_support( 'title-tag' );
+
 	// Define image size for slider
 	add_image_size( 'uv-woo-slider', 1920, 800, [ 'center', 'center' ] );
 	add_image_size( 'uv-woo-blog', 960, 640, [ 'center', 'center' ] );
