@@ -21,12 +21,12 @@ get_header();
 								get_template_part( 'template-parts/content' );
 							endwhile;
 							the_posts_pagination( [
-								'prev_text' => __('Prev', 'uv-woo'),
-								'next_text' => __('Next', 'uv-woo')
+								'prev_text' => esc_html__('Prev', 'uv-woo'),
+								'next_text' => esc_html__('Next', 'uv-woo')
 							] );
 						else:
 							?>
-                            <p><?php _e('No Posts Found!', 'uv-woo'); ?></p>
+                            <p><?php esc_html_e('No Posts Found!', 'uv-woo'); ?></p>
 						<?php endif; ?>
                     </div>
 					<?php get_sidebar(); ?>

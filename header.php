@@ -29,11 +29,12 @@
 			<?php
 			if ( has_custom_logo() ) : the_custom_logo();
 			else: ?>
-                <a href="<?= get_home_url( '/' ); ?>" class="site-title fw-bold"><?php bloginfo( 'title' ); ?></a>
+                <a href="<?= esc_url( get_home_url( '/' ) ); ?>"
+                   class="site-title fw-bold"><?php bloginfo( 'title' ); ?></a>
                 <span><?php bloginfo( 'description' ); ?></span>
 			<?php endif;
 			wp_nav_menu( [
-				'menu'           => __( 'Uv Woo Nav Menu', 'uv-woo' ),
+				'menu'           => esc_html__( 'Uv Woo Nav Menu', 'uv-woo' ),
 				'theme_location' => 'uv_woo_main_menu',
 				'container'      => false,
 				'fallback_cb'    => '__return_false',
@@ -50,9 +51,9 @@
 				if ( class_exists( 'WooCommerce' ) ) : ?>
                 <ul class="nav">
                     <li class="nav-item">
-                        <a href="<?= wc_get_cart_url(); ?>" class="cart-link position-relative">
+                        <a href="<?= esc_url(wc_get_cart_url()); ?>" class="cart-link position-relative">
                             <span class="dashicons dashicons-cart cart-icon"></span>
-                            <span class="cart-counter position-absolute fw-bold"><?= wc()->cart->get_cart_contents_count(); ?></span>
+                            <span class="cart-counter position-absolute fw-bold"><?= esc_html(wc()->cart->get_cart_contents_count()); ?></span>
                         </a>
                     </li>
                 </ul>
@@ -70,26 +71,26 @@
                     </a>
                     <ul class="dropdown-menu text-small">
                         <li><a class="dropdown-item"
-                               href="<?= wc_get_page_permalink( 'myaccount' ) ?>"><?php _e( 'Dashboard', 'uv-woo' ); ?></a>
+                               href="<?= wc_get_page_permalink( 'myaccount' ) ?>"><?php esc_html_e( 'Dashboard', 'uv-woo' ); ?></a>
                         </li>
                         <li><a class="dropdown-item"
-                               href="<?= wc_get_account_endpoint_url( 'edit-account' ) ?>"><?php _e( 'Profile', 'uv-woo' ); ?></a>
+                               href="<?= wc_get_account_endpoint_url( 'edit-account' ) ?>"><?php esc_html_e( 'Profile', 'uv-woo' ); ?></a>
                         </li>
                         <li><a class="dropdown-item"
-                               href="<?= wc_get_account_endpoint_url( 'orders' ) ?>"><?php _e( 'Orders', 'uv-woo' ); ?></a>
+                               href="<?= wc_get_account_endpoint_url( 'orders' ) ?>"><?php esc_html_e( 'Orders', 'uv-woo' ); ?></a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item"
-                               href="<?= esc_url( wp_logout_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ); ?>">Log
-                                Out</a></li>
+                               href="<?= esc_url( wp_logout_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ); ?>">
+								<?php esc_html_e( 'Log Out', 'uv-woo' ); ?></a></li>
                     </ul>
 					<?php else : ?>
                         <ul class="nav float-end">
                             <li class="nav-item">
                                 <a href="<?= esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>"
-                                   class="nav-link link-dark px-2"><?php _e( 'Login / Register', 'uv-woo' ); ?></a></li>
+                                   class="nav-link link-dark px-2"><?php esc_html_e( 'Login / Register', 'uv-woo' ); ?></a></li>
                         </ul>
 					<?php endif;
 					endif; ?>
