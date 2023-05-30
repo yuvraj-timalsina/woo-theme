@@ -105,7 +105,8 @@ body {
     color: var(--uv-woo-primary);
 }
 
-.dropdown-item.active, .dropdown-item:active {
+.dropdown-item.active,
+.dropdown-item:active {
     color: var(--uv-woo-primary);
     background-color: transparent;
 }
@@ -184,7 +185,8 @@ a.added_to_cart.wc-forward {
     text-decoration: none;
 }
 
-.woocommerce ul.products li.product .onsale, .woocommerce span.onsale {
+.woocommerce ul.products li.product .onsale,
+.woocommerce span.onsale {
     top: 0;
     left: 0;
     right: 0;
@@ -371,10 +373,6 @@ a.added_to_cart.wc-forward {
     padding: 0;
 }
 
-#comments .bypostauthor {
-    background-color: #bf95941a;
-}
-
 .entry-pings,
 .entry-comments {
     color: #444;
@@ -479,9 +477,6 @@ li.comment {
     display: none;
 }
 
-.bypostauthor {
-}
-
 .form-allowed-tags {
     background-color: #f5f5f5;
     font-size: 16px;
@@ -537,13 +532,13 @@ li.comment {
 }
 
 .cart-counter {
-    background-color: var(--uv-woo-primary);
     color: #FFFFFF;
     border-radius: 50%;
     padding: 2px 8px;
     font-size: 12px;
     bottom: 12px;
     left: 16px;
+    background-color: var(--uv-woo-primary);
 }
 
 
@@ -759,15 +754,19 @@ li.comment {
     display: inline-block;
     margin-top: 10px;
 }
+
 /* Post */
 
-.page-numbers, .post-page-numbers {
+.page-numbers,
+.post-page-numbers {
     padding: 5px 10px;
     border-radius: 5px;
     color: #000000;
     border: 1px solid #000000;
 }
-.page-numbers.current, .post-page-numbers.current {
+
+.page-numbers.current,
+.post-page-numbers.current {
     color: #FFFFFF;
     border: 1px solid var(--uv-woo-primary);
     background: var(--uv-woo-primary);
@@ -777,61 +776,64 @@ article h2 a {
     padding-bottom: 1rem;
     color: var(--uv-woo-primary);
 }
+
 article .meta {
     padding-top: 1rem;
 }
+
 article .meta a {
     color: var(--uv-woo-primary);
     font-weight: 600;
 }
 
 /* Footer - Footer Menu */
-.footer-widgets{
+.footer-widgets {
     padding: 35px 0;
     background: #515151;
     color: #aeaeae;
 }
 
-.footer-widgets h4{
+.footer-widgets h4 {
     color: #fff;
     text-transform: uppercase;
 }
 
-.footer-widgets p{
+.footer-widgets p {
     margin-bottom: 0.5rem;
 }
 
-.footer-widgets strong{
+.footer-widgets strong {
     color: #fff;
 }
 
-.footer-widgets ul li a{
+.footer-widgets ul li a {
     color: #aeaeae;
 }
 
-.footer-menu ul, .footer-widgets ul{
+.footer-menu ul,
+.footer-widgets ul {
     list-style: none;
     padding: 0;
     margin: 0;
     font-size: 16px;
 }
 
-.footer-menu ul li{
+.footer-menu ul li {
     display: inline;
     margin: 0 10px 0 0;
 }
 
-.footer-menu ul li:last-child{
+.footer-menu ul li:last-child {
     margin: 0;
 }
 
-.footer-menu ul li a{
+.footer-menu ul li a {
     font-size: 1rem;
     color: #939393;
     text-decoration: none;
 }
 
-.footer-menu ul li.current-menu-item a{
+.footer-menu ul li.current-menu-item a {
     color: #ff9292;
 }
 
