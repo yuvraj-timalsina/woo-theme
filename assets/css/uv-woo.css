@@ -62,7 +62,14 @@ body {
     font-family: 'Rajdhani';
     font-weight: 400;
 }
+.content-area{
+    min-height: 500px;
+    padding: 3rem 0;
+}
 
+.page-template-template-home-php .content-area{
+    padding: 0;
+}
 /* Header */
 .nav-header {
     background-color: aliceblue;
