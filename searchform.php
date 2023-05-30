@@ -5,7 +5,7 @@
  * @package Uv Woo
  */
 ?>
-<div class="w-75">
+<div class="w-100">
     <form role="search" method="get" class="search-form"
           action="<?php echo esc_url(home_url('/')); ?>">
         <div class="input-group">

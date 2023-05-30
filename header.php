@@ -27,8 +27,7 @@
             <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between justify-content-md-center">
                 <!-- Logo -->
 				<?php
-				if ( has_custom_logo() ) :
-					the_custom_logo();
+				if ( has_custom_logo() ) : the_custom_logo();
 				else: ?>
                     <a href="<?= get_home_url( '/' ); ?>" class="site-title fw-bold"><?php bloginfo( 'title' ); ?></a>
                     <span><?php bloginfo( 'description' ); ?></span>
@@ -57,10 +56,8 @@
                             </a>
                         </li>
                     </ul>
-				<?php endif;
-				/* Account */
-				if ( is_user_logged_in() ) :
-				?>
+				<?php if ( is_user_logged_in() ) : ?>
+                    <!-- Account -->
                 <div class="dropdown">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
                        data-bs-toggle="dropdown"
@@ -93,7 +90,7 @@
                                 <a href="<?= esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>"
                                         class="nav-link link-dark px-2">Login / Register</a></li>
                         </ul>
-					<?php endif; ?>
+					<?php endif; endif; ?>
                 </div>
                 </div>
             </div>
