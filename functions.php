@@ -117,6 +117,16 @@ function uv_woo_sidebars(): void {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
 	] );
+
+	register_sidebar( [
+		'name'          => 'Uv Woo Shop Sidebar',
+		'id'            => 'uv-woo-shop-sidebar',
+		'description'   => 'Drag and Drop Your WooCommerce Widgets Here',
+		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
+	] );
 }
 
 // Include the template helper file
