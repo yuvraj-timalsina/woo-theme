@@ -13,7 +13,7 @@ get_header();
         <main>
             <div class="container">
                 <div class="row">
-                    <h1><?php esc_html_e('Search results for', 'uv-woo'); ?> : <?= get_search_query(); ?></h1>
+                    <h1><?php esc_html_e('Search results for', 'uv-woo'); ?> : <?php echo get_search_query(); ?></h1>
 					<?php
 					get_search_form();
 					if ( have_posts() ) :

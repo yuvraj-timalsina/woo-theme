@@ -44,8 +44,8 @@ get_header();
                                             </div>
                                             <div class="slider-description">
                                                 <div class="subtitle"><?php the_content(); ?></div>
-                                                <a href="<?= esc_url( $slider_button_url[ $j ] ); ?>"
-                                                   class="link"><?= esc_html( $slider_button_text[ $j ] ) ?></a>
+                                                <a href="<?php echo esc_url( $slider_button_url[ $j ] ); ?>"
+                                                   class="link"><?php echo esc_html( $slider_button_text[ $j ] ) ?></a>
                                             </div>
                                         </div>
                                     </div>
@@ -70,9 +70,9 @@ get_header();
                 <section class="popular-products">
                     <div class="container">
                         <div class="section-title">
-                            <h2><?= esc_html(get_theme_mod( 'settings_popular_title', __( 'Popular Products', 'uv-woo' ) )); ?></h2>
+                            <h2><?php echo esc_html(get_theme_mod( 'settings_popular_title', __( 'Popular Products', 'uv-woo' ) )); ?></h2>
                         </div>
-						<?= do_shortcode( '[products limit=" ' . esc_attr($popular_limit) . ' " columns="" ' . esc_attr($popular_col) . ' "" orderby="popularity"]' ); ?>
+						<?php echo do_shortcode( '[products limit=" ' . esc_attr($popular_limit) . ' " columns="" ' . esc_attr($popular_col) . ' "" orderby="popularity"]' ); ?>
                     </div>
                 </section>
 
@@ -80,9 +80,9 @@ get_header();
                 <section class="new-arrivals">
                     <div class="container">
                         <div class="section-title">
-                            <h2><?= esc_html(get_theme_mod( 'settings_new_arrivals_title', __( 'New Arrivals', 'uv-woo' ) )); ?></h2>
+                            <h2><?php echo esc_html(get_theme_mod( 'settings_new_arrivals_title', __( 'New Arrivals', 'uv-woo' ) )); ?></h2>
                         </div>
-						<?= do_shortcode( '[products limit=" ' . esc_attr($new_arrivals_limit) . ' " columns="" ' . esc_attr($new_arrivals_col) . ' "" orderby="date"]' ); ?>
+						<?php echo do_shortcode( '[products limit=" ' . esc_attr($new_arrivals_limit) . ' " columns="" ' . esc_attr($new_arrivals_col) . ' "" orderby="date"]' ); ?>
                     </div>
                 </section>
 
@@ -100,31 +100,31 @@ get_header();
                     <section class="deal-of-the-week">
                         <div class="container">
                             <div class="section-title">
-                                <h2><?= esc_html(get_theme_mod( 'settings_deal_title', __( 'Deal of The Day', 'uv-woo' ) )); ?></h2>
+                                <h2><?php echo esc_html(get_theme_mod( 'settings_deal_title', __( 'Deal of The Day', 'uv-woo' ) )); ?></h2>
                             </div>
                             <div class="row d-flex align-items-center justify-content-between">
                                 <div class="deal-img col-12 col-md-6 text-center">
-									<?= get_the_post_thumbnail( $deal, 'large', [ 'class' => 'img-fluid' ] ); ?>
+									<?php echo get_the_post_thumbnail( $deal, 'large', [ 'class' => 'img-fluid' ] ); ?>
                                 </div>
                                 <div class="deal-desc col-12 col-md-4 text-center">
                                 <span class="discount">
-                                    <?= esc_html($discount_percentage . esc_html__( '% OFF', 'uv-woo' )); ?>
+                                    <?php echo esc_html($discount_percentage . esc_html__( '% OFF', 'uv-woo' )); ?>
                                 </span>
                                     <h3>
-                                        <a href="<?= esc_url(get_permalink( $deal )); ?>"> <?= esc_html(get_the_title( $deal )); ?></a>
+                                        <a href="<?php echo esc_url(get_permalink( $deal )); ?>"> <?php echo esc_html(get_the_title( $deal )); ?></a>
                                     </h3>
-                                    <p><?= esc_html(get_the_excerpt( $deal )); ?></p>
+                                    <p><?php echo esc_html(get_the_excerpt( $deal )); ?></p>
                                     <div class="prices">
                                     <span class="regular_price">
-                                       <?= esc_html($currency) . esc_html($regular_price); ?>
+                                       <?php echo esc_html($currency) . esc_html($regular_price); ?>
 
                                     </span>
                                         <span class="sale_price">
-                                         <?= esc_html($currency) . esc_html($sale_price); ?>
+                                         <?php echo esc_html($currency) . esc_html($sale_price); ?>
                                     </span>
                                     </div>
                                     <a class="add-to-cart"
-                                       href="<?= esc_url( '?add-to-cart=' . $deal ); ?>"><?php esc_html_e( 'Add To Cart', 'uv-woo' ); ?></a>
+                                       href="<?php echo esc_url( '?add-to-cart=' . $deal ); ?>"><?php esc_html_e( 'Add To Cart', 'uv-woo' ); ?></a>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +134,7 @@ get_header();
             <section class="uv-woo-blog">
                 <div class="container">
                     <div class="section-title">
-                        <h2><?= esc_html(get_theme_mod( 'settings_blog_title', __( 'Latest News from Our Blog', 'uv-woo' ) )); ?></h2>
+                        <h2><?php echo esc_html(get_theme_mod( 'settings_blog_title', __( 'Latest News from Our Blog', 'uv-woo' ) )); ?></h2>
                     </div>
                     <div class="row">
 						<?php

@@ -11,7 +11,7 @@
     <header>
         <h1><?php the_title(); ?></h1>
         <div class="meta">
-            <p><?php esc_html_e( 'Author' ) ?> : <?php the_author_posts_link(); ?> | <?= esc_html(get_the_date()); ?>
+            <p><?php esc_html_e( 'Author' ) ?> : <?php the_author_posts_link(); ?> | <?php echo esc_html(get_the_date()); ?>
                 <br>
 				<?php if ( has_category() ) : ?>
 					<?php esc_html_e( 'Categories', 'uv-woo' ); ?> : <span><?php the_category( ' ' ); ?></span>

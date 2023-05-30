@@ -61,7 +61,7 @@ function uv_woo_wc_modifications(): void {
 		global $woocommerce;
 		ob_start();
 		?>
-        <span class="cart-counter position-absolute fw-bold"><?= wc()->cart->get_cart_contents_count(); ?></span>
+        <span class="cart-counter position-absolute fw-bold"><?php echo wc()->cart->get_cart_contents_count(); ?></span>
 		<?php
 		$fragments['span.cart-counter'] = ob_get_clean();
 

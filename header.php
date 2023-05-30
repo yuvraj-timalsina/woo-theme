@@ -29,7 +29,7 @@
 			<?php
 			if ( has_custom_logo() ) : the_custom_logo();
 			else: ?>
-                <a href="<?= esc_url( get_home_url( '/' ) ); ?>"
+                <a href="<?php echo esc_url( get_home_url( '/' ) ); ?>"
                    class="site-title fw-bold"><?php bloginfo( 'title' ); ?></a>
                 <span><?php bloginfo( 'description' ); ?></span>
 			<?php endif;
@@ -51,9 +51,9 @@
 				if ( class_exists( 'WooCommerce' ) ) : ?>
                 <ul class="nav">
                     <li class="nav-item">
-                        <a href="<?= esc_url(wc_get_cart_url()); ?>" class="cart-link position-relative">
+                        <a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="cart-link position-relative">
                             <span class="dashicons dashicons-cart cart-icon"></span>
-                            <span class="cart-counter position-absolute fw-bold"><?= esc_html(wc()->cart->get_cart_contents_count()); ?></span>
+                            <span class="cart-counter position-absolute fw-bold"><?php echo esc_html(wc()->cart->get_cart_contents_count()); ?></span>
                         </a>
                     </li>
                 </ul>
@@ -63,33 +63,33 @@
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
                        data-bs-toggle="dropdown"
                        aria-expanded="false">
-                        <img src="<?= esc_url( get_avatar_url( wp_get_current_user()->ID ) ); ?>"
-                             alt="<?= wp_get_current_user()->display_name ?>"
+                        <img src="<?php echo esc_url( get_avatar_url( wp_get_current_user()->ID ) ); ?>"
+                             alt="<?php echo wp_get_current_user()->display_name ?>"
                              width="25" height="25"
                              class="rounded-circle"><span
-                                class="ms-2 fw-bold"><?= wp_get_current_user()->display_name ?></span>
+                                class="ms-2 fw-bold"><?php echo wp_get_current_user()->display_name ?></span>
                     </a>
                     <ul class="dropdown-menu text-small">
                         <li><a class="dropdown-item"
-                               href="<?= wc_get_page_permalink( 'myaccount' ) ?>"><?php esc_html_e( 'Dashboard', 'uv-woo' ); ?></a>
+                               href="<?php echo wc_get_page_permalink( 'myaccount' ) ?>"><?php esc_html_e( 'Dashboard', 'uv-woo' ); ?></a>
                         </li>
                         <li><a class="dropdown-item"
-                               href="<?= wc_get_account_endpoint_url( 'edit-account' ) ?>"><?php esc_html_e( 'Profile', 'uv-woo' ); ?></a>
+                               href="<?php echo wc_get_account_endpoint_url( 'edit-account' ) ?>"><?php esc_html_e( 'Profile', 'uv-woo' ); ?></a>
                         </li>
                         <li><a class="dropdown-item"
-                               href="<?= wc_get_account_endpoint_url( 'orders' ) ?>"><?php esc_html_e( 'Orders', 'uv-woo' ); ?></a>
+                               href="<?php echo wc_get_account_endpoint_url( 'orders' ) ?>"><?php esc_html_e( 'Orders', 'uv-woo' ); ?></a>
                         </li>
                         <li>
                             <hr class="dropdown-divider">
                         </li>
                         <li><a class="dropdown-item"
-                               href="<?= esc_url( wp_logout_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ); ?>">
+                               href="<?php echo esc_url( wp_logout_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ) ); ?>">
 								<?php esc_html_e( 'Log Out', 'uv-woo' ); ?></a></li>
                     </ul>
 					<?php else : ?>
                         <ul class="nav float-end">
                             <li class="nav-item">
-                                <a href="<?= esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>"
+                                <a href="<?php echo esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>"
                                    class="nav-link link-dark px-2"><?php esc_html_e( 'Login / Register', 'uv-woo' ); ?></a></li>
                         </ul>
 					<?php endif;
