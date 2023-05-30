@@ -49,9 +49,13 @@ get_header();
                             </article>
 						<?php
 						endwhile;
+						the_posts_pagination( [
+							'prev_text' => 'Prev',
+							'next_text' => 'Next'
+						] );
 					else:
 						?>
-                        <p>No Posts!</p>
+                        <p>No Posts Found!</p>
 					<?php endif; ?>
                 </div>
             </div>
