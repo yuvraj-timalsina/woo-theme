@@ -127,6 +127,34 @@ function uv_woo_sidebars(): void {
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
 	] );
+
+	register_sidebar( [
+		'name'          => 'Uv Woo Footer Sidebar One',
+		'id'            => 'uv-woo-footer-sidebar-one',
+		'description'   => 'Drag and Drop Your Widgets Here',
+		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
+	] );
+	register_sidebar( [
+		'name'          => 'Uv Woo Footer Sidebar Two',
+		'id'            => 'uv-woo-footer-sidebar-two',
+		'description'   => 'Drag and Drop Your Widgets Here',
+		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
+	] );
+	register_sidebar( [
+		'name'          => 'Uv Woo Footer Sidebar Three',
+		'id'            => 'uv-woo-footer-sidebar-three',
+		'description'   => 'Drag and Drop Your Widgets Here',
+		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
+	] );
 }
 
 // Include the template helper file
