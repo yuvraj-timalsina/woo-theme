@@ -21,13 +21,13 @@ get_header(); ?>
                                 <div class="meta">
                                     <p>Author : <?php the_author_posts_link(); ?> | <?= get_the_date(); ?>
                                         <br>
-			                            <?php if ( has_category() ) : ?>
+										<?php if ( has_category() ) : ?>
                                             Categories : <span><?php the_category( ' ' ); ?></span>
-			                            <?php endif; ?>
+										<?php endif; ?>
                                         <br>
-			                            <?php if ( has_tag() ) : ?>
+										<?php if ( has_tag() ) : ?>
                                             Tags : <span><?php the_tags( '', ', ' ); ?></span>
-			                            <?php endif; ?>
+										<?php endif; ?>
                                     </p>
                                 </div>
                                 <div class="post-thumbnail">
@@ -42,7 +42,10 @@ get_header(); ?>
 								<?php the_content(); ?>
                             </div>
                         </article>
-					<?php
+						<?php
+						if ( comments_open() || get_comments_number() ) :
+							comments_template();
+						endif;
 					endwhile;
 					?>
                 </div>
