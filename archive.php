@@ -13,6 +13,7 @@ get_header();
         <main>
             <div class="container">
                 <div class="row">
+                    <div class="col-12 col-lg-9 col-md-8">
 					<?php
 					the_archive_title( '<h1 class="article-title">', '</h1>' );
 					if ( have_posts() ) :
@@ -28,6 +29,8 @@ get_header();
 						?>
                         <p>No Posts Found!</p>
 					<?php endif; ?>
+                    </div>
+	                <?php get_sidebar(); ?>
                 </div>
             </div>
         </main>

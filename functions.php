@@ -33,17 +33,11 @@ function uv_woo_enqueue_styles_and_scripts(): void {
 // Hook the UV Woo enqueue styles and scripts function to the wp_enqueue_scripts action
 add_action( 'wp_enqueue_scripts', 'uv_woo_enqueue_styles_and_scripts' );
 
-/**
- * Disable Gutenberg Editor
- *
- * Disables the Gutenberg editor and reverts to the classic editor for all post types.
- */
+// Disable Gutenberg editor for all post types
+add_filter( 'use_block_editor_for_post_type', '__return_false' );
 
-function uv_woo_disable_gutenberg_editor(): void {
-	add_filter( 'use_block_editor_for_post_type', '__return_false', 10 ); // Disable Gutenberg editor for all post types
-}
-
-add_action( 'init', 'uv_woo_disable_gutenberg_editor' );
+// Disables the block editor from managing widgets.
+add_filter( 'use_widgets_block_editor', '__return_false' );
 
 // Include the navwalker class
 require_once get_template_directory() . '/helpers/navwalker.php';
@@ -110,6 +104,20 @@ add_action( 'after_setup_theme', 'uv_woo_config', 0 );
 
 // Check if the 'WooCommerce' class exists and include customizations file if it does
 class_exists( 'WooCommerce' ) && require_once get_template_directory() . '/helpers/woo-customizations.php';
+
+// Sidebar/Widgets
+add_action( 'widgets_init', 'uv_woo_sidebars' );
+function uv_woo_sidebars(): void {
+	register_sidebar( [
+		'name'          => 'Uv Woo Main Sidebar',
+		'id'            => 'uv-woo-main-sidebar',
+		'description'   => 'Drag and Drop Your Widgets Here',
+		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>'
+	] );
+}
 
 // Include the template helper file
 require_once get_template_directory() . '/helpers/template-helper.php';

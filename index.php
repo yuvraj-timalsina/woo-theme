@@ -13,20 +13,23 @@ get_header();
         <main>
             <div class="container">
                 <div class="row">
-					<?php
-					if ( have_posts() ) :
-						while ( have_posts() ) :
-							the_post();
-							get_template_part( 'template-parts/content' );
-						endwhile;
-						the_posts_pagination( [
-							'prev_text' => 'Prev',
-							'next_text' => 'Next'
-						] );
-					else:
-						?>
-                        <p>No Posts Found!</p>
-					<?php endif; ?>
+                    <div class="col-12 col-lg-9 col-md-8">
+						<?php
+						if ( have_posts() ) :
+							while ( have_posts() ) :
+								the_post();
+								get_template_part( 'template-parts/content' );
+							endwhile;
+							the_posts_pagination( [
+								'prev_text' => 'Prev',
+								'next_text' => 'Next'
+							] );
+						else:
+							?>
+                            <p>No Posts Found!</p>
+						<?php endif; ?>
+                    </div>
+					<?php get_sidebar(); ?>
                 </div>
             </div>
         </main>
