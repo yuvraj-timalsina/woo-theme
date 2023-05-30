@@ -37,8 +37,8 @@
         <div class="container">
             <div class="row align-items-center fw-medium text-secondary">
                 <div class="copyright-text col-6">
-                    &copy; Copyright - <?= date( 'Y' ); ?> |
-					<?= get_theme_mod( 'settings_copyright', 'All Rights Reserved!' ) ?>
+                    &copy; <?php _e('Copyright', 'uv-woo'); ?> - <?= date( 'Y' ); ?> |
+					<?= get_theme_mod( 'settings_copyright', __('All Rights Reserved!', 'uv-woo') ) ?>
                 </div>
                 <div class="useful-links col-6">
                     <nav class="footer-menu navbar navbar-expand-lg">

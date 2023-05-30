@@ -13,7 +13,7 @@ get_header();
         <main>
             <div class="container">
                 <div class="row">
-                    <h1>Search results for : <?= get_search_query(); ?></h1>
+                    <h1><?php _e('Search results for', 'uv-woo'); ?> : <?= get_search_query(); ?></h1>
 					<?php
 					get_search_form();
 					if ( have_posts() ) :
@@ -22,12 +22,12 @@ get_header();
 							get_template_part( 'template-parts/content', 'search' );
 						endwhile;
 						the_posts_pagination( [
-							'prev_text' => 'Prev',
-							'next_text' => 'Next'
+							'prev_text' => __('Prev', 'uv-woo'),
+							'next_text' => __('Next', 'uv-woo')
 						] );
 					else:
 						?>
-                        <p>No Results Found For Your Query!</p>
+                        <p><?php _e('No Results Found For Your Query!', 'uv-woo'); ?></p>
 					<?php endif; ?>
                 </div>
             </div>

@@ -22,47 +22,48 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
-        <!-- Header -->
-        <header class="p-3 border-bottom nav-header sticky-top">
-            <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between justify-content-md-center">
-                <!-- Logo -->
+    <!-- Header -->
+    <header class="p-3 border-bottom nav-header sticky-top">
+        <div class="container d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between justify-content-md-center">
+            <!-- Logo -->
+			<?php
+			if ( has_custom_logo() ) : the_custom_logo();
+			else: ?>
+                <a href="<?= get_home_url( '/' ); ?>" class="site-title fw-bold"><?php bloginfo( 'title' ); ?></a>
+                <span><?php bloginfo( 'description' ); ?></span>
+			<?php endif;
+			wp_nav_menu( [
+				'menu'           => __( 'Uv Woo Nav Menu', 'uv-woo' ),
+				'theme_location' => 'uv_woo_main_menu',
+				'container'      => false,
+				'fallback_cb'    => '__return_false',
+				'items_wrap'     => '<ul id="%1$s" class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 %2$s">%3$s</ul>',
+				'depth'          => 2,
+				'walker'         => new Bootstrap_5_Navwalker(),
+			] );
+			/* Search Form */
+			?>
+            <div class="align-items-center d-flex gap-5">
 				<?php
-				if ( has_custom_logo() ) : the_custom_logo();
-				else: ?>
-                    <a href="<?= get_home_url( '/' ); ?>" class="site-title fw-bold"><?php bloginfo( 'title' ); ?></a>
-                    <span><?php bloginfo( 'description' ); ?></span>
-				<?php endif;
-				wp_nav_menu( [
-					'menu'           => 'Uv Woo Nav Menu',
-					'theme_location' => 'uv_woo_main_menu',
-					'container'      => false,
-					'fallback_cb'    => '__return_false',
-					'items_wrap'     => '<ul id="%1$s" class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 %2$s">%3$s</ul>',
-					'depth'          => 2,
-					'walker'         => new Bootstrap_5_Navwalker(),
-				] );
-				/* Search Form */
-                ?>
-                <div class="align-items-center d-flex gap-5">
-                <?php
 				get_search_form();
 				/* Cart */
 				if ( class_exists( 'WooCommerce' ) ) : ?>
-                    <ul class="nav">
-                        <li class="nav-item">
-                            <a href="<?= wc_get_cart_url(); ?>" class="cart-link position-relative">
-                                <span class="dashicons dashicons-cart cart-icon"></span>
-                                <span class="cart-counter position-absolute fw-bold"><?= wc()->cart->get_cart_contents_count(); ?></span>
-                            </a>
-                        </li>
-                    </ul>
+                <ul class="nav">
+                    <li class="nav-item">
+                        <a href="<?= wc_get_cart_url(); ?>" class="cart-link position-relative">
+                            <span class="dashicons dashicons-cart cart-icon"></span>
+                            <span class="cart-counter position-absolute fw-bold"><?= wc()->cart->get_cart_contents_count(); ?></span>
+                        </a>
+                    </li>
+                </ul>
 				<?php if ( is_user_logged_in() ) : ?>
-                    <!-- Account -->
+                <!-- Account -->
                 <div class="dropdown">
                     <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle"
                        data-bs-toggle="dropdown"
                        aria-expanded="false">
-                        <img src="<?= esc_url( get_avatar_url( wp_get_current_user()->ID ) ); ?>" alt="mdo"
+                        <img src="<?= esc_url( get_avatar_url( wp_get_current_user()->ID ) ); ?>"
+                             alt="<?= wp_get_current_user()->display_name ?>"
                              width="25" height="25"
                              class="rounded-circle"><span
                                 class="ms-2 fw-bold"><?= wp_get_current_user()->display_name ?></span>
@@ -88,10 +89,11 @@
                         <ul class="nav float-end">
                             <li class="nav-item">
                                 <a href="<?= esc_url( get_permalink( get_option( 'woocommerce_myaccount_page_id' ) ) ); ?>"
-                                        class="nav-link link-dark px-2">Login / Register</a></li>
+                                   class="nav-link link-dark px-2"><?php _e( 'Login / Register', 'uv-woo' ); ?></a></li>
                         </ul>
-					<?php endif; endif; ?>
-                </div>
+					<?php endif;
+					endif; ?>
                 </div>
             </div>
-        </header>
+        </div>
+    </header>

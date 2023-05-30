@@ -70,7 +70,7 @@ get_header();
                 <section class="popular-products">
                     <div class="container">
                         <div class="section-title">
-                            <h2><?= get_theme_mod( 'settings_popular_title', 'Popular Products' ); ?></h2>
+                            <h2><?= get_theme_mod( 'settings_popular_title', __( 'Popular Products', 'uv-woo' ) ); ?></h2>
                         </div>
 						<?= do_shortcode( '[products limit=" ' . $popular_limit . ' " columns="" ' . $popular_col . ' "" orderby="popularity"]' ); ?>
                     </div>
@@ -80,7 +80,7 @@ get_header();
                 <section class="new-arrivals">
                     <div class="container">
                         <div class="section-title">
-                            <h2><?= get_theme_mod( 'settings_new_arrivals_title', 'New Arrivals' ); ?></h2>
+                            <h2><?= get_theme_mod( 'settings_new_arrivals_title', __( 'New Arrivals', 'uv-woo' ) ); ?></h2>
                         </div>
 						<?= do_shortcode( '[products limit=" ' . $new_arrivals_limit . ' " columns="" ' . $new_arrivals_col . ' "" orderby="date"]' ); ?>
                     </div>
@@ -100,7 +100,7 @@ get_header();
                     <section class="deal-of-the-week">
                         <div class="container">
                             <div class="section-title">
-                                <h2><?= get_theme_mod( 'settings_deal_title', 'New Arrivals' ); ?></h2>
+                                <h2><?= get_theme_mod( 'settings_deal_title', __( 'Deal of The Day', 'uv-woo' ) ); ?></h2>
                             </div>
                             <div class="row d-flex align-items-center justify-content-between">
                                 <div class="deal-img col-12 col-md-6 text-center">
@@ -108,7 +108,7 @@ get_header();
                                 </div>
                                 <div class="deal-desc col-12 col-md-4 text-center">
                                 <span class="discount">
-                                    <?= $discount_percentage . '% OFF' ?>
+                                    <?= $discount_percentage . __( '% OFF', 'uv-woo' ) ?>
                                 </span>
                                     <h3>
                                         <a href="<?= get_permalink( $deal ); ?>"> <?= get_the_title( $deal ); ?></a>
@@ -124,7 +124,7 @@ get_header();
                                     </span>
                                     </div>
                                     <a class="add-to-cart"
-                                       href="<?= esc_url( '?add-to-cart=' . $deal ); ?>">Add To Cart</a>
+                                       href="<?= esc_url( '?add-to-cart=' . $deal ); ?>"><?php _e( 'Add To Cart', 'uv-woo' ); ?></a>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +134,7 @@ get_header();
             <section class="uv-woo-blog">
                 <div class="container">
                     <div class="section-title">
-                        <h2>News from Our Blog</h2>
+                        <h2><?= get_theme_mod( 'settings_blog_title', __( 'Latest News from Our Blog', 'uv-woo' ) ); ?></h2>
                     </div>
                     <div class="row">
 						<?php
@@ -165,7 +165,7 @@ get_header();
 							wp_reset_postdata();
 						else:
 							?>
-                            <p>No Posts Found!</p>
+                            <p><?php _e( 'No Posts Found!', 'uv-woo' ); ?></p>
 						<?php endif; ?>
                     </div>
                 </div>

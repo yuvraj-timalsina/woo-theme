@@ -53,9 +53,13 @@ require_once get_template_directory() . '/helpers/customizer.php';
 function uv_woo_config(): void {
 	// Register menus for UV Woo theme
 	register_nav_menus( [
-		'uv_woo_main_menu'   => 'Uv Woo Nav Menu',
-		'uv_woo_footer_menu' => 'Uv Woo Footer Menu'
+		'uv_woo_main_menu'   => __( 'Uv Woo Nav Menu', 'uv-woo' ),
+		'uv_woo_footer_menu' => __( 'Uv Woo Footer Menu', 'uv-woo' )
 	] );
+
+	// Translation support
+	load_theme_textdomain( 'uv-woo', get_stylesheet_directory() . '/lang/' );
+	load_theme_textdomain( 'uv-woo', get_template_directory() . '/lang/' );
 
 	// Declare woocommerce support
 	add_theme_support( 'woocommerce', [
@@ -109,9 +113,9 @@ class_exists( 'WooCommerce' ) && require_once get_template_directory() . '/helpe
 add_action( 'widgets_init', 'uv_woo_sidebars' );
 function uv_woo_sidebars(): void {
 	register_sidebar( [
-		'name'          => 'Uv Woo Main Sidebar',
+		'name'          => __( 'Uv Woo Main Sidebar', 'uv-woo' ),
 		'id'            => 'uv-woo-main-sidebar',
-		'description'   => 'Drag and Drop Your Widgets Here',
+		'description'   => __( 'Drag and Drop Your Widgets Here', 'uv-woo' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
@@ -119,9 +123,9 @@ function uv_woo_sidebars(): void {
 	] );
 
 	register_sidebar( [
-		'name'          => 'Uv Woo Shop Sidebar',
+		'name'          => __( 'Uv Woo Shop Sidebar', 'uv-woo' ),
 		'id'            => 'uv-woo-shop-sidebar',
-		'description'   => 'Drag and Drop Your WooCommerce Widgets Here',
+		'description'   => __( 'Drag and Drop Your WooCommerce Widgets Here', 'uv-woo' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
@@ -129,27 +133,27 @@ function uv_woo_sidebars(): void {
 	] );
 
 	register_sidebar( [
-		'name'          => 'Uv Woo Footer Sidebar One',
+		'name'          => __( 'Uv Woo Footer Sidebar One', 'uv-woo' ),
 		'id'            => 'uv-woo-footer-sidebar-one',
-		'description'   => 'Drag and Drop Your Widgets Here',
+		'description'   => __( 'Drag and Drop Your Widgets Here', 'uv-woo' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
 	] );
 	register_sidebar( [
-		'name'          => 'Uv Woo Footer Sidebar Two',
+		'name'          => __( 'Uv Woo Footer Sidebar Two', 'uv-woo' ),
 		'id'            => 'uv-woo-footer-sidebar-two',
-		'description'   => 'Drag and Drop Your Widgets Here',
+		'description'   => __( 'Drag and Drop Your Widgets Here', 'uv-woo' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>'
 	] );
 	register_sidebar( [
-		'name'          => 'Uv Woo Footer Sidebar Three',
+		'name'          => __( 'Uv Woo Footer Sidebar Three', 'uv-woo' ),
 		'id'            => 'uv-woo-footer-sidebar-three',
-		'description'   => 'Drag and Drop Your Widgets Here',
+		'description'   => __( 'Drag and Drop Your Widgets Here', 'uv-woo' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s widget-wrapper>"',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
@@ -159,7 +163,3 @@ function uv_woo_sidebars(): void {
 
 // Include the template helper file
 require_once get_template_directory() . '/helpers/template-helper.php';
-
-
-
-

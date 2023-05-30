@@ -25,7 +25,7 @@ function uv_woo_display_current_template(WP_Admin_Bar $wp_admin_bar): void
 
         $args = [
             'id' => 'current-template',
-            'title' => 'Current Template: ' . $template_name,
+            'title' => __('Current Template', 'uv-woo'). ': ' . $template_name,
             'meta' => [
                 'class' => 'current-template',
                 'title' => 'Template Path: ' . $template_directory . '/' . $template_path, // Additional detail: Template directory and path as the title attribute

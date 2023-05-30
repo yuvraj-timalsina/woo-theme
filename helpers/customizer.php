@@ -11,8 +11,8 @@ function uv_woo_customizer( $wp_customize ): void {
 	 * */
 	$wp_customize->add_section(
 		'section_copyright', [
-			'title'       => 'Copyright Settings',
-			'description' => 'Copyright Section',
+			'title'       => __( 'Copyright Settings', 'uv-woo' ),
+			'description' => __( 'Copyright Section', 'uv-woo' ),
 		]
 	);
 	// Field - copyright text box
@@ -26,8 +26,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_copyright', [
-			'label'       => 'Copyright',
-			'description' => 'Add your copyright information here',
+			'label'       => __( 'Copyright', 'uv-woo' ),
+			'description' => __( 'Add your copyright information here', 'uv-woo' ),
 			'section'     => 'section_copyright',
 			'type'        => 'text'
 		]
@@ -39,8 +39,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_section(
 		'section_slider', [
-			'title'       => 'Slider Settings',
-			'description' => 'Slider Section',
+			'title'       => __( 'Slider Settings', 'uv-woo' ),
+			'description' => __( 'Slider Section', 'uv-woo' ),
 		]
 	);
 
@@ -56,8 +56,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_slider_page_1', [
-			'label'       => 'Page One',
-			'description' => 'Set Slider Page One',
+			'label'       => __( 'Page One', 'uv-woo' ),
+			'description' => __( 'Set Slider Page One', 'uv-woo' ),
 			'section'     => 'section_slider',
 			'type'        => 'dropdown-pages'
 		]
@@ -74,8 +74,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_slider_button_text_1', [
-			'label'       => 'Button Text',
-			'description' => 'Button Text for Page One',
+			'label'       => __( 'Button Text', 'uv-woo' ),
+			'description' => __( 'Button Text for Page One', 'uv-woo' ),
 			'section'     => 'section_slider',
 			'type'        => 'text'
 		]
@@ -92,8 +92,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_slider_button_url_1', [
-			'label'       => 'Button URL',
-			'description' => 'Button URL for Page One',
+			'label'       => __( 'Button URL', 'uv-woo' ),
+			'description' => __( 'Button URL for Page One', 'uv-woo' ),
 			'section'     => 'section_slider',
 			'type'        => 'url'
 		]
@@ -111,8 +111,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_slider_page_2', [
-			'label'       => 'Page Two',
-			'description' => 'Set Slider Page Two',
+			'label'       => __( 'Page Two', 'uv-woo' ),
+			'description' => __( 'Set Slider Page Two', 'uv-woo' ),
 			'section'     => 'section_slider',
 			'type'        => 'dropdown-pages'
 		]
@@ -129,8 +129,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_slider_button_text_2', [
-			'label'       => 'Button Text',
-			'description' => 'Button Text for Page Two',
+			'label'       => __( 'Button Text', 'uv-woo' ),
+			'description' => __( 'Button Text for Page Two', 'uv-woo' ),
 			'section'     => 'section_slider',
 			'type'        => 'text'
 		]
@@ -147,8 +147,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_slider_button_url_2', [
-			'label'       => 'Button URL',
-			'description' => 'Button URL for Page Two',
+			'label'       => __( 'Button URL', 'uv-woo' ),
+			'description' => __( 'Button URL for Page Two', 'uv-woo' ),
 			'section'     => 'section_slider',
 			'type'        => 'url'
 		]
@@ -166,8 +166,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_slider_page_3', [
-			'label'       => 'Page Three',
-			'description' => 'Set Slider Page Three',
+			'label'       => __( 'Page Three', 'uv-woo' ),
+			'description' => __( 'Set Slider Page Three', 'uv-woo' ),
 			'section'     => 'section_slider',
 			'type'        => 'dropdown-pages'
 		]
@@ -184,8 +184,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_slider_button_text_3', [
-			'label'       => 'Button Text',
-			'description' => 'Button Text for Page Three',
+			'label'       => __( 'Button Text', 'uv-woo' ),
+			'description' => __( 'Button Text for Page Three', 'uv-woo' ),
 			'section'     => 'section_slider',
 			'type'        => 'text'
 		]
@@ -202,8 +202,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_slider_button_url_3', [
-			'label'       => 'Button URL',
-			'description' => 'Button URL for Page Three',
+			'label'       => __( 'Button URL', 'uv-woo' ),
+			'description' => __( 'Button URL for Page Three', 'uv-woo' ),
 			'section'     => 'section_slider',
 			'type'        => 'url'
 		]
@@ -215,8 +215,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_section(
 		'section_home_page', [
-			'title'       => 'Home Page Products',
-			'description' => 'Home Page Products Section',
+			'title'       => __( 'Home Page Products/Blog', 'uv-woo' ),
+			'description' => __( 'Home Page Products/Blog Section', 'uv-woo' ),
 		]
 	);
 
@@ -231,8 +231,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_popular_title', [
-			'label'       => 'Popular Products - Title',
-			'description' => 'Title For Popular Products Section',
+			'label'       => __( 'Popular Products - Title', 'uv-woo' ),
+			'description' => __( 'Title For Popular Products Section', 'uv-woo' ),
 			'section'     => 'section_home_page',
 			'type'        => 'text'
 		]
@@ -247,8 +247,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_popular_max_num', [
-			'label'       => 'Popular Products - Max Number',
-			'description' => 'Sets Max Number For Popular Products',
+			'label'       => __( 'Popular Products - Max Number', 'uv-woo' ),
+			'description' => __( 'Sets Max Number For Popular Products', 'uv-woo' ),
 			'section'     => 'section_home_page',
 			'type'        => 'number'
 		]
@@ -264,8 +264,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_popular_max_col', [
-			'label'       => 'Popular Products - Max Columns',
-			'description' => 'Sets Max Columns For Popular Products',
+			'label'       => __( 'Popular Products - Max Columns', 'uv-woo' ),
+			'description' => __( 'Sets Max Columns For Popular Products', 'uv-woo' ),
 			'section'     => 'section_home_page',
 			'type'        => 'number'
 		]
@@ -281,8 +281,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_new_arrivals_title', [
-			'label'       => 'New Arrivals - Title',
-			'description' => 'Title For New Arrivals Section',
+			'label'       => __( 'New Arrivals - Title', 'uv-woo' ),
+			'description' => __( 'Title For New Arrivals Section', 'uv-woo' ),
 			'section'     => 'section_home_page',
 			'type'        => 'text'
 		]
@@ -298,8 +298,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_new_arrivals_max_num', [
-			'label'       => 'New Arrivals - Max Number',
-			'description' => 'Sets Max Number For New Arrivals',
+			'label'       => __( 'New Arrivals - Max Number', 'uv-woo' ),
+			'description' => __( 'Sets Max Number For New Arrivals', 'uv-woo' ),
 			'section'     => 'section_home_page',
 			'type'        => 'number'
 		]
@@ -315,8 +315,8 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_new_arrivals_max_col', [
-			'label'       => 'New Arrivals - Max Columns',
-			'description' => 'Sets Max Columns For New Arrivals',
+			'label'       => __( 'New Arrivals - Max Columns', 'uv-woo' ),
+			'description' => __( 'Sets Max Columns For New Arrivals', 'uv-woo' ),
 			'section'     => 'section_home_page',
 			'type'        => 'number'
 		]
@@ -333,15 +333,15 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_deal_title', [
-			'label'       => 'Deal of The Week - Title',
-			'description' => 'Title For Deal Of The Week Section',
+			'label'       => __( 'Deal of The Week - Title', 'uv-woo' ),
+			'description' => __( 'Title For Deal Of The Week Section', 'uv-woo' ),
 			'section'     => 'section_home_page',
 			'type'        => 'text'
 		]
 	);
 
 	$wp_customize->add_setting(
-		'settings_deal',[
+		'settings_deal', [
 			'type'              => 'theme_mod',
 			'default'           => '',
 			'sanitize_callback' => 'absint',
@@ -349,13 +349,13 @@ function uv_woo_customizer( $wp_customize ): void {
 	);
 
 	$wp_customize->add_control(
-		'settings_deal',[
-			'label'       => 'Deal of the Week (Product ID)',
-			'description' => 'Product ID to Display',
-			'section'     => 'section_home_page',
-			'type'        => 'select',
-			'choices'     => uv_woo_get_featured_products(),
-		]);
+		'settings_deal', [
+		'label'       => __( 'Deal of the Week (Product ID)', 'uv-woo' ),
+		'description' => __( 'Product ID to Display', 'uv-woo' ),
+		'section'     => 'section_home_page',
+		'type'        => 'select',
+		'choices'     => uv_woo_get_featured_products(),
+	] );
 
 	// Deal of the Week Checkbox
 	$wp_customize->add_setting(
@@ -368,9 +368,27 @@ function uv_woo_customizer( $wp_customize ): void {
 
 	$wp_customize->add_control(
 		'settings_deal_show', [
-			'label'   => 'Show Deal of the Week?',
+			'label'   => __( 'Show Deal of the Week?', 'uv-woo' ),
 			'section' => 'section_home_page',
 			'type'    => 'checkbox'
+		]
+	);
+
+	// Blog Title
+	$wp_customize->add_setting(
+		'settings_blog_title', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		]
+	);
+
+	$wp_customize->add_control(
+		'settings_blog_title', [
+			'label'       => __( 'Blog - Title', 'uv-woo' ),
+			'description' => __( 'Title For Blog Section', 'uv-woo' ),
+			'section'     => 'section_home_page',
+			'type'        => 'text'
 		]
 	);
 }
@@ -400,5 +418,3 @@ function uv_woo_get_featured_products(): array {
 
 	return $choices;
 }
-
-

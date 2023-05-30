@@ -12,12 +12,12 @@ get_header(); ?>
             <div class="container">
                 <div class="error-404">
                     <header>
-                        <h1>Page Not Found!</h1>
-                        <p>Unfortunately, the page you tried to reach does not exist here.</p>
+                        <h1><?php _e('Page Not Found!', 'uv-woo'); ?></h1>
+                        <p><?php _e('Unfortunately, the page you tried to reach does not exist here.', 'uv-woo'); ?></p>
                     </header>
 					<?php
 					the_widget( 'WP_Widget_Recent_Posts', [
-						'title'  => 'Take a look at Our Latest Posts',
+						'title'  => __('Take a look at Our Latest Posts', 'uv-woo'),
 						'number' => 5,
 					] );
 					?>

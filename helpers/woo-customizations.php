@@ -69,7 +69,6 @@ function uv_woo_wc_modifications(): void {
 	}
 
 	add_filter( 'woocommerce_add_to_cart_fragments', 'uv_woo_add_to_cart_fragment' );
-
 }
 
 add_action( 'wp', 'uv_woo_wc_modifications' );
