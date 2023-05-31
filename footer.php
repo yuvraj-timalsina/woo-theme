@@ -37,14 +37,15 @@
         <div class="container">
             <div class="row align-items-center fw-medium text-secondary">
                 <div class="copyright-text col-6">
-                    &copy; <?php esc_html_e('Copyright', 'uv-woo'); ?> - <?php echo date( 'Y' ); ?> |
-					<?php echo esc_html(get_theme_mod( 'settings_copyright', __('All Rights Reserved!', 'uv-woo') )); ?>
+                    &copy; <?php esc_html_e( 'Copyright', 'uv-woo' ); ?> - <?php echo date( 'Y' ); ?> |
+					<?php echo esc_html( get_theme_mod( 'settings_copyright', __( 'All Rights Reserved!', 'uv-woo' ) ) ); ?>
                 </div>
                 <div class="useful-links col-6">
                     <nav class="footer-menu navbar navbar-expand-lg">
 						<?php wp_nav_menu( [
-							'menu'            => esc_html__('Uv Woo Footer Menu', 'uv-woo'),
+							'menu'            => esc_html__( 'Uv Woo Footer Menu', 'uv-woo' ),
 							'theme_location'  => 'uv_woo_footer_menu',
+							'depth'           => 1,
 							'menu_class'      => 'navbar-nav',
 							'container'       => 'div',
 							'container_class' => 'container-fluid'

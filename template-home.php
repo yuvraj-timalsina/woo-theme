@@ -70,9 +70,9 @@ get_header();
                 <section class="popular-products">
                     <div class="container">
                         <div class="section-title">
-                            <h2><?php echo esc_html(get_theme_mod( 'settings_popular_title', __( 'Popular Products', 'uv-woo' ) )); ?></h2>
+                            <h2><?php echo esc_html( get_theme_mod( 'settings_popular_title', __( 'Popular Products', 'uv-woo' ) ) ); ?></h2>
                         </div>
-						<?php echo do_shortcode( '[products limit=" ' . esc_attr($popular_limit) . ' " columns="" ' . esc_attr($popular_col) . ' "" orderby="popularity"]' ); ?>
+						<?php echo do_shortcode( '[products limit=" ' . esc_attr( $popular_limit ) . ' " columns="" ' . esc_attr( $popular_col ) . ' "" orderby="popularity"]' ); ?>
                     </div>
                 </section>
 
@@ -80,9 +80,9 @@ get_header();
                 <section class="new-arrivals">
                     <div class="container">
                         <div class="section-title">
-                            <h2><?php echo esc_html(get_theme_mod( 'settings_new_arrivals_title', __( 'New Arrivals', 'uv-woo' ) )); ?></h2>
+                            <h2><?php echo esc_html( get_theme_mod( 'settings_new_arrivals_title', __( 'New Arrivals', 'uv-woo' ) ) ); ?></h2>
                         </div>
-						<?php echo do_shortcode( '[products limit=" ' . esc_attr($new_arrivals_limit) . ' " columns="" ' . esc_attr($new_arrivals_col) . ' "" orderby="date"]' ); ?>
+						<?php echo do_shortcode( '[products limit=" ' . esc_attr( $new_arrivals_limit ) . ' " columns="" ' . esc_attr( $new_arrivals_col ) . ' "" orderby="date"]' ); ?>
                     </div>
                 </section>
 
@@ -100,7 +100,7 @@ get_header();
                     <section class="deal-of-the-week">
                         <div class="container">
                             <div class="section-title">
-                                <h2><?php echo esc_html(get_theme_mod( 'settings_deal_title', __( 'Deal of The Day', 'uv-woo' ) )); ?></h2>
+                                <h2><?php echo esc_html( get_theme_mod( 'settings_deal_title', __( 'Deal of The Day', 'uv-woo' ) ) ); ?></h2>
                             </div>
                             <div class="row d-flex align-items-center justify-content-between">
                                 <div class="deal-img col-12 col-md-6 text-center">
@@ -108,19 +108,19 @@ get_header();
                                 </div>
                                 <div class="deal-desc col-12 col-md-4 text-center">
                                 <span class="discount">
-                                    <?php echo esc_html($discount_percentage . esc_html__( '% OFF', 'uv-woo' )); ?>
+                                    <?php echo esc_html( $discount_percentage . esc_html__( '% OFF', 'uv-woo' ) ); ?>
                                 </span>
                                     <h3>
-                                        <a href="<?php echo esc_url(get_permalink( $deal )); ?>"> <?php echo esc_html(get_the_title( $deal )); ?></a>
+                                        <a href="<?php echo esc_url( get_permalink( $deal ) ); ?>"> <?php echo esc_html( get_the_title( $deal ) ); ?></a>
                                     </h3>
-                                    <p><?php echo esc_html(get_the_excerpt( $deal )); ?></p>
+                                    <p><?php echo esc_html( get_the_excerpt( $deal ) ); ?></p>
                                     <div class="prices">
                                     <span class="regular_price">
-                                       <?php echo esc_html($currency) . esc_html($regular_price); ?>
+                                       <?php echo esc_html( $currency ) . esc_html( $regular_price ); ?>
 
                                     </span>
                                         <span class="sale_price">
-                                         <?php echo esc_html($currency) . esc_html($sale_price); ?>
+                                         <?php echo esc_html( $currency ) . esc_html( $sale_price ); ?>
                                     </span>
                                     </div>
                                     <a class="add-to-cart"
@@ -134,13 +134,14 @@ get_header();
             <section class="uv-woo-blog">
                 <div class="container">
                     <div class="section-title">
-                        <h2><?php echo esc_html(get_theme_mod( 'settings_blog_title', __( 'Latest News from Our Blog', 'uv-woo' ) )); ?></h2>
+                        <h2><?php echo esc_html( get_theme_mod( 'settings_blog_title', __( 'Latest News from Our Blog', 'uv-woo' ) ) ); ?></h2>
                     </div>
                     <div class="row">
 						<?php
 						$args = [
-							'post_type'      => 'post',
-							'posts_per_page' => 3
+							'post_type'           => 'post',
+							'ignore_sticky_posts' => true,
+							'posts_per_page'      => 3
 						];
 
 						$blog_posts = new WP_Query( $args );
