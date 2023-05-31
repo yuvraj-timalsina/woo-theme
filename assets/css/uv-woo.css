@@ -13,7 +13,8 @@ Version: 1.0.0
 :root {
     --uv-woo-primary: #D2335B;
     --uv-woo-secondary: #8C52FF;
-    --uv-woo-white: #FFFFFF;
+    --uv-woo-light: #FFFFFF;
+    --uv-woo-dark: #000000;
 }
 
 /* rajdhani-regular - latin */
@@ -67,7 +68,7 @@ a {
 }
 
 .uv-woo-btn-outline:hover {
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
     background-color: var(--uv-woo-secondary);
     border-color: var(--uv-woo-secondary);
 }
@@ -137,7 +138,7 @@ body {
 
 .main-menu ul li ul {
     color: var(--uv-woo-primary);
-    background-color: var(--uv-woo-white);
+    background-color: var(--uv-woo-light);
 }
 
 .main-menu ul li ul li {
@@ -149,7 +150,7 @@ body {
 }
 
 .main-menu ul li ul li a .active {
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
     background-color: var(--uv-woo-primary);
 }
 
@@ -159,7 +160,7 @@ body {
 
 .main-menu .dropdown-item:focus,
 .main-menu .dropdown-item:hover {
-    background-color: var(--uv-woo-white);
+    background-color: var(--uv-woo-light);
 }
 
 .main-menu .dropdown:hover > .dropdown-menu,
@@ -169,7 +170,7 @@ body {
 
 .main-menu .dropdown-item.active,
 .main-menu .dropdown-item:active {
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
     background-color: var(--uv-woo-primary);
 }
 
@@ -273,7 +274,7 @@ a.added_to_cart.wc-forward {
 .woocommerce button.button.alt,
 .woocommerce input.button.alt {
     background-color: var(--uv-woo-primary);
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
 }
 
 .woocommerce ul.products li.product .price ins,
@@ -397,7 +398,7 @@ a.added_to_cart.wc-forward {
 
 .woocommerce table.shop_table thead {
     background-color: var(--uv-woo-primary);
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
 }
 
 .woocommerce .coupon input#coupon_code {
@@ -454,7 +455,7 @@ a.added_to_cart.wc-forward {
 .woocommerce button.button:hover,
 .woocommerce input.button:hover,
 .woocommerce ul.products li.product .button:hover {
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
 }
 
 
@@ -479,7 +480,7 @@ a.added_to_cart.wc-forward {
     padding: 20px 45px 40px 45px;
     border: 1px solid #ccc;
     overflow: hidden;
-    background: var(--uv-woo-white);
+    background: var(--uv-woo-light);
     -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.3);
@@ -520,7 +521,7 @@ a.added_to_cart.wc-forward {
 }
 
 li.comment {
-    background-color: var(--uv-woo-white);
+    background-color: var(--uv-woo-light);
     border-right: none;
 }
 
@@ -545,7 +546,7 @@ li.comment {
 }
 
 .comment-list li li li {
-    background-color: var(--uv-woo-white);
+    background-color: var(--uv-woo-light);
 }
 
 .comment-respond input[type="email"],
@@ -566,7 +567,7 @@ li.comment {
 
 .entry-comments .comment-author img {
     border-radius: 50%;
-    border: 5px solid var(--uv-woo-white);
+    border: 5px solid var(--uv-woo-light);
     left: -80px;
     top: -5px;
     position: absolute;
@@ -582,13 +583,25 @@ li.comment {
     font-size: 16px;
     padding: 24px;
 }
+.comment-form .submit {
+    background-color: var(--uv-woo-secondary);
+    border: none;
+    color: var(--uv-woo-light);
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
 
 .comment-reply-link {
     cursor: pointer;
-    background-color: #444;
+    background-color: var(--uv-woo-dark);
     border: none;
-    border-radius: 3px;
-    color: var(--uv-woo-white);
+    border-radius: 5px;
+    color: var(--uv-woo-light);
     font-size: 12px;
     font-weight: 300;
     letter-spacing: 1px;
@@ -598,7 +611,7 @@ li.comment {
 }
 
 .comment-reply-link:hover {
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
 }
 
 .comment-notes {
@@ -627,7 +640,7 @@ li.comment {
 }
 
 .cart-counter {
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
     border-radius: 50%;
     padding: 2px 8px;
     font-size: 12px;
@@ -675,7 +688,7 @@ li.comment {
 
 .slider-details-container a {
     background-color: var(--uv-woo-primary);
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
     border: 1px solid var(--uv-woo-primary);
     border-radius: 5px;
     text-transform: uppercase;
@@ -719,7 +732,7 @@ li.comment {
 .home main .section-title h2 {
     font-size: 2.5rem;
     display: inline-block;
-    background: var(--uv-woo-white);
+    background: var(--uv-woo-light);
     padding: 42px 0 20px 0;
 }
 
@@ -769,7 +782,7 @@ li.comment {
 
 .deal-of-the-week .discount {
     background: #ff6891;
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
     padding: 0.5rem;
     display: inline-block;
     margin: 20px 0;
@@ -840,7 +853,7 @@ li.comment {
 
 .deal-of-the-week a.add-to-cart {
     background-color: #D2335B;
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
     text-decoration: none;
     line-height: 1;
     padding: 0.618em 1em;
@@ -856,15 +869,20 @@ li.comment {
 .post-page-numbers {
     padding: 5px 10px;
     border-radius: 5px;
-    color: #000000;
-    border: 1px solid #000000;
+    color: var(--uv-woo-secondary);
+    border: 1px solid var(--uv-woo-secondary);
 }
 
 .page-numbers.current,
 .post-page-numbers.current {
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
     border: 1px solid var(--uv-woo-primary);
     background: var(--uv-woo-primary);
+}
+
+article h2,
+article h3 {
+    margin: 1rem 0 1rem 0;
 }
 
 article h2 a {
@@ -881,6 +899,10 @@ article .meta a {
     font-weight: 600;
 }
 
+article .post-thumbnail {
+    cursor: pointer;
+}
+
 /* Footer - Footer Menu */
 .footer-widgets {
     padding: 35px 0;
@@ -888,7 +910,7 @@ article .meta a {
 }
 
 .footer-widgets h4 {
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
     text-transform: uppercase;
 }
 
@@ -897,7 +919,7 @@ article .meta a {
 }
 
 .footer-widgets strong {
-    color: var(--uv-woo-white);
+    color: var(--uv-woo-light);
 }
 
 .footer-widgets ul li a {

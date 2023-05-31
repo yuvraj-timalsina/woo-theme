@@ -11,7 +11,7 @@
     <h2>
         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
     </h2>
-    <div class="post-thumbnail">
+    <div class="post-thumbnail" onclick="location.href='<?php the_permalink(); ?>';">
 		<?php
 		if ( has_post_thumbnail() ) :
 			the_post_thumbnail( 'uv-woo-blog', [ 'class' => 'img-fluid' ] );
@@ -20,7 +20,7 @@
     </div>
     <div class="meta">
         <p><?php esc_html_e( 'Author', 'uv-woo' ) ?> : <?php the_author_posts_link(); ?>
-            | <?php echo esc_html( get_the_date() ); ?>
+            | <a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date() ); ?></a>
             <br>
 			<?php if ( has_category() ) : ?>
 				<?php esc_html_e( 'Categories', 'uv-woo' ); ?> : <span><?php the_category( ' ' ); ?></span>
