@@ -34,7 +34,7 @@
 	<?php if ( has_excerpt() ) : ?>
         <div class="content"><?php the_excerpt(); ?></div>
 	<?php elseif ( strpos( $post->post_content, '<!--more-->' ) ) : ?>
-        <div class="content"><?php the_content( 'Continue Reading ...' ); ?></div>
+        <div class="content"><?php the_content( 'Continue Reading' ); ?></div>
 	<?php else: ?>
         <div class="content"><?php the_excerpt(); ?></div>
 	<?php endif; ?>

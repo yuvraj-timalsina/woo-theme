@@ -346,7 +346,17 @@ a.added_to_cart.wc-forward {
 .product_meta > span {
     display: block;
 }
-
+.more-link {
+    font-weight: bold;
+}
+.more-link:after {
+    font-family: 'dashicons';
+    content: '\f344';
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: var(--uv-woo-secondary);
+}
 .woocommerce div.product p.price del,
 .woocommerce div.product span.price del,
 .woocommerce ul.products li.product .price del .woocommerce-Price-amount {
@@ -362,6 +372,7 @@ a.added_to_cart.wc-forward {
 .woocommerce ul.products li.product .button:hover {
     background-color: #bd3759;
 }
+
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
     padding: 0;
@@ -453,6 +464,8 @@ a.added_to_cart.wc-forward {
 .woocommerce input.button,
 .woocommerce ul.products li.product .button {
     text-transform: capitalize;
+    color: var(--uv-woo-light);
+    background-color: var(--uv-woo-primary);
 }
 
 .woocommerce #respond input#submit:hover,
@@ -473,6 +486,15 @@ a.added_to_cart.wc-forward {
  .woocommerce-ordering select{
      padding: 5px;
  }
+.woocommerce ul.products li.product .price del {
+    color: inherit;
+    opacity: .5;
+    display: inline-block;
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--uv-woo-dark);
+    vertical-align: middle;
+}
 
  .wp-block-latest-posts li a {
      font-size: 20px;
@@ -495,9 +517,36 @@ a.added_to_cart.wc-forward {
 .blog aside{
     padding-top: 1rem;
 }
-.blog .widget-item h2{
-    border-bottom: 2px solid var(--uv-woo-primary);
+.blog .widget-item h2 {
+    position: relative;
 }
+
+.blog .widget-item h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    height: 2px;
+    background-color: var(--uv-woo-primary);
+}
+
+/* Category */
+.cat-item {
+    font-size: 20px;
+}
+.cat-parent > a::before {
+    font-family: "dashicons";
+    content: "\f522"; /* Replace with the desired dashicon code for parent items */
+    margin-right: 5px;
+}
+
+.children > .cat-item > a::before {
+    font-family: "dashicons";
+    content: "\f147"; /* Replace with the desired dashicon code for child items */
+    margin-right: 5px;
+}
+
 /* Comments */
 #comments ol,
 #comments ul {
@@ -657,6 +706,9 @@ li.comment {
 .comment-notes {
     display: none;
 }
+.comment-author img {
+    border-radius: 10%;
+}
 
 /* General */
 .size-auto,
@@ -772,9 +824,20 @@ li.comment {
 .home main .section-title h2 {
     font-size: 2.5rem;
     display: inline-block;
-    background: var(--uv-woo-light);
     padding: 42px 0 20px 0;
+    position: relative;
 }
+
+.home main .section-title h2::after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+    border-bottom: 2px solid var(--uv-woo-primary);
+}
+
 
 .home section.lab-blog {
     padding: 40px 0;
@@ -793,27 +856,9 @@ li.comment {
     display: table;
 }
 
-.home .popular-products .woocommerce ul.products li.product .button,
-.home .new-arrivals .woocommerce ul.products li.product .button {
-    background-color: transparent;
-    color: #d83a65;
-    padding: 0;
-    margin: 0;
-    transition: 0.5s;
-}
-
-.home .popular-products .woocommerce ul.products li.product .button:hover,
-.home .new-arrivals .woocommerce ul.products li.product .button:hover {
-    color: #666;
-}
-
-.home .woocommerce ul.products li.product .button {
-    margin-top: 0;
-}
 
 .deal-of-the-week {
-    background: #f7f7f7;
-    padding: 60px 0;
+    padding: 50px 0;
 }
 
 .deal-of-the-week .row {
@@ -850,13 +895,6 @@ li.comment {
     border: 1px dashed #ffc8d8;
 }
 
-.deal-of-the-week .section-title {
-    margin: 0 !important;
-}
-
-.deal-of-the-week h2 {
-    background: #f8f8f8 !important;
-}
 
 .deal-of-the-week h3 {
     margin: 0 0 20px 0;
@@ -864,14 +902,13 @@ li.comment {
 }
 
 .deal-of-the-week h3 a {
-    font-size: 2rem;
+    font-size: 2.4rem;
     font-weight: 700;
-    color: #000;
     transition: 0.5s;
 }
 
 .deal-of-the-week h3 a:hover {
-    color: #777;
+    color: var(--uv-woo-primary);
 }
 
 .deal-of-the-week p {
@@ -879,14 +916,14 @@ li.comment {
     font-size: 1.2rem;
 }
 
-.deal-of-the-week .prices .regular {
+.deal-of-the-week .prices .regular-price {
     font-size: 1.4rem;
     font-weight: 600;
     opacity: 0.4;
     text-decoration: line-through;
 }
 
-.deal-of-the-week .prices .sale {
+.deal-of-the-week .prices .sale-price {
     font-size: 2rem;
     font-weight: 700;
 }
@@ -902,7 +939,9 @@ li.comment {
     display: inline-block;
     margin-top: 10px;
 }
-
+.deal-img img {
+    border-radius: 10%;
+}
 /* Post */
 
 .page-numbers,
@@ -923,6 +962,7 @@ li.comment {
 article h2,
 article h3 {
     margin: 1rem 0 1rem 0;
+    word-wrap: break-word;
 }
 
 article h2 a {
@@ -952,7 +992,20 @@ article .post-thumbnail {
 .footer-widgets h4 {
     color: var(--uv-woo-light);
     text-transform: uppercase;
+    position: relative;
+    display: inline-block;
 }
+
+.footer-widgets h4::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 50%;
+    height: 2px;
+    background-image: linear-gradient(to right, var(--uv-woo-primary) 50%, transparent 50%);
+}
+
 
 .footer-widgets p {
     margin-bottom: 0.5rem;

@@ -97,7 +97,7 @@ get_header();
 					$discount_percentage = absint( 100 - ( ( $sale_price / $regular_price ) * 100 ) );
 					?>
                     <!-- Deal of the Week -->
-                    <section class="deal-of-the-week">
+                    <section class="deal-of-the-week bg-dark text-white">
                         <div class="container">
                             <div class="section-title">
                                 <h2><?php echo esc_html( get_theme_mod( 'settings_deal_title', __( 'Deal of The Day', 'uv-woo' ) ) ); ?></h2>
@@ -115,11 +115,10 @@ get_header();
                                     </h3>
                                     <p><?php echo esc_html( get_the_excerpt( $deal ) ); ?></p>
                                     <div class="prices">
-                                    <span class="regular_price">
+                                    <span class="regular-price">
                                        <?php echo esc_html( $currency ) . esc_html( $regular_price ); ?>
-
                                     </span>
-                                        <span class="sale_price">
+                                        <span class="sale-price">
                                          <?php echo esc_html( $currency ) . esc_html( $sale_price ); ?>
                                     </span>
                                     </div>
