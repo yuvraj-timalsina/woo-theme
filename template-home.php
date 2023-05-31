@@ -149,16 +149,20 @@ get_header();
 							while ( $blog_posts->have_posts() ) :
 								$blog_posts->the_post(); ?>
                                 <article class="col-12 col-md-4">
-                                    <a href="<?php the_permalink(); ?>">
+                                    <div class="post-thumbnail" onclick="location.href='<?php the_permalink(); ?>';">
 										<?php
 										if ( has_post_thumbnail() ) :
 											the_post_thumbnail( 'uv-woo-blog', [ 'class' => 'img-fluid' ] );
-										endif;
-										?>
-                                    </a>
+										endif; ?>
+                                    </div>
                                     <h3>
                                         <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                                     </h3>
+                                    <p>
+                                        <span class="meta">
+                                        <?php esc_html_e('Author', 'uv-woo') ?> : <?php the_author_posts_link(); ?> | <a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date() ); ?></a>
+                                    </span>
+                                    </p>
                                     <div class="excerpt"><?php the_excerpt(); ?></div>
                                 </article>
 							<?php

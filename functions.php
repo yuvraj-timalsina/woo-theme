@@ -12,6 +12,10 @@ defined( 'ABSPATH' ) || exit;
 /**
  * Enqueue styles and scripts for UV Woo theme.
  */
+
+// Enqueue files for TGM Plugin Activation Library
+require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
+require_once get_template_directory() . '/inc/required-plugins.php';
 function uv_woo_enqueue_styles_and_scripts(): void {
 	// Bootstrap script and css
 	wp_enqueue_script( 'bootstrap-script', get_template_directory_uri() . '/inc/bootstrap/bootstrap.min.js', [], '5.3.0', true );
