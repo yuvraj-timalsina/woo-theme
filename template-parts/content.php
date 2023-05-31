@@ -24,7 +24,7 @@
             | <a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date() ); ?></a>
             <br>
 			<?php if ( has_category() ) : ?>
-				<?php esc_html_e( 'Categories', 'uv-woo' ); ?> : <span><?php the_category( ' ' ); ?></span>
+				<?php esc_html_e( 'Categories', 'uv-woo' ); ?> : <span><?php the_category( ' | ' ); ?></span>
 			<?php endif; ?>
             <br>
 			<?php if ( has_tag() ) : ?>

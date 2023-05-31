@@ -26,7 +26,7 @@ get_header();
 							] );
 						else:
 							?>
-                            <p><?php esc_html_e('No Posts Found!', 'uv-woo'); ?></p>
+                            <h5 ><?php esc_html_e('No Posts Found!', 'uv-woo'); ?></h5>
 						<?php endif; ?>
                     </div>
 					<?php get_sidebar(); ?>
