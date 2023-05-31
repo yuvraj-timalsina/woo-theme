@@ -142,7 +142,9 @@ a img.aligncenter {
 .widget {
     margin-bottom: 1rem;
 }
-
+.widget li {
+    list-style: none;
+}
 .content-area .widget h4 {
     border-bottom: 1px solid #f5f5f5;
     padding: 0.4rem 0;
