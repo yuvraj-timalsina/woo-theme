@@ -43,7 +43,7 @@
                 <div class="useful-links col-6">
                     <nav class="footer-menu navbar navbar-expand-lg">
 						<?php wp_nav_menu( [
-							'menu'            => 'Uv Woo Footer Menu',
+							'menu'            => esc_html__('Uv Woo Footer Menu', 'uv-woo'),
 							'theme_location'  => 'uv_woo_footer_menu',
 							'menu_class'      => 'navbar-nav',
 							'container'       => 'div',

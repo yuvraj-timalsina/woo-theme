@@ -12,6 +12,7 @@ Version: 1.0.0
 
 :root {
     --uv-woo-primary: #D2335B;
+    --uv-woo-secondary: #8C52FF;
 }
 
 /* rajdhani-regular - latin */
@@ -55,8 +56,24 @@ Version: 1.0.0
 }
 
 a {
-    color: var(--uv-woo-primary);
+    color: var(--uv-woo-secondary);
     text-decoration: none;
+}
+
+.uv-woo-btn-outline {
+    color: var(--uv-woo-secondary);
+    border-color: var(--uv-woo-secondary);
+}
+
+.uv-woo-btn-outline:hover {
+    color: #fff;
+    background-color: var(--uv-woo-secondary);
+    border-color: var(--uv-woo-secondary);
+}
+
+.uv-woo-btn-outline.focus,
+.uv-woo-btn-outline:focus {
+    box-shadow: 0 0 0 .2rem var(--uv-woo-secondary);
 }
 
 body {
@@ -69,13 +86,21 @@ body {
     padding: 3rem 0;
 }
 
+#page {
+    margin-top: 4rem;
+}
+
 .page-template-template-home-php .content-area {
     padding: 0;
 }
 
-/* Header */
-.nav-bg {
-    background-color: aliceblue;
+.account-link {
+    font-weight: 500;
+    color: var(--uv-woo-primary);
+}
+
+.account-link:hover {
+    color: var(--uv-woo-secondary);
 }
 
 /* Nav Menu */
@@ -99,6 +124,7 @@ body {
 
 .main-menu ul li:last-child {
     margin: 0;
+    width: auto;
 }
 
 .main-menu > ul li a,
@@ -148,7 +174,9 @@ body {
 
 .main-menu .navbar-toggler {
     border: none;
-    padding-right: 0;
+    position: absolute;
+    right: 0;
+    top: 18px;
 }
 
 .main-menu .dropdown-toggle::after {
@@ -177,7 +205,10 @@ body {
     top: -1px;
     left: 100%;
 }
-
+.main-menu .nav-link.active {
+    font-weight: 600;
+    color: var(--uv-woo-primary);
+}
 /* Shop */
 .shop-content {
     padding: 3rem 0;
@@ -425,7 +456,6 @@ a.added_to_cart.wc-forward {
 
 
 /* Comments */
-
 #comments ol,
 #comments ul {
     list-style: none;
@@ -582,11 +612,6 @@ li.comment {
     height: auto;
 }
 
-/* Search */
-.ms-n5 {
-    margin-left: -46px;
-}
-
 /* Footer */
 .footer-menu ul {
     gap: 5px
@@ -594,7 +619,7 @@ li.comment {
 
 /* Cart */
 .cart-icon {
-    color: #8C52FF;
+    color: var(--uv-woo-secondary);
     font-size: 24px;
 }
 
@@ -914,6 +939,10 @@ article .meta a {
 }
 
 @media all and (max-width: 767px) {
+
+    .main-menu .navbar-collapse {
+        flex-basis: 100%;
+    }
 
     .woocommerce .col2-set .col-1,
     .woocommerce .col2-set .col-2 {
