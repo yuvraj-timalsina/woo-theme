@@ -352,6 +352,12 @@ a.added_to_cart.wc-forward {
     vertical-align: middle;
     color: var(--uv-woo-primary);
 }
+
+/* Calendar */
+:where(.wp-block-calendar table:not(.has-background) th) {
+    background-color: var(--uv-woo-secondary);
+    color: var(--uv-woo-light);
+}
 /* Single Product */
 .product_meta>span {
     display: block;
