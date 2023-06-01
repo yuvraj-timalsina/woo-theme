@@ -56,8 +56,8 @@ function uv_woo_config(): void {
 	] );
 
 	// Translation support
-	load_theme_textdomain( 'uv-woo', get_stylesheet_directory() . '/lang/' );
-	load_theme_textdomain( 'uv-woo', get_template_directory() . '/lang/' );
+	load_theme_textdomain( 'uv-woo', get_stylesheet_directory() . '/languages/' );
+	load_theme_textdomain( 'uv-woo', get_template_directory() . '/languages/' );
 
 	// Declare woocommerce support
 	add_theme_support( 'woocommerce', [
