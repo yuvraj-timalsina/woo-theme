@@ -306,7 +306,7 @@ a.added_to_cart.wc-forward {
     font-weight: bold;
 }
 
-.woocommerce span.onsale:before {
+.woocommerce span.onsale::before {
     content: "";
     position: absolute;
     top: 0;
@@ -318,7 +318,7 @@ a.added_to_cart.wc-forward {
     border-color: var(--uv-woo-primary) transparent transparent transparent;
 }
 
-.woocommerce span.onsale:after {
+.woocommerce span.onsale::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -343,8 +343,8 @@ a.added_to_cart.wc-forward {
 .content-area .widget  ul li {
     font-size: 18px;
 }
-.error-404 .widget  ul li:before,
-.content-area .widget  ul li:before {
+.error-404 .widget  ul li::before,
+.content-area .widget  ul li::before {
     font-family: 'dashicons';
     content: '\f344';
     display: inline-block;
@@ -358,6 +358,7 @@ a.added_to_cart.wc-forward {
     background-color: var(--uv-woo-secondary);
     color: var(--uv-woo-light);
 }
+
 /* Single Product */
 .product_meta>span {
     display: block;
@@ -367,7 +368,7 @@ a.added_to_cart.wc-forward {
     font-weight: bold;
 }
 
-.more-link:after {
+.more-link::after {
     font-family: 'dashicons';
     content: '\f344';
     display: inline-block;
@@ -531,7 +532,7 @@ a.added_to_cart.wc-forward {
     margin-right: 5px;
 }
 
-.wp-block-archives li:before {
+.wp-block-archives li::before {
     font-family: 'dashicons';
     content: '\f344';
     font-size: 12px;
@@ -539,16 +540,22 @@ a.added_to_cart.wc-forward {
     display: inline-block;
     margin-right: 5px;
 }
+.woocommerce .blockUI.blockOverlay::before {
+    visibility: hidden;
+}
 
 .blog aside {
     padding-top: 1rem;
 }
 
-.blog .widget-item h2 {
+.blog .widget-item h2,
+.search .widget-item h2
+{
     position: relative;
 }
 
-.blog .widget-item h2::after {
+.blog .widget-item h2::after,
+.search .widget-item h2::after{
     content: "";
     position: absolute;
     left: 0;
@@ -921,7 +928,7 @@ li.comment {
     font-weight: 600;
 }
 
-.deal-of-the-week .discount:before {
+.deal-of-the-week .discount::before {
     content: '';
     position: absolute;
     top: 6%;
@@ -931,7 +938,7 @@ li.comment {
     border: 1px dashed #ffc8d8;
 }
 
-.deal-of-the-week .discount:after {
+.deal-of-the-week .discount::after {
     content: '';
     position: absolute;
     bottom: 5%;
@@ -1277,7 +1284,7 @@ a img.aligncenter {
     height: 25px;
     border-radius: 50%;
     display: inline-block;
-    color: #fff;
+    color: var(--uv-woo-light);
     text-align: center;
 }
 
@@ -1286,7 +1293,7 @@ a img.aligncenter {
 }
 
 .widget_calendar tfoot a {
-    color: #fff;
+    color: var(--uv-woo-light);
 }
 
 .widget_calendar tfoot tr td {
@@ -1303,8 +1310,8 @@ a img.aligncenter {
 
 .widget_calendar table caption {
     text-align: center;
-    background-color: #a7524b;
-    color: #fff;
+    background-color: var(--uv-woo-primary);
+    color: var(--uv-woo-light);
     padding: 0.3rem;
 }
 
@@ -1390,7 +1397,7 @@ a img.aligncenter {
 .footer-widgets .widget_calendar table caption {
     text-align: center;
     background-color: #2b2b2b;
-    color: #fff;
+    color: var(--uv-woo-light);
     padding: 0.3rem;
 }
 
