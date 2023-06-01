@@ -129,7 +129,7 @@ body {
     width: auto;
 }
 
-.main-menu > ul li a,
+.main-menu>ul li a,
 .navbar-light .navbar-nav .nav-link {
     color: #000000;
     text-decoration: none;
@@ -154,7 +154,7 @@ body {
     background-color: var(--uv-woo-primary);
 }
 
-.main-menu .navbar-nav .active > .nav-link {
+.main-menu .navbar-nav .active>.nav-link {
     color: #CA2424;
 }
 
@@ -163,8 +163,8 @@ body {
     background-color: var(--uv-woo-light);
 }
 
-.main-menu .dropdown:hover > .dropdown-menu,
-.main-menu .dropup:hover > .dropdown-menu {
+.main-menu .dropdown:hover>.dropdown-menu,
+.main-menu .dropup:hover>.dropdown-menu {
     display: block;
 }
 
@@ -185,7 +185,7 @@ body {
     vertical-align: 0.155em;
 }
 
-.main-menu ul li .dropdown-menu .dropdown > a::after {
+.main-menu ul li .dropdown-menu .dropdown>a::after {
     display: inline-block;
     margin-left: 0.355em;
     vertical-align: 0.2em;
@@ -330,10 +330,8 @@ a.added_to_cart.wc-forward {
     border-color: transparent transparent var(--uv-woo-primary) transparent;
 }
 
-.woocommerce nav.woocommerce-pagination ul li a,
-.woocommerce nav.woocommerce-pagination ul li span {
-    color: #000;
-    padding: 12px;
+.woocommerce nav.woocommerce-pagination ul {
+    border: none;
 }
 
 .woocommerce .products p,
@@ -341,9 +339,21 @@ a.added_to_cart.wc-forward {
     color: #6C757D;
     font-size: 20px;
 }
-
+.error-404 .widget  ul li,
+.content-area .widget  ul li {
+    font-size: 18px;
+}
+.error-404 .widget  ul li:before,
+.content-area .widget  ul li:before {
+    font-family: 'dashicons';
+    content: '\f344';
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+    color: var(--uv-woo-primary);
+}
 /* Single Product */
-.product_meta > span {
+.product_meta>span {
     display: block;
 }
 
@@ -551,28 +561,28 @@ a.added_to_cart.wc-forward {
     font-weight: 500;
 }
 
-.shop-sidebar .widget-item > h3 {
+.shop-sidebar .widget-item>h3 {
     font-size: 24px;
 }
 
-.shop-sidebar .widget-item ul li > a {
+.shop-sidebar .widget-item ul li>a {
     font-size: 22px;
     color: var(--uv-woo-primary);
 }
 
-.shop-sidebar .widget-item ul li ul li > a::before {
+.shop-sidebar .widget-item ul li ul li>a::before {
     font-family: "dashicons";
     content: "\f345";
     margin-right: 5px;
     vertical-align: middle;
 }
 
-.shop-sidebar .widget-item ul li ul li > a {
+.shop-sidebar .widget-item ul li ul li>a {
     font-size: 20px;
     color: var(--uv-woo-secondary);
 }
 
-.shop-sidebar ul li > span {
+.shop-sidebar ul li>span {
     font-weight: bold;
 }
 
@@ -985,7 +995,8 @@ li.comment {
 }
 
 .page-numbers.current,
-.post-page-numbers.current {
+.post-page-numbers.current,
+.woocommerce nav.woocommerce-pagination ul li span.current{
     color: var(--uv-woo-light);
     border: 1px solid var(--uv-woo-primary);
     background: var(--uv-woo-primary);
@@ -1123,7 +1134,8 @@ a img.aligncenter {
 .wp-caption {
     background: #fff;
     border: 1px solid #f0f0f0;
-    max-width: 96%; /* Image does not overflow the content area */
+    max-width: 96%;
+    /* Image does not overflow the content area */
     padding: 5px 3px 10px;
     text-align: center;
 }
@@ -1167,7 +1179,8 @@ a img.aligncenter {
     padding: 0;
     position: absolute !important;
     width: 1px;
-    word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+    word-wrap: normal !important;
+    /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
@@ -1221,14 +1234,14 @@ a img.aligncenter {
     font-weight: 700;
 }
 
-.widget > ul,
-.widget > ol,
-.widget_nav_menu div > ul {
+.widget>ul,
+.widget>ol,
+.widget_nav_menu div>ul {
     padding: 0;
     list-style: none;
 }
 
-.widget_nav_menu div > ul li ul,
+.widget_nav_menu div>ul li ul,
 .widget_product_categories ul li ul {
     padding: 0 0 0 0.7rem;
     list-style: none;
@@ -1416,6 +1429,7 @@ a img.aligncenter {
 /* Media Queries */
 
 @media all and (max-width: 768px) {
+
     .woocommerce ul.products[class*="columns-"] li.product,
     .woocommerce-page ul.products[class*="columns-"] li.product {
         width: 100%;

@@ -21,13 +21,18 @@ get_header();
 								get_template_part( 'template-parts/content' );
 							endwhile;
 							the_posts_pagination( [
-								'prev_text' => esc_html__('Prev', 'uv-woo'),
-								'next_text' => esc_html__('Next', 'uv-woo')
+								'prev_text' => esc_html__( 'Prev', 'uv-woo' ),
+								'next_text' => esc_html__( 'Next', 'uv-woo' )
 							] );
 						else:
 							?>
-                            <h5 ><?php esc_html_e('No Posts Found!', 'uv-woo'); ?></h5>
-						<?php endif; ?>
+                            <h1><?php esc_html_e( 'No Posts Found!', 'uv-woo' ); ?></h1>
+                            <p><?php esc_html_e( 'Unfortunately, none of the results matched your search.', 'uv-woo' ); ?></p>
+							<?php
+							the_widget( 'WP_Widget_Recent_Posts', [
+								'title'  => esc_html__( 'Take a look at Our Latest Posts', 'uv-woo' ),
+								'number' => 5,
+							] ); endif; ?>
                     </div>
 					<?php get_sidebar(); ?>
                 </div>
