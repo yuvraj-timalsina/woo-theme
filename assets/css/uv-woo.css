@@ -83,19 +83,6 @@ body {
     font-weight: 400;
 }
 
-.content-area {
-    min-height: 500px;
-    padding: 3rem 0;
-}
-
-#page {
-    margin-top: 4rem;
-}
-
-.page-template-template-home-php .content-area {
-    padding: 0;
-}
-
 .account-link {
     font-weight: 500;
     color: var(--uv-woo-primary);
@@ -214,8 +201,9 @@ body {
 }
 
 /* Shop */
-.archive .shop-content {
-    padding: 3rem 0;
+.shop-content,
+.content-area{
+    padding: 7rem 0;
 }
 
 .shop-content .single-product {
@@ -876,6 +864,7 @@ li.comment {
 }
 
 /* Frontend Product Lists */
+
 .home main .section-title {
     margin-bottom: 20px;
 }
@@ -1023,7 +1012,7 @@ li.comment {
 
 article h2,
 article h3 {
-    margin: 1rem 0 1rem 0;
+    margin: 2rem 0 2rem 0;
     word-wrap: break-word;
 }
 
@@ -1045,7 +1034,9 @@ article .post-thumbnail {
     cursor: pointer;
     margin-bottom: 1.5rem;
 }
-
+article .content p {
+    text-align: justify;
+}
 /* Footer - Footer Menu */
 .footer-widgets {
     padding: 35px 0;

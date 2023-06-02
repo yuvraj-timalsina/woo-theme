@@ -22,9 +22,8 @@
 <body <?php body_class(); ?>>
 <?php function_exists('wp_body_open') && wp_body_open(); ?>
 <div id="page" class="site">
-    <main>
         <!-- Navbar -->
-        <nav class="main-menu navbar navbar-expand-lg bg-body-tertiary border-bottom p-3 fixed-top"
+        <nav class="main-menu navbar navbar-expand-lg p-3 bg-body-tertiary border-bottom fixed-top"
              aria-label="Offcanvas navbar large">
             <div class="container-fluid">
 				<?php if ( has_custom_logo() ) : the_custom_logo();
@@ -123,7 +122,6 @@
                 </div>
             </div>
         </nav>
-    </main>
 
 
 

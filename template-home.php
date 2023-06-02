@@ -159,7 +159,8 @@ get_header();
                                     </h3>
                                     <p>
                                         <span class="meta">
-                                        <?php esc_html_e('Author', 'uv-woo') ?> : <?php the_author_posts_link(); ?> | <a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date() ); ?></a>
+                                        <?php esc_html_e( 'Author', 'uv-woo' ) ?> : <?php the_author_posts_link(); ?> | <a
+                                                    href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date() ); ?></a>
                                     </span>
                                     </p>
                                     <div class="excerpt"><?php the_excerpt(); ?></div>
