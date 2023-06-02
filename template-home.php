@@ -27,7 +27,9 @@ get_header();
 
 						$args        = [
 							'post_type'      => 'page',
-							'posts_per_page' => 3
+							'posts_per_page' => 3,
+							'post__in'			=> $slider_page,
+							'orderby'			=> 'post__in',
 						];
 						$slider_loop = new WP_Query( $args );
 						$j           = 1;

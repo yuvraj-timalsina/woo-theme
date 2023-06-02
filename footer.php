@@ -34,11 +34,10 @@
         </div>
     </section>
     <section class="copyright">
-        <div class="container">
+        <div class="container-fluid">
             <div class="row align-items-center fw-medium text-secondary justify-content-center text-center pt-1">
                 <div class="copyright-text col-6">
-                    &copy; <?php esc_html_e( 'Copyright', 'uv-woo' ); ?> - <?php echo date( 'Y' ); ?> |
-					<?php echo esc_html( get_theme_mod( 'settings_copyright', __( 'All Rights Reserved!', 'uv-woo' ) ) ); ?>
+					<?php echo esc_html( get_theme_mod( 'settings_copyright', __( '© Copyright 2018 - 2023 | All Rights Reserved!', 'uv-woo' ) ) ); ?>
                 </div>
                 <?php if (class_exists('WooCommerce')) : ?>
                 <div class="useful-links col-6">

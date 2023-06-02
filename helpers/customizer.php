@@ -37,102 +37,177 @@ function uv_woo_customizer( $wp_customize ): void {
 	 * Slider section
 	 * */
 
-	$slider_pages = [
-		[
-			'page_number'      => 1,
-			'button_text'      => 'Page One',
-			'button_text_desc' => 'Button Text for Page One',
-			'button_url_desc'  => 'Button URL for Page One'
-		],
-		[
-			'page_number'      => 2,
-			'button_text'      => 'Page Two',
-			'button_text_desc' => 'Button Text for Page Two',
-			'button_url_desc'  => 'Button URL for Page Two'
-		],
-		[
-			'page_number'      => 3,
-			'button_text'      => 'Page Three',
-			'button_text_desc' => 'Button Text for Page Three',
-			'button_url_desc'  => 'Button URL for Page Three'
+	$wp_customize->add_section(
+		'section_slider', [
+			'title'       => __( 'Slider Settings', 'uv-woo' ),
+			'description' => __( 'Slider Section', 'uv-woo' ),
 		]
-	];
+	);
 
-	foreach ($slider_pages as $slider_page) {
-		$page_number      = $slider_page['page_number'];
-		$button_text      = $slider_page['button_text'];
-		$button_text_desc = $slider_page['button_text_desc'];
-		$button_url_desc  = $slider_page['button_url_desc'];
+	// Slider One
+	// Field 1 - Slider Page Number 1
+	$wp_customize->add_setting(
+		'settings_slider_page_1', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'absint'
+		]
+	);
 
-		$wp_customize->add_section(
-			'section_slider',
-			[
-				'title'       => __( 'Slider Settings', 'uv-woo' ),
-				'description' => __( 'Slider Section', 'uv-woo' )
-			]
-		);
+	$wp_customize->add_control(
+		'settings_slider_page_1', [
+			'label'       => __( 'Page One', 'uv-woo' ),
+			'description' => __( 'Set Slider Page One', 'uv-woo' ),
+			'section'     => 'section_slider',
+			'type'        => 'dropdown-pages'
+		]
+	);
 
-		// Field 1 - Slider Page Number
-		$wp_customize->add_setting(
-			'settings_slider_page_' . $page_number,
-			[
-				'type'              => 'theme_mod',
-				'default'           => '',
-				'sanitize_callback' => 'absint'
-			]
-		);
+	// Field 2 - Slider Button Text For Page 1
+	$wp_customize->add_setting(
+		'settings_slider_button_text_1', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		]
+	);
 
-		$wp_customize->add_control(
-			'settings_slider_page_' . $page_number,
-			[
-				'label'       => $button_text,
-				'description' => __( 'Set Slider ' . $button_text, 'uv-woo' ),
-				'section'     => 'section_slider',
-				'type'        => 'dropdown-pages'
-			]
-		);
+	$wp_customize->add_control(
+		'settings_slider_button_text_1', [
+			'label'       => __( 'Button Text', 'uv-woo' ),
+			'description' => __( 'Button Text for Page One', 'uv-woo' ),
+			'section'     => 'section_slider',
+			'type'        => 'text'
+		]
+	);
 
-		// Field 2 - Slider Button Text
-		$wp_customize->add_setting(
-			'settings_slider_button_text_' . $page_number,
-			[
-				'type'              => 'theme_mod',
-				'default'           => '',
-				'sanitize_callback' => 'sanitize_text_field'
-			]
-		);
+	// Field 3 - Slider Button URL For Page 1
+	$wp_customize->add_setting(
+		'settings_slider_button_url_1', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw'
+		]
+	);
 
-		$wp_customize->add_control(
-			'settings_slider_button_text_' . $page_number,
-			[
-				'label'       => __( 'Button Text', 'uv-woo' ),
-				'description' => __( $button_text_desc, 'uv-woo' ),
-				'section'     => 'section_slider',
-				'type'        => 'text'
-			]
-		);
+	$wp_customize->add_control(
+		'settings_slider_button_url_1', [
+			'label'       => __( 'Button URL', 'uv-woo' ),
+			'description' => __( 'Button URL for Page One', 'uv-woo' ),
+			'section'     => 'section_slider',
+			'type'        => 'url'
+		]
+	);
 
-		// Field 3 - Slider Button URL
-		$wp_customize->add_setting(
-			'settings_slider_button_url_' . $page_number,
-			[
-				'type'              => 'theme_mod',
-				'default'           => '',
-				'sanitize_callback' => 'esc_url_raw'
-			]
-		);
+	// Slider Two
+	// Field 1 - Slider Page Number 2
+	$wp_customize->add_setting(
+		'settings_slider_page_2', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'absint'
+		]
+	);
 
-		$wp_customize->add_control(
-			'settings_slider_button_url_' . $page_number,
-			[
-				'label'       => __( 'Button URL', 'uv-woo' ),
-				'description' => __( $button_url_desc, 'uv-woo' ),
-				'section'     => 'section_slider',
-				'type'        => 'url'
-			]
-		);
-	}
+	$wp_customize->add_control(
+		'settings_slider_page_2', [
+			'label'       => __( 'Page Two', 'uv-woo' ),
+			'description' => __( 'Set Slider Page Two', 'uv-woo' ),
+			'section'     => 'section_slider',
+			'type'        => 'dropdown-pages'
+		]
+	);
 
+	// Field 2 - Slider Button Text For Page 2
+	$wp_customize->add_setting(
+		'settings_slider_button_text_2', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		]
+	);
+
+	$wp_customize->add_control(
+		'settings_slider_button_text_2', [
+			'label'       => __( 'Button Text', 'uv-woo' ),
+			'description' => __( 'Button Text for Page Two', 'uv-woo' ),
+			'section'     => 'section_slider',
+			'type'        => 'text'
+		]
+	);
+
+	// Field 3 - Slider Button URL For Page 1
+	$wp_customize->add_setting(
+		'settings_slider_button_url_2', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw'
+		]
+	);
+
+	$wp_customize->add_control(
+		'settings_slider_button_url_2', [
+			'label'       => __( 'Button URL', 'uv-woo' ),
+			'description' => __( 'Button URL for Page Two', 'uv-woo' ),
+			'section'     => 'section_slider',
+			'type'        => 'url'
+		]
+	);
+
+	// Slider Three
+	// Field 1 - Slider Page Number 3
+	$wp_customize->add_setting(
+		'settings_slider_page_3', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'absint'
+		]
+	);
+
+	$wp_customize->add_control(
+		'settings_slider_page_3', [
+			'label'       => __( 'Page Three', 'uv-woo' ),
+			'description' => __( 'Set Slider Page Three', 'uv-woo' ),
+			'section'     => 'section_slider',
+			'type'        => 'dropdown-pages'
+		]
+	);
+
+	// Field 2 - Slider Button Text for Page 3
+	$wp_customize->add_setting(
+		'settings_slider_button_text_3', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'sanitize_text_field'
+		]
+	);
+
+	$wp_customize->add_control(
+		'settings_slider_button_text_3', [
+			'label'       => __( 'Button Text', 'uv-woo' ),
+			'description' => __( 'Button Text for Page Three', 'uv-woo' ),
+			'section'     => 'section_slider',
+			'type'        => 'text'
+		]
+	);
+
+	// Field 3 - Slider Button URL for Page 3
+	$wp_customize->add_setting(
+		'settings_slider_button_url_3', [
+			'type'              => 'theme_mod',
+			'default'           => '',
+			'sanitize_callback' => 'esc_url_raw'
+		]
+	);
+
+	$wp_customize->add_control(
+		'settings_slider_button_url_3', [
+			'label'       => __( 'Button URL', 'uv-woo' ),
+			'description' => __( 'Button URL for Page Three', 'uv-woo' ),
+			'section'     => 'section_slider',
+			'type'        => 'url'
+		]
+	);
 
 	/**
 	 * Homepage Settings
