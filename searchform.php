@@ -5,7 +5,7 @@
  * @package Uv Woo
  */
 ?>
-    <form role="search" method="get" class="search-form d-flex mt-3 mt-lg-0"
+    <form role="search" method="get" class="search-form d-flex my-3 my-lg-0 "
           action="<?php echo esc_url(home_url('/')); ?>">
         <div class="input-group">
             <input placeholder="<?php echo esc_attr_x('Search &hellip;', 'placeholder', 'uv-woo'); ?>" aria-label="<?php echo esc_attr_x('Search', 'aria-label', 'uv-woo'); ?>"

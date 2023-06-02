@@ -164,8 +164,7 @@ body {
 .main-menu .navbar-toggler {
     border: none;
     position: absolute;
-    right: 0;
-    top: 18px;
+    right: 18px;
 }
 
 .main-menu .dropdown-toggle::after {
