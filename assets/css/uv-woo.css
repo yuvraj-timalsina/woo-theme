@@ -129,7 +129,7 @@ body {
     width: auto;
 }
 
-.main-menu>ul li a,
+.main-menu > ul li a,
 .navbar-light .navbar-nav .nav-link {
     color: #000000;
     text-decoration: none;
@@ -154,7 +154,7 @@ body {
     background-color: var(--uv-woo-primary);
 }
 
-.main-menu .navbar-nav .active>.nav-link {
+.main-menu .navbar-nav .active > .nav-link {
     color: #CA2424;
 }
 
@@ -163,8 +163,8 @@ body {
     background-color: var(--uv-woo-light);
 }
 
-.main-menu .dropdown:hover>.dropdown-menu,
-.main-menu .dropup:hover>.dropdown-menu {
+.main-menu .dropdown:hover > .dropdown-menu,
+.main-menu .dropup:hover > .dropdown-menu {
     display: block;
 }
 
@@ -185,7 +185,7 @@ body {
     vertical-align: 0.155em;
 }
 
-.main-menu ul li .dropdown-menu .dropdown>a::after {
+.main-menu ul li .dropdown-menu .dropdown > a::after {
     display: inline-block;
     margin-left: 0.355em;
     vertical-align: 0.2em;
@@ -339,12 +339,14 @@ a.added_to_cart.wc-forward {
     color: #6C757D;
     font-size: 20px;
 }
-.error-404 .widget  ul li,
-.content-area .widget  ul li {
+
+.error-404 .widget ul li,
+.content-area .widget ul li {
     font-size: 18px;
 }
-.error-404 .widget  ul li::before,
-.content-area .widget  ul li::before {
+
+.error-404 .widget ul li::before,
+.content-area .widget ul li::before {
     font-family: 'dashicons';
     content: '\f344';
     display: inline-block;
@@ -360,7 +362,7 @@ a.added_to_cart.wc-forward {
 }
 
 /* Single Product */
-.product_meta>span {
+.product_meta > span {
     display: block;
 }
 
@@ -520,7 +522,7 @@ a.added_to_cart.wc-forward {
     vertical-align: middle;
 }
 
-.wp-block-latest-posts li a {
+.wp-block-latest-posts li {
     font-size: 20px;
 }
 
@@ -540,6 +542,7 @@ a.added_to_cart.wc-forward {
     display: inline-block;
     margin-right: 5px;
 }
+
 .woocommerce .blockUI.blockOverlay::before {
     visibility: hidden;
 }
@@ -549,13 +552,12 @@ a.added_to_cart.wc-forward {
 }
 
 .blog .widget-item h2,
-.search .widget-item h2
-{
+.search .widget-item h2 {
     position: relative;
 }
 
 .blog .widget-item h2::after,
-.search .widget-item h2::after{
+.search .widget-item h2::after {
     content: "";
     position: absolute;
     left: 0;
@@ -574,28 +576,28 @@ a.added_to_cart.wc-forward {
     font-weight: 500;
 }
 
-.shop-sidebar .widget-item>h3 {
+.shop-sidebar .widget-item > h3 {
     font-size: 24px;
 }
 
-.shop-sidebar .widget-item ul li>a {
+.shop-sidebar .widget-item ul li > a {
     font-size: 22px;
     color: var(--uv-woo-primary);
 }
 
-.shop-sidebar .widget-item ul li ul li>a::before {
+.shop-sidebar .widget-item ul li ul li > a::before {
     font-family: "dashicons";
     content: "\f345";
     margin-right: 5px;
     vertical-align: middle;
 }
 
-.shop-sidebar .widget-item ul li ul li>a {
+.shop-sidebar .widget-item ul li ul li > a {
     font-size: 20px;
     color: var(--uv-woo-secondary);
 }
 
-.shop-sidebar ul li>span {
+.shop-sidebar ul li > span {
     font-weight: bold;
 }
 
@@ -634,7 +636,8 @@ a.added_to_cart.wc-forward {
 
 .comment-respond h3,
 .entry-pings h3 {
-    font-size: 20px;
+    color: var(--uv-woo-primary);
+    font-size: 22px;
     margin-bottom: 30px;
 }
 
@@ -868,6 +871,9 @@ li.comment {
     margin: 0 2px !important;
 }
 
+.wp-block-latest-posts.wp-block-latest-posts__list li {
+    display: flex;
+}
 
 /* Frontend Product Lists */
 .home main .section-title {
@@ -1009,7 +1015,7 @@ li.comment {
 
 .page-numbers.current,
 .post-page-numbers.current,
-.woocommerce nav.woocommerce-pagination ul li span.current{
+.woocommerce nav.woocommerce-pagination ul li span.current {
     color: var(--uv-woo-light);
     border: 1px solid var(--uv-woo-primary);
     background: var(--uv-woo-primary);
@@ -1037,6 +1043,7 @@ article .meta a {
 
 article .post-thumbnail {
     cursor: pointer;
+    margin-bottom: 1.5rem;
 }
 
 /* Footer - Footer Menu */
@@ -1095,6 +1102,12 @@ article .post-thumbnail {
 .footer-menu ul li a {
     font-size: 1rem;
     color: #939393;
+    text-decoration: none;
+}
+
+.footer-menu ul li a:hover {
+    font-size: 1rem;
+    color: var(--uv-woo-secondary);
     text-decoration: none;
 }
 
@@ -1247,14 +1260,14 @@ a img.aligncenter {
     font-weight: 700;
 }
 
-.widget>ul,
-.widget>ol,
-.widget_nav_menu div>ul {
+.widget > ul,
+.widget > ol,
+.widget_nav_menu div > ul {
     padding: 0;
     list-style: none;
 }
 
-.widget_nav_menu div>ul li ul,
+.widget_nav_menu div > ul li ul,
 .widget_product_categories ul li ul {
     padding: 0 0 0 0.7rem;
     list-style: none;

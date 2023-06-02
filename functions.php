@@ -119,3 +119,6 @@ require_once get_template_directory() . '/helpers/template-helper.php';
 // Enqueue files for TGM Plugin Activation Library
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 require_once get_template_directory() . '/inc/required-plugins.php';
+
+// Disable WordPress Admin Bar for all users
+add_filter( 'show_admin_bar', '__return_false' );
