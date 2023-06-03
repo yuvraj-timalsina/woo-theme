@@ -1,6 +1,7 @@
 === Uv Woo ===
 
-Contributors: Yv(timalsinayuvraj@gmail.com)
+Contributors: Yv
+Donate link: https://bmc.link/yuvrajtimalsina
 Requires at least: WordPress 4.9
 Requires PHP: 8.0
 Tested up to: WordPress 6.2
@@ -56,6 +57,15 @@ GNU General Public License for more details.
 
 = 1.0 - June 2, 2023
 * Initial release
+
+== Upgrade Notice ==
+
+= 1.0 =
+No significant updates or changes in this version.
+
+== Screenshots ==
+
+1. No screenshots available for this theme.
 
 == Credits ==
 
