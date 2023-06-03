@@ -498,6 +498,10 @@ a.added_to_cart.wc-forward {
     font-weight: bold;
 }
 
+.coupon {
+    display: flex;
+}
+
 /* Single Product */
 .product_meta > span {
     display: block;
