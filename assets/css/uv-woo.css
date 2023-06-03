@@ -1410,7 +1410,6 @@ a img.aligncenter {
 /* Media Queries */
 
 @media all and (max-width: 768px) {
-
     .woocommerce ul.products[class*="columns-"] li.product,
     .woocommerce-page ul.products[class*="columns-"] li.product {
         width: 100%;
@@ -1418,7 +1417,6 @@ a img.aligncenter {
 }
 
 @media all and (max-width: 767px) {
-
     .main-menu .navbar-collapse {
         flex-basis: 100%;
     }
