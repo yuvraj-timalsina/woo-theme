@@ -25,8 +25,7 @@ class Bootstrap_5_Navwalker extends Walker_Nav_menu {
 	/**
 	 * Start Level
 	 */
-	function start_lvl(&$output, $depth = 0, $args = null)
-	{
+	function start_lvl(&$output, $depth = 0, $args = null): void {
 		$dropdown_menu_class[] = '';
 		foreach ($this->current_item->classes as $class) {
 			if (in_array($class, $this->dropdown_menu_alignment_values)) {
@@ -34,7 +33,6 @@ class Bootstrap_5_Navwalker extends Walker_Nav_menu {
 			}
 		}
 		$indent = str_repeat("\t", $depth);
-		// CSDEV changed sub-menu  for dropdown-submenu
 		$submenu = ($depth > 0) ? ' dropdown-submenu' : '';
 		$output .= "\n$indent<ul class=\"dropdown-menu$submenu " . esc_attr(implode(" ", $dropdown_menu_class)) . " depth_$depth\">\n";
 	}
@@ -42,8 +40,7 @@ class Bootstrap_5_Navwalker extends Walker_Nav_menu {
 	/**
 	 * Start Element
 	 */
-	function start_el(&$output, $item, $depth = 0, $args = null, $id = 0)
-	{
+	function start_el(&$output, $item, $depth = 0, $args = null, $id = 0): void {
 		$this->current_item = $item;
 
 		$indent = ($depth) ? str_repeat("\t", $depth) : '';
@@ -56,7 +53,6 @@ class Bootstrap_5_Navwalker extends Walker_Nav_menu {
 		$classes[] = ($args->walker->has_children) ? 'dropdown' : '';
 		$classes[] = 'nav-item';
 		$classes[] = 'nav-item-' . $item->ID;
-		// CSDev added dropdown-menu-child-item & at_depth classes
 		if ($depth && $args->walker->has_children) {
 			$classes[] = 'dropdown-menu-child-item dropdown-menu-end at_depth_'.$depth;
 		}
@@ -78,7 +74,6 @@ class Bootstrap_5_Navwalker extends Walker_Nav_menu {
 		$nav_link_class = ($depth > 0) ? 'dropdown-item ' : 'nav-link ';
 
 		if ($args->walker->has_children) {
-			// CSDEV added data-bs-auto-close
 			$attributes .=  ' class="' . $nav_link_class . $active_class . ' dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" data-bs-auto-close="outside" aria-expanded="false"';
 		}
 		else {
