@@ -120,5 +120,5 @@ require_once get_template_directory() . '/helpers/template-helper.php';
 require_once get_template_directory() . '/inc/class-tgm-plugin-activation.php';
 require_once get_template_directory() . '/inc/required-plugins.php';
 
-
+// One Click Demo Import
 require_once get_template_directory() . '/demo/ocdi.php';

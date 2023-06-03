@@ -27,6 +27,11 @@ function uv_woo_register_required_plugins(): void {
 			'slug'        => 'woocommerce',
 			'required' => false,
 		],
+		[
+			'name'        => 'One Click Demo Import',
+			'slug'        => 'one-click-demo-import',
+			'required' => false,
+		],
 	];
 
 	$config = [
