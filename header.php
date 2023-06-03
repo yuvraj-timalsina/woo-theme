@@ -25,7 +25,7 @@
         <!-- Navbar -->
         <nav class="main-menu navbar navbar-expand-lg p-3 bg-body-tertiary border-bottom fixed-top"
              aria-label="Offcanvas navbar large">
-            <div class="container-fluid">
+            <div class="container">
 				<?php if ( has_custom_logo() ) : the_custom_logo();
 				else : ?>
                     <a href="<?php echo esc_url( get_home_url( '/' ) ); ?>"
