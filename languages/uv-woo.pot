@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2023-06-01T09:34:58+00:00\n"
+"POT-Creation-Date: 2023-06-03T07:30:04+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: uv-woo\n"
@@ -59,39 +59,39 @@ msgstr ""
 
 #: archive.php:30
 #: index.php:29
-#: template-home.php:172
+#: template-home.php:175
 msgid "No Posts Found!"
 msgstr ""
 
-#: comments.php:26
+#: comments.php:25
+msgctxt "comments title"
 msgid "One thought on \"%2$s\""
 msgid_plural "%1$s thoughts on \"%2$s\""
 msgstr[0] ""
 msgstr[1] ""
 
-#: comments.php:52
+#: comments.php:51
 msgid "Comment navigation"
 msgstr ""
 
-#: comments.php:53
+#: comments.php:52
 msgid "&larr; Older Comments"
 msgstr ""
 
-#: comments.php:54
+#: comments.php:53
 msgid "Newer Comments &rarr;"
 msgstr ""
 
-#: comments.php:59
+#: comments.php:58
 msgid "Comments are closed."
 msgstr ""
 
-#: footer.php:40
-#: helpers/customizer.php:29
-msgid "Copyright"
+#: demo/ocdi.php:10
+msgid "This theme works best with WooCommerce installed."
 msgstr ""
 
-#: footer.php:41
-msgid "All Rights Reserved!"
+#: footer.php:40
+msgid "© Copyright 2018 - 2023 | All Rights Reserved!"
 msgstr ""
 
 #: footer.php:46
@@ -100,66 +100,35 @@ msgid "Uv Woo Footer Menu"
 msgstr ""
 
 #: functions.php:54
-#: header.php:58
+#: header.php:57
 msgid "Uv Woo Nav Menu"
 msgstr ""
 
-#: functions.php:117
-msgid "Uv Woo Main Sidebar"
-msgstr ""
-
-#: functions.php:119
-#: functions.php:139
-#: functions.php:148
-#: functions.php:157
-msgid "Drag and Drop Your Widgets Here"
-msgstr ""
-
-#: functions.php:127
-msgid "Uv Woo Shop Sidebar"
-msgstr ""
-
-#: functions.php:129
-msgid "Drag and Drop Your WooCommerce Widgets Here"
-msgstr ""
-
-#: functions.php:137
-msgid "Uv Woo Footer Sidebar One"
-msgstr ""
-
-#: functions.php:146
-msgid "Uv Woo Footer Sidebar Two"
-msgstr ""
-
-#: functions.php:155
-msgid "Uv Woo Footer Sidebar Three"
-msgstr ""
-
-#: header.php:38
+#: header.php:37
 msgid "Toggle Navigation"
 msgstr ""
 
-#: header.php:53
+#: header.php:52
 msgid "Close"
 msgstr ""
 
-#: header.php:95
+#: header.php:94
 msgid "Dashboard"
 msgstr ""
 
-#: header.php:98
+#: header.php:97
 msgid "Profile"
 msgstr ""
 
-#: header.php:101
+#: header.php:100
 msgid "Orders"
 msgstr ""
 
-#: header.php:107
+#: header.php:106
 msgid "Log Out"
 msgstr ""
 
-#: header.php:114
+#: header.php:113
 msgid "Login / Register"
 msgstr ""
 
@@ -169,6 +138,10 @@ msgstr ""
 
 #: helpers/customizer.php:15
 msgid "Copyright Section"
+msgstr ""
+
+#: helpers/customizer.php:29
+msgid "Copyright"
 msgstr ""
 
 #: helpers/customizer.php:30
@@ -329,6 +302,37 @@ msgstr ""
 
 #: helpers/template-helper.php:28
 msgid "Current Template"
+msgstr ""
+
+#: helpers/uv-woo-widgets.php:4
+msgid "Uv Woo Main Sidebar"
+msgstr ""
+
+#: helpers/uv-woo-widgets.php:6
+#: helpers/uv-woo-widgets.php:26
+#: helpers/uv-woo-widgets.php:35
+#: helpers/uv-woo-widgets.php:44
+msgid "Drag and Drop Your Widgets Here"
+msgstr ""
+
+#: helpers/uv-woo-widgets.php:14
+msgid "Uv Woo Shop Sidebar"
+msgstr ""
+
+#: helpers/uv-woo-widgets.php:16
+msgid "Drag and Drop Your WooCommerce Widgets Here"
+msgstr ""
+
+#: helpers/uv-woo-widgets.php:24
+msgid "Uv Woo Footer Sidebar One"
+msgstr ""
+
+#: helpers/uv-woo-widgets.php:33
+msgid "Uv Woo Footer Sidebar Two"
+msgstr ""
+
+#: helpers/uv-woo-widgets.php:42
+msgid "Uv Woo Footer Sidebar Three"
 msgstr ""
 
 #: inc/class-tgm-plugin-activation.php:327
@@ -755,31 +759,31 @@ msgstr ""
 msgid "Home Template"
 msgstr ""
 
-#: template-home.php:73
+#: template-home.php:75
 msgid "Popular Products"
 msgstr ""
 
-#: template-home.php:83
+#: template-home.php:85
 msgid "New Arrivals"
 msgstr ""
 
-#: template-home.php:103
+#: template-home.php:105
 msgid "Deal of The Day"
 msgstr ""
 
-#: template-home.php:111
+#: template-home.php:113
 msgid "% OFF"
 msgstr ""
 
-#: template-home.php:126
+#: template-home.php:128
 msgid "Add To Cart"
 msgstr ""
 
-#: template-home.php:136
+#: template-home.php:138
 msgid "Latest News from Our Blog"
 msgstr ""
 
-#: template-home.php:162
+#: template-home.php:164
 #: template-parts/content-archive.php:22
 #: template-parts/content-search.php:22
 #: template-parts/content-single.php:14
