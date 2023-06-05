@@ -219,7 +219,7 @@ function uv_woo_customizer( $wp_customize ): void {
 			'description' => __( 'Home Page Products/Blog Section', 'uv-woo' ),
 		]
 	);
-
+    if (class_exists('WooCommerce')) :
 	// Popular Products
 	$wp_customize->add_setting(
 		'settings_popular_title', [
@@ -373,6 +373,7 @@ function uv_woo_customizer( $wp_customize ): void {
 			'type'    => 'checkbox'
 		]
 	);
+    endif;
 
 	// Blog Title
 	$wp_customize->add_setting(
@@ -395,6 +396,7 @@ function uv_woo_customizer( $wp_customize ): void {
 
 add_action( 'customize_register', 'uv_woo_customizer' );
 
+if (class_exists('WooCommerce')) :
 // Sanitize Checkbox
 function uv_woo_sanitize_checkbox( $checked ): bool {
 	return isset( $checked ) && true == $checked;
@@ -402,6 +404,7 @@ function uv_woo_sanitize_checkbox( $checked ): bool {
 
 // Retrieve featured product IDs as choices for the dropdown
 function uv_woo_get_featured_products(): array {
+
 	$featured_product_ids = wc_get_featured_product_ids();
 
 	$choices = [];
@@ -418,3 +421,4 @@ function uv_woo_get_featured_products(): array {
 
 	return $choices;
 }
+endif;
