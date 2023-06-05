@@ -4,9 +4,9 @@ function uv_woo_import_files(): array {
     return [
         [
             'import_file_name'             => 'Uv Woo',
-            'local_import_file'            => trailingslashit( get_template_directory() ) . 'demo/uv-woo-demo-content.xml',
-            'local_import_widget_file'     => trailingslashit( get_template_directory() ) . 'demo/uv-woo-widgets.wie',
-            'local_import_customizer_file' => trailingslashit( get_template_directory() ) . 'demo/uv-woo-customizer.dat',
+            'import_file_url'            => 'https://mega.nz/file/deNzVIjT#ZPQGS2iTdHZ9RSPCpu4O6BU81xdC9lfP-Uhfp5utmQQ',
+            'import_widget_file_url'     => 'https://mega.nz/file/kbESHJwC#PszjIv4qLa4_NZzMND_snecTR2Gup7EvH_2ycjhy-T0',
+            'import_customizer_file_url' => 'https://mega.nz/file/5TMDRLhb#qlpg0Q36PU-QiJ16Fkw8K2bgxalrXikAA0eOBB9qY3w',
             'import_notice'                => __( 'This theme works best with WooCommerce installed.', 'uv-woo' ),
         ],
     ];
