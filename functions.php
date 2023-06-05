@@ -23,11 +23,11 @@ function uv_woo_enqueue_styles_and_scripts(): void {
 
 	// Uv Woo script and css
 	wp_enqueue_script( 'uv-woo-script', get_template_directory_uri() . '/assets/js/uv-woo.js', [], '1.0.0', true );
-	wp_enqueue_style( 'uv-woo-style', get_template_directory_uri() . '/assets/css/uv-woo.css', [], '1.0.0', 'all' );
+	wp_enqueue_style( 'uv-woo-style', get_template_directory_uri() . '/assets/css/uv-woo.css', [], '1.0.1', 'all' );
 
 	// Enqueue dashicons and main stylesheet
 	wp_enqueue_style( 'dashicons' );
-	wp_enqueue_style( 'uv-woo-main-style', get_stylesheet_uri(), [], filemtime( get_template_directory() . '/style.css' ), 'all' );
+	wp_enqueue_style( 'uv-woo-main-style', get_stylesheet_uri(), [], '1.0.1', 'all' );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
